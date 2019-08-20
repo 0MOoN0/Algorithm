@@ -1,36 +1,25 @@
 package com.interview.leetcode.九十一_解码方法;
+
+/**
+ * 使用动态规划的思想解题
+ * @author Peter
+ * 
+ * 参考：https://leetcode-cn.com/problems/decode-ways/solution/fei-bo-na-qi-si-lu-by-dingmin1860
+ *
+ */
 class Solution {
     public int numDecodings(String s) {
-    	if(s.length()==0) {
-    		return 0;
-    	}else if(s.length()==1) {
-    		if(s.equals("0")){
-    			return 0;
+    	if(s.charAt(0)=='0') return 0;
+    	int [] dp = new int[s.length()+1];
+    	dp[0]=dp[1]=1;
+    	for(int i=2; i<=s.length(); i++) {
+    		if(s.charAt(i-1)!='0') {
+    			dp[i]+=dp[i-1];
     		}
-    		return 1;
+    		if(s.charAt(i-2)=='1' || s.charAt(i-2)=='2' && s.charAt(i-1)<='6') {
+    			dp[i]+=dp[i-2];
+    		}
     	}
-    	int [] cache = new int[]{1,0};
-    	int max = 0;
-        char[] cs = s.toCharArray();
-        for(int i=cs.length-2; 0<=i; i--) {
-        	if(cs[i]=='0') {
-        		// 如果是遇见0，指针移动两位，更新cache[1]
-//        		i--;
-//        		cache[1] = cache[0];
-        		continue;
-        	}
-        	if(Integer.parseInt(s.substring(i, i+2))<=26) {
-        		if(cache[1]==0) {
-        			cache[1]=1;
-        		}
-        		max = cache[1]+cache[0];
-        		cache[1] = cache[0];
-        		cache[0] = max;
-        	}else {
-        		max = cache[0];
-        	}
-        }
-        	
-        return max;
+        return dp[s.length()];
     }
 }

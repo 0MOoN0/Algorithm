@@ -13,23 +13,24 @@ import java.util.Arrays;
  */
 public class Solution {
     public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
-    	
-    	TreeNode root = new TreeNode(0);
-    	TreeNode parent = root;
-    	int index = pre.length/2;
-    	// 录入根节点
-    	if(pre.length >0 ) {
-    		root = new TreeNode(pre[0]);
-    	}
-    	int rootIndex = Arrays.binarySearch(in, pre[0]);
-    	for(int i=0; i<pre.length; i++) {
-    		
-    	}
-    	return root.left;
+    	TreeNode root = BinaryTree(pre, 0, pre.length-1, in, 0, pre.length-1);
+    	return root;
     }
     
-    private TreeNode BinaryTree(int[] pre, int []in, int start, int end) {
+    private TreeNode BinaryTree(int[] pre, int startPre, int endPre, int [] in, int startIn, int endIn) {
+    	// 边界判定
+    	if(endPre>startPre || endIn>startIn) {
+    		return null;
+    	}
+    	TreeNode root = new TreeNode(pre[startPre]);
+    	for(int i=startIn; i<=endIn; i++) {
+    		if(in[i]==pre[startPre]) {
+    			root.left = BinaryTree(pre, startPre+1, startPre+i-startIn, in, startIn, i-1);
+    			root.right = BinaryTree(pre, i-startIn+startPre+1, endPre, in ,i+1, endIn);
+    		}
+    	}
     	
+    	return root;
     }
     
 }

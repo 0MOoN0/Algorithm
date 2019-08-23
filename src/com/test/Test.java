@@ -31,4 +31,5 @@ class Test {
             super.setValue(2 * value);
         }
     }
+    
 }

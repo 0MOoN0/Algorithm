@@ -1,5 +1,7 @@
 package com.test.two;
 
+import java.util.Scanner;
+
 public class Main {
 	
 	private static int a = 0;
@@ -7,12 +9,10 @@ public class Main {
 	public static int b = 0;
 
 	public static void main(String[] args) {
-		Main.a = 10;
-		Main main = new Main();
-		main.a = 11;	
-		String str = "abc";
-		String[] split = str.split("abc");
-		System.out.println(split.length-1);
+		Integer.parseInt("+1");
+		Scanner sc = new Scanner(System.in);
+		int nextInt = sc.nextInt();
+		System.out.println(nextInt);
 		
 	}
 

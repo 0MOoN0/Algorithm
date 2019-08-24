@@ -10,6 +10,10 @@ public class Main {
 		Main.a = 10;
 		Main main = new Main();
 		main.a = 11;	
+		String str = "abc";
+		String[] split = str.split("abc");
+		System.out.println(split.length-1);
+		
 	}
 
 }

@@ -1,0 +1,11 @@
+package com.interview.leetcode.¾ÅÈý°Ë_¶þ²æËÑË÷Ê÷µÄ·¶Î§ºÍ;
+
+public class TreeNode {
+	int val;
+	TreeNode left;
+	TreeNode right;
+
+	TreeNode(int x) {
+		val = x;
+	}
+}

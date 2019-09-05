@@ -1,4 +1,4 @@
-package com.basic._锁.自旋锁;
+package com.basic.并发._锁.自旋锁;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;

@@ -1,4 +1,4 @@
-package com.basic._volatile.可见性;
+package com.basic.并发._volatile.可见性;
 
 import java.util.concurrent.TimeUnit;
 

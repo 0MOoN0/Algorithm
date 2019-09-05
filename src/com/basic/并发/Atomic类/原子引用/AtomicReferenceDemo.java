@@ -1,4 +1,4 @@
-package com.basic.Atomic类.原子引用;
+package com.basic.并发.Atomic类.原子引用;
 
 import java.util.concurrent.atomic.AtomicReference;
 

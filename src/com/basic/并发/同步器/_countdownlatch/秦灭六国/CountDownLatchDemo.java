@@ -1,4 +1,4 @@
-package com.basic.并发.同步器.秦灭六国;
+package com.basic.并发.同步器._countdownlatch.秦灭六国;
 
 import java.util.concurrent.CountDownLatch;
 

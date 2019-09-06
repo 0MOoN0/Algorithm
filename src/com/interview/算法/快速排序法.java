@@ -10,8 +10,6 @@ public class 快速排序法 {
 		System.out.println(Arrays.toString(arr));
 		
 	}
-	
-	
 	private static int partition(int []arr, int left, int right) {
 		// 选择一个基准数，从左边开始
 		int temp = arr[left];

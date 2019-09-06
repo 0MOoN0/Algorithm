@@ -1,4 +1,4 @@
-package com.basic.并发.同步器;
+package com.basic.并发.同步器._countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 

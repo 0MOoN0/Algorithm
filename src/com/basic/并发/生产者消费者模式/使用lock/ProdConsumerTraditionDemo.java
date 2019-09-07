@@ -1,4 +1,4 @@
-package com.basic.并发.生产者消费者模式;
+package com.basic.并发.生产者消费者模式.使用lock;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;

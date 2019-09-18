@@ -47,7 +47,7 @@ public class ¿ìËÙÅÅĞò·¨ {
 		}
 		int middle = partition(arr, left, right);
 		sort(arr,left,middle);
-		sort(arr,middle+1,arr.length-1);		
+		sort(arr,middle+1,right);		
 	}
 	
 

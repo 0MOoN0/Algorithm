@@ -1,9 +1,7 @@
 package com.interview.leetcode.九八_验证二叉搜索树;
-
-import java.util.Stack;
-
 /**
- * AC-4ms-递归中序遍历，获取序列后再进行判断
+ * 非递归遍历
+ * 
  * Definition for a binary tree node.
  * public class TreeNode {
  *     int val;
@@ -12,10 +10,11 @@ import java.util.Stack;
  *     TreeNode(int x) { val = x; }
  * }
  */
-class Solution {
+import java.util.*;
+class Solution2 {
 
     Stack<TreeNode> stack = new Stack<TreeNode>();
-    int preNum = Integer.MIN_VALUE;
+    double preNum = -Double.MAX_VALUE;
 
     public boolean isValidBST(TreeNode root) {
         while(!stack.isEmpty() || root!=null){

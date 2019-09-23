@@ -37,6 +37,7 @@ public class Father{
 		System.out.print("(4)");
 		return 1;
 	}
+	// 静态方法不会被重写
 	public static int method(){
 		System.out.print("(5)");
 		return 1;

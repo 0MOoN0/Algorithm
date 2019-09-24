@@ -1,19 +1,22 @@
 package com.test.two;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
+import java.util.Scanner;
 
 public class Main {
 	
-	public static void main(String[] args) {
-		Integer i = new Integer(200);
-		Integer k = new Integer(200);
-		int j = 200;
-		System.out.println(i==j);
-		System.out.println(i.equals(j));
-		System.out.println(k==i);
-		System.out.println(i.equals(k));
-	}
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String target = in.nextLine();
+        String[] split = target.split(" ");
+        StringBuffer sb = new StringBuffer();
+        for(int i=split.length-1; i>0; i--) {
+        	if(i!=0) {
+        		sb.append(split[i]+" ");
+        	}else {
+        		sb.append(split[i]);
+        	}
+        }
+        System.out.println(sb.toString());
+    }
 
 }

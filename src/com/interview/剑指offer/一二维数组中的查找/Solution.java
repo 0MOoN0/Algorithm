@@ -1,4 +1,4 @@
-package com.interview.剑指offer.一_二维数组中的查找;
+package com.interview.剑指offer.一二维数组中的查找;
 
 import java.util.Arrays;
 /**

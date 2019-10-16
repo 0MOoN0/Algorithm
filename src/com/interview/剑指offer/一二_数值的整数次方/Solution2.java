@@ -1,4 +1,4 @@
-package com.interview.剑指offer.十二_数值的整数次方;
+package com.interview.剑指offer.一二_数值的整数次方;
 
 public class Solution2 {
 	public double Power(double base, int exponent) {

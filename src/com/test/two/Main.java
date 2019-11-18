@@ -1,14 +1,13 @@
 package com.test.two;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.PriorityQueue;
 
 public class Main {
 
     public static void main(String[] args) {
-    	String.valueOf(new char[] {'1'});
+    	Deque<Integer> queue = new LinkedList();
     }
 
 }

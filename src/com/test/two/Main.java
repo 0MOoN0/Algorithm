@@ -1,12 +1,12 @@
 package com.test.two;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-    	ArrayList<Integer> list = new ArrayList<Integer>();
+    	String[] strs = " ".split(" ");
+    	System.out.println(Arrays.toString(strs));
+    	System.out.println(strs.length);
     }
-    
-
 }

@@ -42,16 +42,20 @@ public class Array_To_Stack {
 	
 	public void push(int num) {
 		if(index == arr.length) {
-			throw new RuntimeException("Õ»ÒÑÂú");
+			throw new RuntimeException("ÈÝÆ÷ÒÑÂú");
 		}
 		arr[index++] = num;
 	}
 	
 	public Integer pop() {
 		if(index==0) {
-			throw new RuntimeException("Õ»ÒÑ¿Õ");
+			throw new RuntimeException("ÈÝÆ÷ÒÑ¿Õ");
 		}
 		return arr[--index];
+	}
+	
+	public boolean isEmpty() {
+		return index == 0;
 	}
 	
 }

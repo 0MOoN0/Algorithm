@@ -1,4 +1,4 @@
-package com.interview.算法.四_归并排序;
+package com.interview.算法.归并排序;
 
 public class Solution {
 	

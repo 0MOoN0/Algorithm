@@ -3,6 +3,16 @@ package com.interview.算法.三.Q9_FindNumInSortedMatrix;
 /**
  * 在行列都排好序的矩阵中找数
  * 【要求】 时间复杂度为O(N+M)，额外空间复杂度为O(1)。
+ * input: 		  int[][] matrix = { 
+				  { 0, 1, 2, 5 }, 
+				  { 2, 3, 4, 7 }, 
+				  { 4, 4, 4, 8 }, 
+				  { 5, 7, 7, 9 } 
+				  };
+  System.out.println(findNum(matrix, 9));	// true
+  System.out.println(findNum(matrix, 0));	// true
+  System.out.println(findNum(matrix, 3));	// true
+  System.out.println(findNum(matrix, 10));	// false
  * @author Peter
  *
  */

@@ -1,9 +1,8 @@
 package com.interview.算法.三.Q7_ReverseList;
 
-import com.interview.算法.三.Q10_PrintCommonPart.PrintCommonPart.Node;
-
 /**
  * 反转链表
+ *
  * @author Peter
  *
  */
@@ -17,6 +16,8 @@ public class ReverseList {
 			this.value = data;
 		}
 	}	
+	
+	// TODO: 反转双链表
 	
 	// 反转单链表
 	public static Node reverseList(Node p) {

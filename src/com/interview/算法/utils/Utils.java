@@ -3,6 +3,8 @@ package com.interview.算法.utils;
 import java.util.Arrays;
 import java.util.Random;
 
+import com.interview.算法.common.Node;
+
 public class Utils {
 	
 	/**
@@ -59,5 +61,18 @@ public class Utils {
 		}
 		return false;
 	}
+	
+	/**
+	 * 打印链表
+	 * @param p
+	 */
+	public static void printLinkedList(Node p) {
+		while(p != null) {
+			System.out.print(p.value + " ");
+			p = p.next;
+		}
+		System.out.println();
+	}
+	
 	
 }

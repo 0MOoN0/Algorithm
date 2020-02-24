@@ -1,4 +1,5 @@
 package com.interview.Ëã·¨.common;
+
 public class Node {
 	public int value;
 	public Node next;
@@ -6,4 +7,10 @@ public class Node {
 	public Node(int data) {
 		this.value = data;
 	}
+
+	@Override
+	public String toString() {
+		return "Node [value=" + value + "]";
+	}
+
 }

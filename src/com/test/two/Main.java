@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-//		int[][] matrix = { { 1, 2, 3, 4 }};
-		int[][] matrix = { { 1},{2},{3},{4}};
-		Solution s = new Solution();
-		ArrayList<Integer> printMatrix = s.printMatrix(matrix);
-		System.out.println(printMatrix);
+    	
+    	Integer a = new Integer(2);
+    	Integer b = new Integer(2);
+    	System.out.println(a==b);
+    	
     }
 }

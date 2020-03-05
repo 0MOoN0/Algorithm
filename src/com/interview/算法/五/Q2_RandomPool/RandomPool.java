@@ -11,6 +11,7 @@ import java.util.Map;
 	等概率随机返回结构中的任何一个key。
 	【要求】 Insert、delete和getRandom方法的时间复杂度都是
 	O(1)
+	思路，使用两个HashMap。map1:对象-位置，map2:位置-对象，删除时，在map2中将最后一个entry填到被删除的空位中
  * @author Peter
  *
  */

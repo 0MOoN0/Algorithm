@@ -1,4 +1,4 @@
-package com.interview.Ëã·¨.Áù;
+package com.interview.Ëã·¨.Áù.Q1_BFS;
 
 import java.util.HashSet;
 import java.util.LinkedList;

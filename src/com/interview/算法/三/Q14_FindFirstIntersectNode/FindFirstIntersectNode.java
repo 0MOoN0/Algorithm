@@ -135,6 +135,33 @@ public class FindFirstIntersectNode {
 		return cur1;
 	}
 	
+    public static Node FindFirstCommonNode2(Node pHead1, Node pHead2) {
+    	Node l1 = pHead1, l2 = pHead2;
+        boolean flag1 = false, flag2 = false;
+        while (l1 != l2) {
+            if (l1 == null) {
+                if (flag1)
+                    return null;
+                flag1 = true;
+                l1 = pHead2;
+            }else
+                l1 = l1.next;
+
+            if (l2 == null){
+                if (flag2)
+                    return null;
+                flag2 = true;
+                l2 = pHead1;
+            }else
+                l2 = l2.next;
+
+
+//            l1 = (l1 == null) ? pHead2 : l1.next;
+//            l2 = (l2 == null) ? pHead1 : l2.next;
+        }
+        return l1;
+    }
+	
 	
 	public static void main(String[] args) {
 		// 1->2->3->4->5->6->7->4...
@@ -166,6 +193,7 @@ public class FindFirstIntersectNode {
 		head4.next.next = head3.next.next;
 		head4.next.next.next = head3.next.next.next;	// 10->9(非同地址)->8->6->null
 //		Optional.ofNullable(findFirstIntersectNode(head3, head4)).ifPresent(h -> System.out.println(h.value));
+//		Optional.ofNullable(FindFirstCommonNode2(head3, head4)).ifPresent(h->System.out.println(h));
 		
 		//=========无环链表不相交测试=========
 		Node head5 = new Node(0);
@@ -191,7 +219,7 @@ public class FindFirstIntersectNode {
 		head8.next.next.next = new Node(16);	// 10->19->18->16->19
 		head8.next.next.next.next = head8.next;
 		Node result2 = findFirstIntersectNode(head7, head8);
-//		System.out.println(result2);
+		System.out.println(result2);
 		
 		
 		// 有环相交，且交点相同
@@ -226,7 +254,7 @@ public class FindFirstIntersectNode {
 		Node head12 = new Node(18);
 		head12.next = new Node(19);
 		head12.next.next = head11.next.next.next.next;
-		System.out.println(findFirstIntersectNode(head12,head11));
+//		System.out.println(findFirstIntersectNode(head12,head11));
 		
 	}
 

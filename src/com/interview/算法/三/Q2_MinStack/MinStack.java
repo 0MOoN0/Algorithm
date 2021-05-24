@@ -37,7 +37,7 @@ public class MinStack {
 
 	public void push(int num) {
 		stack.push(num);
-		if(minStack.peek()==null) {
+		if(minStack.isEmpty()) {
 			minStack.push(num);
 		}else if(minStack.peek()>num) {
 			minStack.push(num);

@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.ÎåÁù_É¾³ıÁ´±íÖĞÖØ¸´µÄ½Úµã;
+package com.interview.å‰‘æŒ‡offer.äº”å…­_åˆ é™¤é“¾è¡¨ä¸­é‡å¤çš„èŠ‚ç‚¹;
 /*
  public class ListNode {
     int val;
@@ -12,23 +12,23 @@ package com.interview.½£Ö¸offer.ÎåÁù_É¾³ıÁ´±íÖĞÖØ¸´µÄ½Úµã;
 public class Solution {
     public ListNode deleteDuplication(ListNode pHead)
     {
-        // ¹¹½¨Ò»¸öÍ·½Úµã
+        // æ„å»ºä¸€ä¸ªå¤´èŠ‚ç‚¹
         ListNode newHead = new ListNode(-1);
         newHead.next = pHead;
-        // ¹¹½¨Ò»¸ö¸¸½Úµã£¬Ö¸ÏòÍ·½Úµã
+        // æ„å»ºä¸€ä¸ªçˆ¶èŠ‚ç‚¹ï¼ŒæŒ‡å‘å¤´èŠ‚ç‚¹
         ListNode parent = newHead;
-        // ¹¹½¨Ò»¸ö×Ó½Úµã
+        // æ„å»ºä¸€ä¸ªå­èŠ‚ç‚¹
         ListNode child = parent.next;
-        // ×Ó½ÚµãÊÇ·ñÖØ¸´µÄ±êÖ¾Î»
+        // å­èŠ‚ç‚¹æ˜¯å¦é‡å¤çš„æ ‡å¿—ä½
         boolean isReapet = false;
-        // ±éÀúÁ´±í
+        // éå†é“¾è¡¨
         while(child!=null){
             ListNode temp = child.next;
-            // ÕÒµ½Óë×Ó½Úµã²»ÏàµÈµÄµÚÒ»¸ö½Úµã
+            // æ‰¾åˆ°ä¸å­èŠ‚ç‚¹ä¸ç›¸ç­‰çš„ç¬¬ä¸€ä¸ªèŠ‚ç‚¹
             while(temp!=null && temp.val == child.val){
                 temp = temp.next;
             }
-            // Èç¹ûÏÂÒ»¸ö½ÚµãÓë×Ó½ÚµãÖØ¸´£¬ÔòÉ¾³ıËùÓĞÏà¹Ø½Úµã
+            // å¦‚æœä¸‹ä¸€ä¸ªèŠ‚ç‚¹ä¸å­èŠ‚ç‚¹é‡å¤ï¼Œåˆ™åˆ é™¤æ‰€æœ‰ç›¸å…³èŠ‚ç‚¹
             if(temp!=child.next){
                 parent.next = temp;
                 child = parent.next;

@@ -1,10 +1,10 @@
-package com.basic.²¢·¢.Í¬²½Æ÷._semaphore;
+package com.basic.å¹¶å‘.åŒæ­¥å™¨._semaphore;
 
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Áù²¿³µÇÀÈı¸ö³µÎ»
+ * å…­éƒ¨è½¦æŠ¢ä¸‰ä¸ªè½¦ä½
  * @author Peter
  *
  */
@@ -17,9 +17,9 @@ public class SemaphoreDemo {
 			new Thread(()->{
 				try {
 					semaphore.acquire();
-					System.out.println(Thread.currentThread().getName()+"\tÇÀµ½Ò»¸ö³µÎ»");
+					System.out.println(Thread.currentThread().getName()+"\tæŠ¢åˆ°ä¸€ä¸ªè½¦ä½");
 					try {
-						// ÇÀµ½³µÎ»£¬²¢Õ¼ÓÃ3Ãë
+						// æŠ¢åˆ°è½¦ä½ï¼Œå¹¶å ç”¨3ç§’
 						TimeUnit.SECONDS.sleep(3);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
@@ -29,8 +29,8 @@ public class SemaphoreDemo {
 					
 				}
 				finally {
-					// ÊÍ·Å×ÊÔ´
-					System.out.println(Thread.currentThread().getName()+"\tÀë¿ª³µÎ»");
+					// é‡Šæ”¾èµ„æº
+					System.out.println(Thread.currentThread().getName()+"\tç¦»å¼€è½¦ä½");
 					semaphore.release();
 				}
 			}

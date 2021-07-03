@@ -1,7 +1,7 @@
 package com.object;
 
 /**
- * ·½·¨²âÊÔ
+ * æ–¹æ³•æµ‹è¯•
  * @author Peter
  *
  */
@@ -9,7 +9,7 @@ public class MethodTest {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
 		
-		// ¶ÔÏóÇ³¿ËÂ¡
+		// å¯¹è±¡æµ…å…‹éš†
 		int x[] = new int [10];
 		System.out.println(x.clone().equals(x));
 

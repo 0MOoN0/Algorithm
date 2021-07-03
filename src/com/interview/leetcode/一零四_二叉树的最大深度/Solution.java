@@ -1,4 +1,4 @@
-package com.interview.leetcode.Ò»ÁãËÄ_¶ş²æÊ÷µÄ×î´óÉî¶È;
+package com.interview.leetcode.ä¸€é›¶å››_äºŒå‰æ ‘çš„æœ€å¤§æ·±åº¦;
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -7,9 +7,9 @@ package com.interview.leetcode.Ò»ÁãËÄ_¶ş²æÊ÷µÄ×î´óÉî¶È;
  *     TreeNode right;
  *     TreeNode(int x) { val = x; }
  * }
- * ÖĞĞÄË¼Ïë£º
- * Ñ¡Ôñ×óÓÒ×ÓÊ÷µÄ×î´óÉî¶È
- * Ê¹ÓÃµİ¹éµÄ·½Ê½¶Ô×óÓÒ×ÓÊ÷½øĞĞ±éÀú£¬ÓĞÖÖÀàËÆ¶¯Ì¬¹æ»®µÄÏë·¨£¬¼´Ã¿Ò»´Î·µ»Ø¶¼ÊÇµ±Ç°½ÚµãËùÄÜµ½´ïµÄ×î´óÉî¶È
+ * ä¸­å¿ƒæ€æƒ³ï¼š
+ * é€‰æ‹©å·¦å³å­æ ‘çš„æœ€å¤§æ·±åº¦
+ * ä½¿ç”¨é€’å½’çš„æ–¹å¼å¯¹å·¦å³å­æ ‘è¿›è¡Œéå†ï¼Œæœ‰ç§ç±»ä¼¼åŠ¨æ€è§„åˆ’çš„æƒ³æ³•ï¼Œå³æ¯ä¸€æ¬¡è¿”å›éƒ½æ˜¯å½“å‰èŠ‚ç‚¹æ‰€èƒ½åˆ°è¾¾çš„æœ€å¤§æ·±åº¦
  * 
  */
 class Solution {
@@ -18,11 +18,11 @@ class Solution {
     	if(root==null) {
     		return 0;
     	}
-    	// ×ó×ÓÊ÷µÄÉî¶È
+    	// å·¦å­æ ‘çš„æ·±åº¦
     	int leftDepth = maxDepth(root.left);
-    	// ÓÒ×ÓÊ÷µÄÉî¶È
+    	// å³å­æ ‘çš„æ·±åº¦
     	int rightDepth = maxDepth(root.right);
-    	// ±È½Ï×óÓÒ×ÓÊ÷µÄÉî¶È£¬Ñ¡Ôñ×î´óµÄÄÇ¸ö
+    	// æ¯”è¾ƒå·¦å³å­æ ‘çš„æ·±åº¦ï¼Œé€‰æ‹©æœ€å¤§çš„é‚£ä¸ª
     	return Math.max(leftDepth, rightDepth)+1;
     }
     

@@ -1,9 +1,9 @@
-package com.interview.Ëã·¨.Èı.Q2_stack_queue;
+package com.interview.ç®—æ³•.ä¸‰.Q2_stack_queue;
 
 /**
- * ÓÃÊı×éÊµÏÖÒ»¸ö¹Ì¶¨³¤¶ÈµÄÕ»
- * ¹æ¶¨£ºindex³õÊ¼Îª0£¬Ö¸ÏòÏÂÒ»¸öÈëÕ»µÄ¿Õ¼ä£»
- * ¼ÙÈçÕ»µÄ´óĞ¡Îª2£¬ÔòÕ»ÂúÊ±indexÎª2£¬Õ»¿ÕÊ±indexÎª0£¬Òò´ËÈëÕ»ĞèÒªÏÈÈëÕ»,index++;³öÕ»ĞèÒª£¬--index£¬ÔÙ³öÕ»
+ * ç”¨æ•°ç»„å®ç°ä¸€ä¸ªå›ºå®šé•¿åº¦çš„æ ˆ
+ * è§„å®šï¼šindexåˆå§‹ä¸º0ï¼ŒæŒ‡å‘ä¸‹ä¸€ä¸ªå…¥æ ˆçš„ç©ºé—´ï¼›
+ * å‡å¦‚æ ˆçš„å¤§å°ä¸º2ï¼Œåˆ™æ ˆæ»¡æ—¶indexä¸º2ï¼Œæ ˆç©ºæ—¶indexä¸º0ï¼Œå› æ­¤å…¥æ ˆéœ€è¦å…ˆå…¥æ ˆ,index++;å‡ºæ ˆéœ€è¦ï¼Œ--indexï¼Œå†å‡ºæ ˆ
  * @author Peter
  *
  */
@@ -42,14 +42,14 @@ public class Array_To_Stack {
 	
 	public void push(int num) {
 		if(index == arr.length) {
-			throw new RuntimeException("ÈİÆ÷ÒÑÂú");
+			throw new RuntimeException("å®¹å™¨å·²æ»¡");
 		}
 		arr[index++] = num;
 	}
 	
 	public Integer pop() {
 		if(index==0) {
-			throw new RuntimeException("ÈİÆ÷ÒÑ¿Õ");
+			throw new RuntimeException("å®¹å™¨å·²ç©º");
 		}
 		return arr[--index];
 	}

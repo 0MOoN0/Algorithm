@@ -1,18 +1,18 @@
-package com.interview.½£Ö¸offer.Èı¾Å_Æ½ºâ¶ş²æÊ÷;
+package com.interview.å‰‘æŒ‡offer.ä¸‰ä¹_å¹³è¡¡äºŒå‰æ ‘;
 
-// 1. ´Ó×óÓÒ×ÓÊ÷×î½Ó½üÒ¶×Ó½áµãµÄ²¿·Ö¿ªÊ¼ÅĞ¶Ï£¬Èç¹û×óÓÒ×ÓÊ÷ÈÎºÎÒ»¸ö²¿·Ö²»Æ½ºâ£¬Ôò¸ÃÊ÷²»ÎªÆ½ºâ¶ş²æÊ÷
+// 1. ä»å·¦å³å­æ ‘æœ€æ¥è¿‘å¶å­ç»“ç‚¹çš„éƒ¨åˆ†å¼€å§‹åˆ¤æ–­ï¼Œå¦‚æœå·¦å³å­æ ‘ä»»ä½•ä¸€ä¸ªéƒ¨åˆ†ä¸å¹³è¡¡ï¼Œåˆ™è¯¥æ ‘ä¸ä¸ºå¹³è¡¡äºŒå‰æ ‘
 public class Solution {
 	public boolean IsBalanced_Solution(TreeNode root) {
 		if (root == null)
 			return true;
-		// ×ó×ÓÊ÷Éî¶È
+		// å·¦å­æ ‘æ·±åº¦
 		int left = treeDepth(root.left);
 		int right = treeDepth(root.right);
 		int depth = left - right;
 		if (depth < -1 || depth > 1) {
 			return false;
 		}
-		// ÅĞ¶Ï×óÓÒ×ÓÊ÷ÊÇ·ñÆ½ºâ
+		// åˆ¤æ–­å·¦å³å­æ ‘æ˜¯å¦å¹³è¡¡
 		return IsBalanced_Solution(root.left) && IsBalanced_Solution(root.right);
 	}
 

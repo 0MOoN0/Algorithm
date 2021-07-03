@@ -1,8 +1,8 @@
-package com.interview.½£Ö¸offer.Áù_Ğı×ªÊı×éµÄ×îĞ¡Êı×Ö.¶ş·Ö²éÕÒ;
+package com.interview.å‰‘æŒ‡offer.å…­_æ—‹è½¬æ•°ç»„çš„æœ€å°æ•°å­—.äºŒåˆ†æŸ¥æ‰¾;
 
 /**
- * Á´½Ó£ºhttps://www.nowcoder.com/questionTerminal/9f3231a991af4f55b95579b44b7a01ba
-       À´Ô´£ºÅ£¿ÍÍø
+ * é“¾æ¥ï¼šhttps://www.nowcoder.com/questionTerminal/9f3231a991af4f55b95579b44b7a01ba
+       æ¥æºï¼šç‰›å®¢ç½‘
  * @author Peter
  *
  */
@@ -16,7 +16,7 @@ public class Solution {
 			if (array[mid] > array[high]) {
 				low = mid + 1;
 			} else if (array[mid] == array[high]) {
-				// Èç¹û³öÏÖÊı×ÖÏàµÈ£¬·¶Î§Ëõ½ô
+				// å¦‚æœå‡ºç°æ•°å­—ç›¸ç­‰ï¼ŒèŒƒå›´ç¼©ç´§
 				high = high - 1;
 			} else {
 				high = mid;

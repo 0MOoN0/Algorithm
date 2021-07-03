@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.¶þ¶þ_´ÓÉÏÍùÏÂ´òÓ¡¶þ²æÊ÷;
+package com.interview.å‰‘æŒ‡offer.äºŒäºŒ_ä»Žä¸Šå¾€ä¸‹æ‰“å°äºŒå‰æ ‘;
 
 import java.util.*;
 
@@ -10,11 +10,11 @@ public class Solution {
 		if (root == null)
 			return result;
 		s.offer(root);
-		// ±éÀúµ±Ç°²ãÊýµÄ½Úµã
+		// éåŽ†å½“å‰å±‚æ•°çš„èŠ‚ç‚¹
 		while (s.size() > 0) {
 			int size = s.size();
 			for (int i = 0; i < size; i++) {
-				// ³ö¶Ó
+				// å‡ºé˜Ÿ
 				TreeNode tn = s.poll();
 				result.add(tn.val);
 				if (tn.left != null)

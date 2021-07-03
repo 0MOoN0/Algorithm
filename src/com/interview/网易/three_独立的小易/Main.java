@@ -1,4 +1,4 @@
-package com.interview.ÍøÒ×.three_¶ÀÁ¢µÄĞ¡Ò×;
+package com.interview.ç½‘æ˜“.three_ç‹¬ç«‹çš„å°æ˜“;
 
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -1,19 +1,19 @@
-package com.interview.Ëã·¨.Èı.Q5_PrintMatrixSpiralOrder;
+package com.interview.ç®—æ³•.ä¸‰.Q5_PrintMatrixSpiralOrder;
 
 /**
- * Ë³Ê±Õë´òÓ¡¾ØÕó£º
- * Ë¼Â·£º´ÓÍâµ½ÄÚ´òÓ¡£¬´òÓ¡Ò»È¦µÄÂß¼­À©É¢µ½´òÓ¡Õû¸ö¾ØÕó£¬Ö»ĞèÒªÖªµÀ×óÉÏ½ÇºÍÓÒÏÂ½Ç¼´¿ÉÍÆ³ö´òÓ¡µÄ±ß½ç
- * ÌØÊâÇé¿ö´¦Àí£ºÖ»ÓĞÒ»ĞĞ / Ö»ÓĞÒ»ÁĞ
+ * é¡ºæ—¶é’ˆæ‰“å°çŸ©é˜µï¼š
+ * æ€è·¯ï¼šä»å¤–åˆ°å†…æ‰“å°ï¼Œæ‰“å°ä¸€åœˆçš„é€»è¾‘æ‰©æ•£åˆ°æ‰“å°æ•´ä¸ªçŸ©é˜µï¼Œåªéœ€è¦çŸ¥é“å·¦ä¸Šè§’å’Œå³ä¸‹è§’å³å¯æ¨å‡ºæ‰“å°çš„è¾¹ç•Œ
+ * ç‰¹æ®Šæƒ…å†µå¤„ç†ï¼šåªæœ‰ä¸€è¡Œ / åªæœ‰ä¸€åˆ—
  * @author Peter
  *
  */
 public class PrintMatrixSpiralOrder {
 
 	public static void SpiralOrder(int[][] matrix) {
-		// ×óÉÏ½Ç
-		int a = 0; // ĞĞ
-		int b = 0; // ÁĞ
-		// ÓÒÏÂ½Ç
+		// å·¦ä¸Šè§’
+		int a = 0; // è¡Œ
+		int b = 0; // åˆ—
+		// å³ä¸‹è§’
 		int d = matrix.length - 1;
 		int c = matrix[0].length - 1;
 		int curR = a;
@@ -28,19 +28,19 @@ public class PrintMatrixSpiralOrder {
 			}
 		} else {
 			while (curR < d && curC < c) {
-				// ÍùÓÒ
+				// å¾€å³
 				while (curC < d) {
 					System.out.print(matrix[curR][curC++] + " ");
 				}
-				// ÍùÏÂ
+				// å¾€ä¸‹
 				while (curR < c) {
 					System.out.print(matrix[curR++][curC] + " ");
 				}
-				// Íù×ó
+				// å¾€å·¦
 				while (curC > a) {
 					System.out.print(matrix[curR][curC--] + " ");
 				}
-				// ÍùÉÏ
+				// å¾€ä¸Š
 				while (curR > b) {
 					System.out.print(matrix[curR--][curC] + " ");
 				}

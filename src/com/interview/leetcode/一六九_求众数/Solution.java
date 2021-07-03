@@ -1,6 +1,6 @@
-package com.interview.leetcode.Ò»Áù¾Å_ÇóÖÚÊı;
+package com.interview.leetcode.ä¸€å…­ä¹_æ±‚ä¼—æ•°;
 
-// ±©Á¦µü´ú£¬Ê¹ÓÃË«ÖØÑ­»·
+// æš´åŠ›è¿­ä»£ï¼Œä½¿ç”¨åŒé‡å¾ªç¯
 class Solution {
 	public int majorityElement(int[] nums) {
 		int[] result = new int[2];

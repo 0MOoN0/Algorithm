@@ -1,4 +1,4 @@
-package com.interview.百田.一;
+package com.interview.鐧剧敯.涓�;
 
 public class Main {
 
@@ -6,7 +6,7 @@ public class Main {
 		System.out.println(findStr("google".toCharArray()));
 	}
 	
-	// 假设字符数组只有a-z
+	// 鍋囪瀛楃鏁扮粍鍙湁a-z
 	public static char findStr(char[] cs) {
 		char [] record = new char[26];
 		for(int i=0; i<cs.length; i++) {

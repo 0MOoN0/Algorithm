@@ -1,13 +1,13 @@
-package com.interview.½£Ö¸offer.°Ë_ÌøÌ¨½×;
+package com.interview.å‰‘æŒ‡offer.å…«_è·³å°é˜¶;
 
 /**
- * Ò»Î¬DP
+ * ä¸€ç»´DP
  * @author Peter
  *
  */
 public class Solution {
 	public int JumpFloor(int target) {
-		// ÅĞ¶ÏÌØÊâÇé¿ö
+		// åˆ¤æ–­ç‰¹æ®Šæƒ…å†µ
 		int dp[] = new int[target + 2];
 		dp[0] = 1;
 		dp[1] = 2;

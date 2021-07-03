@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.ËÄ_ÖØ½¨¶ş²æÊ÷;
+package com.interview.å‰‘æŒ‡offer.å››_é‡å»ºäºŒå‰æ ‘;
 
 import java.util.Arrays;
 
@@ -18,7 +18,7 @@ public class Solution {
     }
     
     private TreeNode BinaryTree(int[] pre, int startPre, int endPre, int [] in, int startIn, int endIn) {
-    	// ±ß½çÅĞ¶¨
+    	// è¾¹ç•Œåˆ¤å®š
     	if(endPre>startPre || endIn>startIn) {
     		return null;
     	}

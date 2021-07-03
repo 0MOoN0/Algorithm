@@ -1,8 +1,8 @@
-package com.interview.½£Ö¸offer.Ò»¶şÎ¬Êı×éÖĞµÄ²éÕÒ;
+package com.interview.å‰‘æŒ‡offer.ä¸€äºŒç»´æ•°ç»„ä¸­çš„æŸ¥æ‰¾;
 
 import java.util.Arrays;
 /**
- * Ê¹ÓÃ¶ş·Ö²éÕÒ¶ÔÃ¿Ò»ĞĞ½øĞĞ²éÕÒ
+ * ä½¿ç”¨äºŒåˆ†æŸ¥æ‰¾å¯¹æ¯ä¸€è¡Œè¿›è¡ŒæŸ¥æ‰¾
  * @author Peter
  *
  */

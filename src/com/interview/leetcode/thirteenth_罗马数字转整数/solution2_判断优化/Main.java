@@ -1,4 +1,4 @@
-package com.interview.leetcode.thirteenth_ÂŞÂíÊı×Ö×ªÕûÊı.solution2_ÅĞ¶ÏÓÅ»¯;
+package com.interview.leetcode.thirteenth_ç½—é©¬æ•°å­—è½¬æ•´æ•°.solution2_åˆ¤æ–­ä¼˜åŒ–;
 
 public class Main {
 

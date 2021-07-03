@@ -1,4 +1,4 @@
-package com.interview.×Ö½ÚÌø¶¯.one_×î´óÓ³Éä;
+package com.interview.å­—èŠ‚è·³åŠ¨.one_æœ€å¤§æ˜ å°„;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class Main {
 		for(int i=0;i<arr.size(); i++) {
 			line = reader.readLine().toCharArray();
 			arr.add(line);
-			// ¼ÆËãÈ¨Öµ
+			// è®¡ç®—æƒå€¼
 			for(int j=0; j<line.length; j++) {
 				if(map.containsKey(line[i])) {
 					map.put(line[j], map.get(line[j]) + j+1);

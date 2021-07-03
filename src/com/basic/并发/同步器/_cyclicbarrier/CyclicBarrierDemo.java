@@ -1,4 +1,4 @@
-package com.basic.²¢·¢.Í¬²½Æ÷._cyclicbarrier;
+package com.basic.å¹¶å‘.åŒæ­¥å™¨._cyclicbarrier;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
@@ -6,13 +6,13 @@ import java.util.concurrent.CyclicBarrier;
 public class CyclicBarrierDemo {
     public static void main(String[] args) {
         CyclicBarrier cyclicBarrier=new CyclicBarrier(7,()->{
-            System.out.println("ÕÙ»½ÉñÁú");
+            System.out.println("å¬å”¤ç¥é¾™");
         });
 
         for (int i = 1; i <=7; i++) {
             final int temp = i;
             new Thread(()->{
-             System.out.println(Thread.currentThread().getName()+"\t ÊÕ¼¯µ½µÚ"+ temp +"¿ÅÁúÖé");
+             System.out.println(Thread.currentThread().getName()+"\t æ”¶é›†åˆ°ç¬¬"+ temp +"é¢—é¾™ç ");
                 try {
                     cyclicBarrier.await();
                 } catch (InterruptedException e) {

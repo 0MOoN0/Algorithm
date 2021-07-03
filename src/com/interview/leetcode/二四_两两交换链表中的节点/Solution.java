@@ -1,8 +1,8 @@
-package com.interview.leetcode.¶şËÄ_Á½Á½½»»»Á´±íÖĞµÄ½Úµã;
+package com.interview.leetcode.äºŒå››_ä¸¤ä¸¤äº¤æ¢é“¾è¡¨ä¸­çš„èŠ‚ç‚¹;
 
 /**
- * ±ß½çÇé¿ö£ºhead¿ÉÄÜÎªnull£¬Á´±í³¤¶È¿ÉÄÜÎªµ¥Êı¡¢Ë«Êı
- * µ±ÔªËØÖ»Ê£ÏÂÒ»¸öµÄÊ±ºò£¬²»ÔÙ½øĞĞ½»»»¶¯×÷
+ * è¾¹ç•Œæƒ…å†µï¼šheadå¯èƒ½ä¸ºnullï¼Œé“¾è¡¨é•¿åº¦å¯èƒ½ä¸ºå•æ•°ã€åŒæ•°
+ * å½“å…ƒç´ åªå‰©ä¸‹ä¸€ä¸ªçš„æ—¶å€™ï¼Œä¸å†è¿›è¡Œäº¤æ¢åŠ¨ä½œ
  * Definition for singly-linked list.
  * public class ListNode {
  *     int val;
@@ -12,23 +12,23 @@ package com.interview.leetcode.¶şËÄ_Á½Á½½»»»Á´±íÖĞµÄ½Úµã;
  */
 class Solution {
     public ListNode swapPairs(ListNode head) {
-        // ¹¹½¨Ò»¸öÍ·½Úµã
+        // æ„å»ºä¸€ä¸ªå¤´èŠ‚ç‚¹
         ListNode newHead = new ListNode(0);
-        // Ö¸Ïòµ±Ç°¸ø¶¨µÄÍ·½Úµã
+        // æŒ‡å‘å½“å‰ç»™å®šçš„å¤´èŠ‚ç‚¹
         newHead.next = head;
-        // ¹¹½¨Ò»¸öÓÎ±ê£¬Ö¸ÏòÍ·½Úµã
+        // æ„å»ºä¸€ä¸ªæ¸¸æ ‡ï¼ŒæŒ‡å‘å¤´èŠ‚ç‚¹
         ListNode temp = newHead;
-        // Èç¹ûÍ·½ÚµãÖ¸ÏòµÄÏÂÒ»¸öÔªËØºÍÏÂÏÂ¸öÔªËØ²»Îª¿Õ£¬Ôò½øĞĞ½»»»
+        // å¦‚æœå¤´èŠ‚ç‚¹æŒ‡å‘çš„ä¸‹ä¸€ä¸ªå…ƒç´ å’Œä¸‹ä¸‹ä¸ªå…ƒç´ ä¸ä¸ºç©ºï¼Œåˆ™è¿›è¡Œäº¤æ¢
         while(temp.next!=null && temp.next.next!=null){
-            // ¹¹½¨Ò»¸öÓÎ±ê£¬Ö¸ÏòÍ·½ÚµãµÄÏÂÒ»¸öÔªËØ
+            // æ„å»ºä¸€ä¸ªæ¸¸æ ‡ï¼ŒæŒ‡å‘å¤´èŠ‚ç‚¹çš„ä¸‹ä¸€ä¸ªå…ƒç´ 
             ListNode cur = temp.next;
-            // ¹¹½¨Ò»¸öÓÎ±ê£¬Ö¸ÏòÍ·½ÚµãµÄÏÂÁ½¸öÔªËØ
+            // æ„å»ºä¸€ä¸ªæ¸¸æ ‡ï¼ŒæŒ‡å‘å¤´èŠ‚ç‚¹çš„ä¸‹ä¸¤ä¸ªå…ƒç´ 
             ListNode next = cur.next;
             // swap
             cur.next = next.next;
             next.next = cur;
             temp.next = next;
-            // ÒÆ¶¯ÓÎ±ê
+            // ç§»åŠ¨æ¸¸æ ‡
             temp = temp.next.next;
         }
         return newHead.next;

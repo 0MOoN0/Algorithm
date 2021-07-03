@@ -1,12 +1,12 @@
-package com.interview.Ëã·¨.¹é²¢ÅÅĞò;
+package com.interview.ç®—æ³•.å½’å¹¶æ’åº;
 
 public class Solution {
 	
-	// ºÏ²¢Êı×é
+	// åˆå¹¶æ•°ç»„
 	public static void merge(int[] arr, int L, int R, int middle) {
-		// ×óÓÒÁ½±ßÖ¸Õë
+		// å·¦å³ä¸¤è¾¹æŒ‡é’ˆ
 		int p1 = L; int p2 = middle+1; int k = L;
-		// ÁÙÊ±Êı×é
+		// ä¸´æ—¶æ•°ç»„
 		int [] temp = new int[arr.length];
 		
 		while(p1<=middle && p2<=R) {
@@ -24,15 +24,15 @@ public class Solution {
 		}
 	}
 	
-	// ÅÅĞò
+	// æ’åº
 	public static void sort(int[] arr, int L, int R) {
 		if(L < R) {
 			int middle = L+((R-L)>>1);
-			// ×ó±ßÅÅĞò
+			// å·¦è¾¹æ’åº
 			sort(arr, L, middle);
-			// ÓÒ±ßÅÅĞò
+			// å³è¾¹æ’åº
 			sort(arr, middle+1, R);
-			// ºÏ²¢×óÓÒÁ½±ßÅÅĞò
+			// åˆå¹¶å·¦å³ä¸¤è¾¹æ’åº
 			merge(arr, L, R, middle);
 		}
 		

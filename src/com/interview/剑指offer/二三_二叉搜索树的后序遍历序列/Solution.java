@@ -1,7 +1,7 @@
-package com.interview.½£Ö¸offer.¶þÈý_¶þ²æËÑË÷Ê÷µÄºóÐò±éÀúÐòÁÐ;
+package com.interview.å‰‘æŒ‡offer.äºŒä¸‰_äºŒå‰æœç´¢æ ‘çš„åŽåºéåŽ†åºåˆ—;
 
-// 1. ºóÐò±éÀúÖÐ£¬ÐòÁÐÄ©Î²Îª²éÕÒÊ÷µÄ¸ù
-// 2. ¸ùµÄ×ó×ÓÊ÷ËùÓÐµÄÔªËØ¶¼Ð¡ÓÚ¸ù£¬¸ùµÄÓÒ×ÓÊ÷ËùÓÐµÄÔªËØ¶¼´óÓÚ¸ù
+// 1. åŽåºéåŽ†ä¸­ï¼Œåºåˆ—æœ«å°¾ä¸ºæŸ¥æ‰¾æ ‘çš„æ ¹
+// 2. æ ¹çš„å·¦å­æ ‘æ‰€æœ‰çš„å…ƒç´ éƒ½å°äºŽæ ¹ï¼Œæ ¹çš„å³å­æ ‘æ‰€æœ‰çš„å…ƒç´ éƒ½å¤§äºŽæ ¹
 public class Solution {
     public boolean VerifySquenceOfBST(int [] sequence) {
         if(sequence.length==0){
@@ -11,18 +11,18 @@ public class Solution {
     }
     
     public boolean verify(int[] sequence, int begin, int end){
-        // µÝ¹é½áÊøÌõ¼þ£ºÒÑ¾­±éÀúµ½Ê÷µÄÄ©Î²
+        // é€’å½’ç»“æŸæ¡ä»¶ï¼šå·²ç»éåŽ†åˆ°æ ‘çš„æœ«å°¾
         if(begin==end){
             return true;
         }
-        // ²¢·ÇÄ©Î²
-        // ÕÒµ½±È¸ù½ÚµãÐ¡µÄÔªËØ
+        // å¹¶éžæœ«å°¾
+        // æ‰¾åˆ°æ¯”æ ¹èŠ‚ç‚¹å°çš„å…ƒç´ 
         int min = end-1;
         while(min>begin){
             if(sequence[min]<sequence[end]) break;
             min--;
         }
-        // ´ÓÇ°¿ªÊ¼±éÀú£¬²é¿´minÀïÃæÊÇ·ñÓÐÔªËØ±È¸ù½Úµã´óµÄ
+        // ä»Žå‰å¼€å§‹éåŽ†ï¼ŒæŸ¥çœ‹miné‡Œé¢æ˜¯å¦æœ‰å…ƒç´ æ¯”æ ¹èŠ‚ç‚¹å¤§çš„
         for(int i=begin; i<min; i++){
             if(sequence[i] > sequence[end]) return false;
         }

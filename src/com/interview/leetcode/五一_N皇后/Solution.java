@@ -1,4 +1,4 @@
-package com.interview.leetcode.ÎåÒ»_N»Êºó;
+package com.interview.leetcode.äº”ä¸€_Nçš‡å;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,50 +7,50 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * N»ÊºóÎÊÌâ
- * »ÊºóµÄ¹¥»÷·¶Î§£º×óĞ±£¬ÓÒĞ±£¬Í¬ÁĞ
- * ½«ÆåÅÌ×÷ÎªÒ»¸ö×ø±êÖá£¬×óĞ±ºÍÓÒĞ±ÎªÒ»ÌõĞ±Ïß
- *   ¸ù¾İ y=kx + c£¬¿ÉÒÔÇó³ö cµÄÖµ£¬ÔÚÕâÀïkµÄÖµ¿ÉÄÜÎª-1»ò1£¬µ±k=1Ê±±íÊ¾ÓÒĞ±£¬k=-1Ê±£¬±íÊ¾×óĞ±
- *   ×óĞ±£ºc = y+x;
- *   ÓÒĞ±: c = y-x
+ * Nçš‡åé—®é¢˜
+ * çš‡åçš„æ”»å‡»èŒƒå›´ï¼šå·¦æ–œï¼Œå³æ–œï¼ŒåŒåˆ—
+ * å°†æ£‹ç›˜ä½œä¸ºä¸€ä¸ªåæ ‡è½´ï¼Œå·¦æ–œå’Œå³æ–œä¸ºä¸€æ¡æ–œçº¿
+ *   æ ¹æ® y=kx + cï¼Œå¯ä»¥æ±‚å‡º cçš„å€¼ï¼Œåœ¨è¿™é‡Œkçš„å€¼å¯èƒ½ä¸º-1æˆ–1ï¼Œå½“k=1æ—¶è¡¨ç¤ºå³æ–œï¼Œk=-1æ—¶ï¼Œè¡¨ç¤ºå·¦æ–œ
+ *   å·¦æ–œï¼šc = y+x;
+ *   å³æ–œ: c = y-x
  */
 class Solution {
 
-    // ¶¨ÒåÁ½¸öset£¬ÓÃÓÚ´æ·Å×óĞ±ºÍÓÒĞ±µÄcÖµ
+    // å®šä¹‰ä¸¤ä¸ªsetï¼Œç”¨äºå­˜æ”¾å·¦æ–œå’Œå³æ–œçš„cå€¼
     Set<Integer> left = new HashSet<Integer>();
     Set<Integer> right = new HashSet<Integer>();
-    // ¶¨ÒåÒ»¸ö½á¹û¼¯
+    // å®šä¹‰ä¸€ä¸ªç»“æœé›†
     List<List<String>> result = new ArrayList<List<String>>();
-    // ¶¨ÒåÒ»¸öÊı×é£¬±íÊ¾»ÊºóµÄ°Ú·ÅÎ»ÖÃ
+    // å®šä¹‰ä¸€ä¸ªæ•°ç»„ï¼Œè¡¨ç¤ºçš‡åçš„æ‘†æ”¾ä½ç½®
     int [] queues;
     public List<List<String>> solveNQueens(int n) {
-        // ³õÊ¼»¯»ÊºóÊı×é
+        // åˆå§‹åŒ–çš‡åæ•°ç»„
         queues = new int [n];
         Arrays.fill(queues,-1);
         DFS(0, n);
         return result;
     }
 
-    // DFS·½·¨
+    // DFSæ–¹æ³•
     public void DFS(int queue, int n){
-        // ½áÊøµİ¹é
+        // ç»“æŸé€’å½’
         if(queue >= n){
-            // ¼ÓÈë½á¹û¼¯£¬½áÊøµİ¹é
+            // åŠ å…¥ç»“æœé›†ï¼Œç»“æŸé€’å½’
             result.add(printQueue(n));
             return ;
         }
-        // ±éÀú¿ÉÄÜ´æÔÚµÄ°Ú·ÅÎ»ÖÃ
+        // éå†å¯èƒ½å­˜åœ¨çš„æ‘†æ”¾ä½ç½®
         for(int i=0; i<n; i++){
-            // Èç¹ûµ±Ç°Î»ÖÃ¿ÉÒÔ°Ú·Å
+            // å¦‚æœå½“å‰ä½ç½®å¯ä»¥æ‘†æ”¾
             if(vaild(queue, i)){
-                // °Ú·Å»Êºó£¬¸üĞÂ×óĞ±ÏßºÍÓÒĞ±Ïß£¬½øĞĞÏÂÒ»²ãÑ­»·
+                // æ‘†æ”¾çš‡åï¼Œæ›´æ–°å·¦æ–œçº¿å’Œå³æ–œçº¿ï¼Œè¿›è¡Œä¸‹ä¸€å±‚å¾ªç¯
                 left.add(queue+i);
                 right.add(queue-i);
                 queues[queue] = i;
 
                 DFS(queue+1, n);
 
-                // ÒÆ³ıÌõ¼ş£¬½øĞĞÏÂÒ»¸öÎ»ÖÃ²âÊÔ
+                // ç§»é™¤æ¡ä»¶ï¼Œè¿›è¡Œä¸‹ä¸€ä¸ªä½ç½®æµ‹è¯•
                 left.remove(queue+i);
                 right.remove(queue-i);
                 queues[queue] = -1;
@@ -74,14 +74,14 @@ class Solution {
 
     public List<String> printQueue(int n){
         List<String> list = new ArrayList<String>(n);
-        // ĞĞ×Ö·û
+        // è¡Œå­—ç¬¦
         StringBuffer sb = new StringBuffer();
         for(int i=0; i<n; i++){
             sb.append(".");
         }
-        // ±éÀúqueues
+        // éå†queues
         for(int i=0; i<queues.length; i++){
-            // Ìî³ä¡°¡£¡±·ûºÅ
+            // å¡«å……â€œã€‚â€ç¬¦å·
             sb.setCharAt(queues[i],'Q');
             list.add(sb.toString());
             sb.setCharAt(queues[i],'.');

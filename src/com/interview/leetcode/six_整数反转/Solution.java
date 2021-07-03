@@ -1,4 +1,4 @@
-package com.interview.leetcode.six_整数反转;
+package com.interview.leetcode.six_鏁存暟鍙嶈浆;
 
 class Solution {
 	public int reverse(int x) {
@@ -6,15 +6,15 @@ class Solution {
 		int i = 0;
 		String strx = x + "";
 		StringBuffer buffer = new StringBuffer();
-		// 处理负号
+		// 澶勭悊璐熷彿
 		if(strx.charAt(0) == '-') {
 			buffer.append(strx, 1, strx.length());
-			// 反转
+			// 鍙嶈浆
 			buffer.reverse();
-			// 添加负号
+			// 娣诲姞璐熷彿
 		}else {
 			buffer.append(strx);
-			// 反转
+			// 鍙嶈浆
 			buffer.reverse();
 		}
 

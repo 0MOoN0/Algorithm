@@ -1,11 +1,11 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.Ê®Áù_»ñµÃ×î¶àµÄ½±½ğ;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.åå…­_è·å¾—æœ€å¤šçš„å¥–é‡‘;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /**
- * ´ÓÇ°ºóÁ½±ß¿ªÊ¼ÕÒÏàÍ¬´óĞ¡µÄÊı×Ö
+ * ä»å‰åä¸¤è¾¹å¼€å§‹æ‰¾ç›¸åŒå¤§å°çš„æ•°å­—
  * 
  * @author Peter
  *
@@ -24,15 +24,15 @@ public class Main {
 		int begin =0, end =  arr.length-1;
 		long beginCount = arr[begin], endCount = arr[end];
 		while(begin<end) {
-			// ÅĞ¶Ï½á¹ûÊÇ·ñÏàµÈ
+			// åˆ¤æ–­ç»“æœæ˜¯å¦ç›¸ç­‰
 			if(beginCount == endCount) {
-				// Èç¹ûÏàµÈ£¬Ìí¼Ó¼ÇÂ¼£¬ÒÆ¶¯×ø±ê
+				// å¦‚æœç›¸ç­‰ï¼Œæ·»åŠ è®°å½•ï¼Œç§»åŠ¨åæ ‡
 				result.add(beginCount);
 				beginCount += arr[++begin];
 				endCount += arr[--end];
 				continue;
 			}else {
-				// Èç¹û²»ÏàµÈ£¬ÒÆ¶¯×ø±ê
+				// å¦‚æœä¸ç›¸ç­‰ï¼Œç§»åŠ¨åæ ‡
 				long temp = beginCount - endCount;
 				if(temp<0) {
 					beginCount += arr[++begin];

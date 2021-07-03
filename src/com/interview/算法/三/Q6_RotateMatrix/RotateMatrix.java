@@ -1,31 +1,31 @@
-package com.interview.Ëã·¨.Èı.Q6_RotateMatrix;
+package com.interview.ç®—æ³•.ä¸‰.Q6_RotateMatrix;
 
 /**
- * Ë³Ê±Õë90¶ÈĞı×ª¾ØÕó
+ * é¡ºæ—¶é’ˆ90åº¦æ—‹è½¬çŸ©é˜µ
  * @author Peter
  *
  */
 public class RotateMatrix {
 	
-	// ½«[LR][LC]ËùÔÚĞĞÁĞË³Ê±ÕëĞı×ª90¶È
+	// å°†[LR][LC]æ‰€åœ¨è¡Œåˆ—é¡ºæ—¶é’ˆæ—‹è½¬90åº¦
 	public static void rotateMatrix(int [][]matrix, int LR, int LC, int RR, int RC) {
-		// ´ÎÊı
+		// æ¬¡æ•°
 		int times = RC-LC;
 		for(int i=0; i<times; i++) {
-			// ×óÉÏ½Ç
+			// å·¦ä¸Šè§’
 			int temp = matrix[LR][LC+i];
-			// ×óÏÂ½ÇÌæ»»×óÉÏ½Ç
+			// å·¦ä¸‹è§’æ›¿æ¢å·¦ä¸Šè§’
 			matrix[LR][LC+i] = matrix[RR-i][LC];
-			// ÓÒÏÂ½ÇÌæ»»×óÏÂ½Ç
+			// å³ä¸‹è§’æ›¿æ¢å·¦ä¸‹è§’
 			matrix[RR-i][LC] = matrix[RR][RC-i];
-			// ÓÒÉÏ½ÇÌæ»»ÓÒÏÂ½Ç
+			// å³ä¸Šè§’æ›¿æ¢å³ä¸‹è§’
 			matrix[RR][RC-i] = matrix[LR+i][RC];
-			// ×óÉÏ½ÇÌæ»»ÓÒÉÏ½Ç
+			// å·¦ä¸Šè§’æ›¿æ¢å³ä¸Šè§’
 			matrix[LR+i][RC] = temp;
 		}
 	}
 	
-	// ´òÓ¡¾ØÕó
+	// æ‰“å°çŸ©é˜µ
 	public static void printMatrix(int[][] matrix) {
 		for(int i=0; i<matrix.length; i++) {
 			for(int j=0; j<matrix[i].length; j++) {
@@ -43,10 +43,10 @@ public class RotateMatrix {
 				  { 13,14, 15, 16 } 
 				  };
 		  int LR=0,LC=0;
-		  int RR = matrix.length-1; // ĞĞ
-		  int RC = matrix[0].length-1; // ÁĞ
+		  int RR = matrix.length-1; // è¡Œ
+		  int RC = matrix[0].length-1; // åˆ—
 		  while(LR<RR && LC<RC) {
-			  rotateMatrix(matrix,LR++,LC++,RR--,RC--);	// Ã¿Ğı×ªÒ»²ã£¬×óÉÏ½ÇºÍÓÒÏÂ½ÇÍù¾ØÕóÖĞĞÄËõ½øÒ»²ã£¬Ïàµ±ÓÚ²½²½±Æ½ü
+			  rotateMatrix(matrix,LR++,LC++,RR--,RC--);	// æ¯æ—‹è½¬ä¸€å±‚ï¼Œå·¦ä¸Šè§’å’Œå³ä¸‹è§’å¾€çŸ©é˜µä¸­å¿ƒç¼©è¿›ä¸€å±‚ï¼Œç›¸å½“äºæ­¥æ­¥é€¼è¿‘
 		  }
 		  printMatrix(matrix);
 	}

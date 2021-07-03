@@ -1,11 +1,11 @@
-package com.interview.½£Ö¸offer.ÎåËÄ_×Ö·ûÁ÷ÖĞµÚÒ»¸ö²»ÖØ¸´µÄÊı×Ö;
+package com.interview.å‰‘æŒ‡offer.äº”å››_å­—ç¬¦æµä¸­ç¬¬ä¸€ä¸ªä¸é‡å¤çš„æ•°å­—;
 import java.util.*;
 public class Solution {
     
     HashMap<Character,Integer> map = new HashMap<Character, Integer>();
     StringBuffer sb = new StringBuffer();
     //Insert one char from stringstream
-    // ¼ÇÂ¼²åÈëµÄ×Ö·û´ÎÊıÒÔ¼°Æ´³ÉµÄ×Ö·û´®
+    // è®°å½•æ’å…¥çš„å­—ç¬¦æ¬¡æ•°ä»¥åŠæ‹¼æˆçš„å­—ç¬¦ä¸²
     public void Insert(char ch)
     {
         int i = map.getOrDefault(ch, 0);

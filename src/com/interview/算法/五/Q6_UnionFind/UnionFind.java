@@ -1,10 +1,10 @@
-package com.interview.Ëã·¨.Îå.Q6_UnionFind;
+package com.interview.ç®—æ³•.äº”.Q6_UnionFind;
 
 import java.util.HashMap;
 import java.util.List;
 
 /**
- * ²¢²é¼¯½á¹¹
+ * å¹¶æŸ¥é›†ç»“æ„
  * 
  * @author Peter
  *
@@ -24,7 +24,7 @@ public class UnionFind {
 			sizeMap = new HashMap<Node, Integer>();
 		}
 
-		// ³õÊ¼»¯²¢²é¼¯£¬ÈÃËûÃÇÖ¸Ïò×Ô¼º
+		// åˆå§‹åŒ–å¹¶æŸ¥é›†ï¼Œè®©ä»–ä»¬æŒ‡å‘è‡ªå·±
 		public void makeSet(List<Node> nodes) {
 			fatherMap.clear();
 			sizeMap.clear();
@@ -34,33 +34,33 @@ public class UnionFind {
 			}
 		}
 
-		// ÕÒµ½¸ø¶¨½ÚµãµÄ¸¸½Úµã
+		// æ‰¾åˆ°ç»™å®šèŠ‚ç‚¹çš„çˆ¶èŠ‚ç‚¹
 		private Node findNode(Node node) {
 			Node father = fatherMap.get(node);
-			if (node != father) { // Ö±µ½×Ô¼ºÕÒµ½×Ô¼º£¬µİ¹é½áÊø
+			if (node != father) { // ç›´åˆ°è‡ªå·±æ‰¾åˆ°è‡ªå·±ï¼Œé€’å½’ç»“æŸ
 				father = findNode(father);
 			}
 			fatherMap.put(node, father);
 			return father;
 		}
 
-		// ÅĞ¶ÏÁ½¸ö½ÚµãÊÇ·ñÏàµÈ
+		// åˆ¤æ–­ä¸¤ä¸ªèŠ‚ç‚¹æ˜¯å¦ç›¸ç­‰
 		public boolean isSameSet(Node a, Node b) {
 			return findNode(a) == findNode(b);
 		}
 
-		// ÁªºÏÁ½¸ö½Úµã
+		// è”åˆä¸¤ä¸ªèŠ‚ç‚¹
 		public void union(Node a, Node b) {
 			if (a == null || b == null) {
 				return;
 			}
-			// ÕÒµ½Á½¸ö½ÚµãµÄ¸¸ÔªËØ
+			// æ‰¾åˆ°ä¸¤ä¸ªèŠ‚ç‚¹çš„çˆ¶å…ƒç´ 
 			Node aHead = findNode(a);
 			Node bHead = findNode(b);
 			if (aHead != bHead) {
 				int aSize = sizeMap.get(aHead);
 				int bSize = sizeMap.get(bHead);
-				if (aSize <= bSize) { // aÏòbºÏ²¢
+				if (aSize <= bSize) { // aå‘båˆå¹¶
 					fatherMap.put(aHead, bHead);
 					sizeMap.put(bHead, aSize + bSize);
 				} else {

@@ -1,9 +1,9 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.Ê®¾Å_Ä§·¨ÉîÔ¨;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.åä¹_é­”æ³•æ·±æ¸Š;
 
 import java.util.Scanner;
 
 /**
- * ¶¯Ì¬¹æ»®
+ * åŠ¨æ€è§„åˆ’
  * @author Peter
  *
  */
@@ -13,8 +13,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		// ¹¹½¨Ò»¸ödpÊı×é
-		// ×î³¤Ö»ÓĞ1000¸öÌ¨½×
+		// æ„å»ºä¸€ä¸ªdpæ•°ç»„
+		// æœ€é•¿åªæœ‰1000ä¸ªå°é˜¶
 		int [] dp = new int[1001];
 		dp[0]=1;
 		dp[1]=1;
@@ -26,10 +26,10 @@ public class Main {
 				dp[i]%=MOD;
 			}
 		}
-		// ÊäÈë
+		// è¾“å…¥
 		int size = sc.nextInt();
 		for(int i=0; i<size; i++) {
-			//Êä³ö
+			//è¾“å‡º
 			System.out.println(dp[sc.nextInt()]);
 		}
 		

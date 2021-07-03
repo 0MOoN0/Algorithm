@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.ÈıÒ»_ÕûÊıÖĞ1³öÏÖµÄ´ÎÊı;
+package com.interview.å‰‘æŒ‡offer.ä¸‰ä¸€_æ•´æ•°ä¸­1å‡ºç°çš„æ¬¡æ•°;
 public class Solution {
     public int NumberOf1Between1AndN_Solution(int n) {
         // return n;

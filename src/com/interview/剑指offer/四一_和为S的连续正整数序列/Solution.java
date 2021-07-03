@@ -1,9 +1,9 @@
-package com.interview.½£Ö¸offer.ËÄÒ»_ºÍÎªSµÄÁ¬ĞøÕıÕûÊıĞòÁĞ;
+package com.interview.å‰‘æŒ‡offer.å››ä¸€_å’Œä¸ºSçš„è¿ç»­æ­£æ•´æ•°åºåˆ—;
 
-// 1.½á¹ûÊÇÒ»×éÁ¬ĞøÕıÊı
-// 2.ĞÂÌí¼ÓµÄÊıÒªĞ¡ÓÚ»òµÈÓÚsum/2
-// 2.1.Èç¹ûÏàµÈ£¬ÏÂÒ»²¿ÔòÈ¥µô¶ÓÊ×£¬ÔÙÌí¼ÓÒ»¸öÊı
-// 2.2.Èç¹û´óÓÚÄ¿±êÊı£¬ÔòÈ¥µô¶ÓÊ×
+// 1.ç»“æœæ˜¯ä¸€ç»„è¿ç»­æ­£æ•°
+// 2.æ–°æ·»åŠ çš„æ•°è¦å°äºæˆ–ç­‰äºsum/2
+// 2.1.å¦‚æœç›¸ç­‰ï¼Œä¸‹ä¸€éƒ¨åˆ™å»æ‰é˜Ÿé¦–ï¼Œå†æ·»åŠ ä¸€ä¸ªæ•°
+// 2.2.å¦‚æœå¤§äºç›®æ ‡æ•°ï¼Œåˆ™å»æ‰é˜Ÿé¦–
 import java.util.ArrayList;
 
 public class Solution {
@@ -17,13 +17,13 @@ public class Solution {
 				tempList.add(i);
 			} else if (result == sum) {
 				resultList.add(new ArrayList<Integer>(tempList));
-				// È¥µô¶ÓÊ×£¬Ìí¼ÓÒ»¸öÊı
+				// å»æ‰é˜Ÿé¦–ï¼Œæ·»åŠ ä¸€ä¸ªæ•°
 				int num = tempList.remove(0);
 				tempList.add(i);
 				result -= num;
 				result += i;
 			} else if (result > sum) {
-				// È¥µô¶ÓÊ×£¬Ö±µ½result<=sum
+				// å»æ‰é˜Ÿé¦–ï¼Œç›´åˆ°result<=sum
 				while (tempList.size() > 0 && result >= sum) {
 					if (result == sum) {
 						resultList.add(new ArrayList<Integer>(tempList));

@@ -1,28 +1,28 @@
-package com.interview.leetcode.Ò»Áù¾Å_ÇóÖÚÊı;
+package com.interview.leetcode.ä¸€å…­ä¹_æ±‚ä¼—æ•°;
 
-// ÅÅĞò+Í³¼Æ
+// æ’åº+ç»Ÿè®¡
 import java.util.Arrays;
 class Solution2 {
     public int majorityElement(int[] nums) {
-        // ÅĞ¶ÏÊı×é³¤¶ÈÎª1µÄÇé¿ö
+        // åˆ¤æ–­æ•°ç»„é•¿åº¦ä¸º1çš„æƒ…å†µ
         if(nums.length==1){
             return nums[0];
         }
-        // ½á¹ûÊı×é
+        // ç»“æœæ•°ç»„
         int [] result = new int [2];
-        // ÅÅĞò
+        // æ’åº
         Arrays.sort(nums);
-        // ±éÀú£¬Í¬Ê±Í³¼Æ³öÏÖµÄ´ÎÊı£¬Èç¹ûÏÂ±ê·¢Éú±ä»¯£¬¼ÇÂ¼²¢±È½Ï
+        // éå†ï¼ŒåŒæ—¶ç»Ÿè®¡å‡ºç°çš„æ¬¡æ•°ï¼Œå¦‚æœä¸‹æ ‡å‘ç”Ÿå˜åŒ–ï¼Œè®°å½•å¹¶æ¯”è¾ƒ
         int times = 0;
         for(int i=0; i<nums.length; i++){
             times++;
             if(i==nums.length-1 || nums[i]!=nums[i+1]){ 
-                // µ±Ç°´ÎÊı¼ÓÒ»£¬±È½Ï½á¹ûÊı×é
+                // å½“å‰æ¬¡æ•°åŠ ä¸€ï¼Œæ¯”è¾ƒç»“æœæ•°ç»„
                 if(times > result[0]){
-                    // ¸üĞÂ½á¹ûÊı×é
+                    // æ›´æ–°ç»“æœæ•°ç»„
                     result[0] = times; 
                     result[1] = nums[i];
-                    // ³õÊ¼»¯´ÎÊı
+                    // åˆå§‹åŒ–æ¬¡æ•°
                     times = 0;
                 }
             }

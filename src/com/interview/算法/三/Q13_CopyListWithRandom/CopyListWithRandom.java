@@ -1,13 +1,13 @@
-package com.interview.Ëã·¨.Èı.Q13_CopyListWithRandom;
+package com.interview.ç®—æ³•.ä¸‰.Q13_CopyListWithRandom;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import com.interview.Ëã·¨.common.Node;
+import com.interview.ç®—æ³•.common.Node;
 
 /**
- * ¸´ÖÆº¬ÓĞËæ»úÖ¸Õë½ÚµãµÄÁ´±í
- * 1. ¹şÏ£±í
+ * å¤åˆ¶å«æœ‰éšæœºæŒ‡é’ˆèŠ‚ç‚¹çš„é“¾è¡¨
+ * 1. å“ˆå¸Œè¡¨
  * @author Peter
  *
  */
@@ -23,18 +23,18 @@ public class CopyListWithRandom {
 		}
 	}
 	
-	// ¹şÏ£±í
+	// å“ˆå¸Œè¡¨
 	public static Node copyListWithRand1(Node head) {
 		Map<Node, Node> nodeMap = new HashMap<Node,Node>();
 		Node cur = head;
-		// ½«Á´±íÒÔ½Úµã-¸´ÖÆ½ÚµãµÄ·½Ê½Ó³Éäµ½HashMapÖĞ
+		// å°†é“¾è¡¨ä»¥èŠ‚ç‚¹-å¤åˆ¶èŠ‚ç‚¹çš„æ–¹å¼æ˜ å°„åˆ°HashMapä¸­
 		while(cur != null) {
 			nodeMap.put(cur, new Node(cur.value));
 			cur = cur.next;
 		}
-		// »Ø¹éÖ¸Õë
+		// å›å½’æŒ‡é’ˆ
 		cur = head;
-		// ¸´ÖÆÁ´±í
+		// å¤åˆ¶é“¾è¡¨
 		while(cur != null) {
 			nodeMap.get(cur).next = nodeMap.get(cur.next);
 			nodeMap.get(cur).rand = nodeMap.get(cur.rand);
@@ -43,12 +43,12 @@ public class CopyListWithRandom {
 		return nodeMap.get(head);
 	}
 	
-	// ¸´ÖÆµ¥Á´£¬¸´ÖÆrandÓò£¬·ÖÀëÁ´±í(²»ĞèÒªÆäËûÌØÊâµÄÊı¾İ½á¹¹Ö§³Ö)
+	// å¤åˆ¶å•é“¾ï¼Œå¤åˆ¶randåŸŸï¼Œåˆ†ç¦»é“¾è¡¨(ä¸éœ€è¦å…¶ä»–ç‰¹æ®Šçš„æ•°æ®ç»“æ„æ”¯æŒ)
 	public static Node copyListWithRand2(Node head) {
 		if(head == null) {
 			return null;
 		}
-		// ¸´ÖÆµ¥Á´
+		// å¤åˆ¶å•é“¾
 		Node cur = head;
 		while(cur != null) {
 			Node nNode = new Node(cur.value);
@@ -56,13 +56,13 @@ public class CopyListWithRandom {
 			cur.next = nNode;
 			cur = cur.next.next;
 		}
-		// ¸´ÖÆrandÓò
+		// å¤åˆ¶randåŸŸ
 		cur = head;
 		while(cur != null) {
 			cur.next.rand = cur.rand == null ? null :cur.rand.next;
 			cur = cur.next.next;
 		}
-		// ·ÖÀëÁ´±í
+		// åˆ†ç¦»é“¾è¡¨
 		cur = head;
 		Node res = head.next;
 		Node next = cur.next;

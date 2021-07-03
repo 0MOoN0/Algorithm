@@ -1,14 +1,14 @@
-package com.interview.leetcode.two_Á½ÊýÏà¼Ó;
+package com.interview.leetcode.two_ä¸¤æ•°ç›¸åŠ ;
 
 /**
  * Definition for singly-linked list. public class ListNode { int val; ListNode
- * next; ListNode(int x) { val = x; } } ÊäÈë£º(2 -> 4 -> 3) + (5 -> 6 -> 4) Êä³ö£º7 ->
- * 0 -> 8 Ô­Òò£º342 + 465 = 807
+ * next; ListNode(int x) { val = x; } } è¾“å…¥ï¼š(2 -> 4 -> 3) + (5 -> 6 -> 4) è¾“å‡ºï¼š7 ->
+ * 0 -> 8 åŽŸå› ï¼š342 + 465 = 807
  */
 class Solution {
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		int tempNum = 0, tempNum2 = 0;
-		// ³õÊ¼»¯½á¹ûÁÐ±í
+		// åˆå§‹åŒ–ç»“æžœåˆ—è¡¨
 		ListNode resultList = new ListNode(0);
 		ListNode tempList = resultList;
 		
@@ -81,7 +81,7 @@ class Solution {
 		return resultList;
 //
 //		while (l1 != null && l2 != null || tempNum2 != 0) {
-//			// ºÏ²¢
+//			// åˆå¹¶
 //			if (l1.val + l2.val + tempNum2 >= 10) {
 //				tempNum = (l1.val + l2.val + tempNum2) % 10;
 //				tempNum2 = 1;
@@ -99,7 +99,7 @@ class Solution {
 //			l2 = l2.next == null ? null : l2.next;
 //		}
 //		if (l1 != null) {
-//			// ½«l1Ê£ÏÂÄÚÈÝÌí¼Óµ½Á´±í
+//			// å°†l1å‰©ä¸‹å†…å®¹æ·»åŠ åˆ°é“¾è¡¨
 //			while (l1 != null) {
 //				tempList.next = new ListNode(l1.val);
 //				tempList = tempList.next;
@@ -109,7 +109,7 @@ class Solution {
 //			return resultList;
 //		}
 //		if (l2 != null) {
-//			// ½«l2Ê£ÏÂÄÚÈÝÌí¼Óµ½Á´±í
+//			// å°†l2å‰©ä¸‹å†…å®¹æ·»åŠ åˆ°é“¾è¡¨
 //			while (l2 != null) {
 //				tempList.next = new ListNode(l2.val);
 //				tempList = tempList.next;

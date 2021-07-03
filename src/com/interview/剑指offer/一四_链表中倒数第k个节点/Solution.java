@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.Ò»ËÄ_Á´±íÖĞµ¹ÊıµÚk¸ö½Úµã;
+package com.interview.å‰‘æŒ‡offer.ä¸€å››_é“¾è¡¨ä¸­å€’æ•°ç¬¬kä¸ªèŠ‚ç‚¹;
 /*
 public class ListNode {
     int val;
@@ -10,9 +10,9 @@ public class ListNode {
 }*/
 
 public class Solution {
-	// 1. counter´Ó0¿ªÊ¼¼ÆËã
-	// 2. ÓÉ1¿ÉµÃ£¬Èç¹û×ø±ê´Ó0¿ªÊ¼¼ÆËã£¬ÔòkÒ»¶¨»áĞ¡ÓÚ»òÕßµÈÓÚcounter
-	// 3. ÓÉÓÚcounter´Ó0¼ÆËã²¢ÇÒµÚ¶ş¸öÖ¸ÕëÒÑ¾­Ö¸ÏòÒ»¸öÔªËØ£¬ËùÒÔcounter¿ÉÄÜ´óÓÚµÈÓÚk£¬µÚ¶ş¸öÖ¸Õë´Ócounter=k¿ªÊ¼×ß
+	// 1. counterä»0å¼€å§‹è®¡ç®—
+	// 2. ç”±1å¯å¾—ï¼Œå¦‚æœåæ ‡ä»0å¼€å§‹è®¡ç®—ï¼Œåˆ™kä¸€å®šä¼šå°äºæˆ–è€…ç­‰äºcounter
+	// 3. ç”±äºcounterä»0è®¡ç®—å¹¶ä¸”ç¬¬äºŒä¸ªæŒ‡é’ˆå·²ç»æŒ‡å‘ä¸€ä¸ªå…ƒç´ ï¼Œæ‰€ä»¥counterå¯èƒ½å¤§äºç­‰äºkï¼Œç¬¬äºŒä¸ªæŒ‡é’ˆä»counter=kå¼€å§‹èµ°
 	public ListNode FindKthToTail(ListNode head, int k) {
 		int counter = 0;
 		ListNode p, q;

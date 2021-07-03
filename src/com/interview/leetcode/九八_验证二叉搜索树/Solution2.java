@@ -1,6 +1,6 @@
-package com.interview.leetcode.¾Å°Ë_ÑéÖ¤¶ş²æËÑË÷Ê÷;
+package com.interview.leetcode.ä¹å…«_éªŒè¯äºŒå‰æœç´¢æ ‘;
 /**
- * ·Çµİ¹é±éÀú
+ * éé€’å½’éå†
  * 
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -18,18 +18,18 @@ class Solution2 {
 
     public boolean isValidBST(TreeNode root) {
         while(!stack.isEmpty() || root!=null){
-            // ×ó×ÓÊ÷²»Îª¿Õ£¬ÈëÕ»
+            // å·¦å­æ ‘ä¸ä¸ºç©ºï¼Œå…¥æ ˆ
             while(root!=null){
                 stack.push(root);
                 root = root.left;
             }
             root = stack.pop();
-            // ×ó×ÓÊ÷Îª¿Õ£¬ÅĞ¶ÏÖµÊÇ·ñ±ÈÇ°Ò»¸ö´ó
+            // å·¦å­æ ‘ä¸ºç©ºï¼Œåˆ¤æ–­å€¼æ˜¯å¦æ¯”å‰ä¸€ä¸ªå¤§
             if(root.val <= preNum){
                 return false;
             }
             preNum = root.val;
-            // ×¢£ºÅĞ¶ÏÓÒ×ÓÊ÷
+            // æ³¨ï¼šåˆ¤æ–­å³å­æ ‘
             root = root.right;
         }
         return true;

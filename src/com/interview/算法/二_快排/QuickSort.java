@@ -1,11 +1,11 @@
-package com.interview.Ëã·¨.¶ş_¿ìÅÅ;
+package com.interview.ç®—æ³•.äºŒ_å¿«æ’;
 
 import java.util.Arrays;
 
-import com.interview.Ëã·¨.utils.Utils;
+import com.interview.ç®—æ³•.utils.Utils;
 
 /**
- * ¾­µä¿ìÅÅÓëËæ»ú¿ìÅÅ
+ * ç»å…¸å¿«æ’ä¸éšæœºå¿«æ’
  * @author Peter
  *
  */
@@ -21,9 +21,9 @@ public class QuickSort {
 	
 	public static void quickSort(int []arr, int L, int R) {
 		if(L < R) {
-			// Ëæ»ú¿ìÅÅ
+			// éšæœºå¿«æ’
 			swap(arr, L + (int)(Math.random()*(R-L+1)), R);
-			// Ñ¡Ôñ×î×ó±ßµÄÊıÎª»ù×¼£¬½øĞĞÅÅĞò
+			// é€‰æ‹©æœ€å·¦è¾¹çš„æ•°ä¸ºåŸºå‡†ï¼Œè¿›è¡Œæ’åº
 			int[] partition = partition(arr, L, R, arr[R]);
 			quickSort(arr, L, partition[0]-1);
 			quickSort(arr, partition[1]+1, R);
@@ -31,30 +31,30 @@ public class QuickSort {
 	}
 	
 	/**
-	 * ²¿·Ö»®·Ö£¬ÀàËÆºÉÀ¼¹úÆìËã·¨£¬ºËĞÄË¼Ïë£º½«±ÈnumĞ¡µÄÊı·ÅÔÚ×ó±ß£¬µÈÓÚnumµÄÊı·ÅÔÚÖĞ¼ä£¬´óÓÚnumµÄÊı·ÅÔÚÓÒ±ß
-	 * @param arr	´ıÅÅÊı×é
+	 * éƒ¨åˆ†åˆ’åˆ†ï¼Œç±»ä¼¼è·å…°å›½æ——ç®—æ³•ï¼Œæ ¸å¿ƒæ€æƒ³ï¼šå°†æ¯”numå°çš„æ•°æ”¾åœ¨å·¦è¾¹ï¼Œç­‰äºnumçš„æ•°æ”¾åœ¨ä¸­é—´ï¼Œå¤§äºnumçš„æ•°æ”¾åœ¨å³è¾¹
+	 * @param arr	å¾…æ’æ•°ç»„
 	 * @param L
 	 * @param R
 	 * @param num
 	 * @return
 	 */
 	public static int[] partition(int []arr, int L, int R, int num) {
-		int less = L - 1;	// Ğ¡ÓÚÇøÓò£¬³õÊ¼Îª-1
-		int more = R + 1;		// ´óÓÚÇøÓò
-		// Ğ¡ÓÚÇøÓòµÄÏÂ±êĞ¡ÓÚ´óÓÚÇøÓòµÄÏÂ±ê£¬È·±£²»Ô½½ç
+		int less = L - 1;	// å°äºåŒºåŸŸï¼Œåˆå§‹ä¸º-1
+		int more = R + 1;		// å¤§äºåŒºåŸŸ
+		// å°äºåŒºåŸŸçš„ä¸‹æ ‡å°äºå¤§äºåŒºåŸŸçš„ä¸‹æ ‡ï¼Œç¡®ä¿ä¸è¶Šç•Œ
 		while(L < more) {
 			if(arr[L] < num) {
-				// Èç¹û±È½ÏµÄÊıĞ¡ÓÚnum£¬Ôò½«Õâ¸öÊıÓëĞ¡ÓÚÇøÓòµÄÏÂÒ»¸öÊı½øĞĞ½»»»
+				// å¦‚æœæ¯”è¾ƒçš„æ•°å°äºnumï¼Œåˆ™å°†è¿™ä¸ªæ•°ä¸å°äºåŒºåŸŸçš„ä¸‹ä¸€ä¸ªæ•°è¿›è¡Œäº¤æ¢
 				swap(arr, ++less, L++);
 			}else if(arr[L] > num) {
-				// Èç¹û±È½ÏµÄÊı´óÓÚnum£¬Ôò½«Õâ¸öÊıÓëµ±Ç°Ö¸ÏòµÄÊı½øĞĞ½»»»
+				// å¦‚æœæ¯”è¾ƒçš„æ•°å¤§äºnumï¼Œåˆ™å°†è¿™ä¸ªæ•°ä¸å½“å‰æŒ‡å‘çš„æ•°è¿›è¡Œäº¤æ¢
 				swap(arr, --more, L); 
 			}else {
-				// Èç¹û±È½ÏµÄÊıÓënumÏàµÈ£¬ÔòÖ¸ÕëÍùÓÒÒÆ¶¯Ò»Î»
+				// å¦‚æœæ¯”è¾ƒçš„æ•°ä¸numç›¸ç­‰ï¼Œåˆ™æŒ‡é’ˆå¾€å³ç§»åŠ¨ä¸€ä½
 				L++;
 			}
 		}
-		// ·µ»ØÏàµÈÇø¼ä
+		// è¿”å›ç›¸ç­‰åŒºé—´
 		return new int[]{less+1, more-1};
 	}
 	

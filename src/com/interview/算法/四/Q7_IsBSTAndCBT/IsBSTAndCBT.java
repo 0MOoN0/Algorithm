@@ -1,13 +1,13 @@
-package com.interview.Ëã·¨.ËÄ.Q7_IsBSTAndCBT;
+package com.interview.ç®—æ³•.å››.Q7_IsBSTAndCBT;
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-import com.interview.Ëã·¨.ËÄ.Q7_IsBSTAndCBT.IsBSTAndCBT.Node;
+import com.interview.ç®—æ³•.å››.Q7_IsBSTAndCBT.IsBSTAndCBT.Node;
 
 /**
- * ÅĞ¶ÏÒ»¿ÃÊ÷ÊÇ·ñÊÇËÑË÷¶ş²æÊ÷¡¢ÅĞ¶ÏÒ»¿ÃÊ÷ÊÇ·ñÊÇÍêÈ«¶ş²æÊ÷
+ * åˆ¤æ–­ä¸€æ£µæ ‘æ˜¯å¦æ˜¯æœç´¢äºŒå‰æ ‘ã€åˆ¤æ–­ä¸€æ£µæ ‘æ˜¯å¦æ˜¯å®Œå…¨äºŒå‰æ ‘
  * @author Peter
  *
  */
@@ -23,7 +23,7 @@ public class IsBSTAndCBT {
 		}
 	}
 	
-	// ÅĞ¶Ï¶ş²æÊ÷ÊÇ·ñÎªÍêÈ«¶ş²æÊ÷£¬Ê¹ÓÃ¹ã¶È±éÀúµÄ·½Ê½
+	// åˆ¤æ–­äºŒå‰æ ‘æ˜¯å¦ä¸ºå®Œå…¨äºŒå‰æ ‘ï¼Œä½¿ç”¨å¹¿åº¦éå†çš„æ–¹å¼
 	public static boolean isCBT(Node root) {
 		if(root == null) {
 			return true;
@@ -33,12 +33,12 @@ public class IsBSTAndCBT {
 		queue.offer(root);
 		while(!queue.isEmpty()) {
 			Node node = queue.poll();
-			// ×ó×ÓÊ÷Îª¿Õ£¬ÓÒ×ÓÊ÷²»Îª¿Õ
+			// å·¦å­æ ‘ä¸ºç©ºï¼Œå³å­æ ‘ä¸ä¸ºç©º
 			if(node.left == null && node.right != null) {
 				return false;
-			}else if(!leafJudge && node.left != null && node.right == null) {		// Î´¿ªÆôÒ¶×Ó½ÚµãÅĞ¶ÏÄ£Ê½£¬×ó×ÓÊ÷²»Îª¿Õ£¬ÓÒ×ÓÊ÷Îª¿Õ
+			}else if(!leafJudge && node.left != null && node.right == null) {		// æœªå¼€å¯å¶å­èŠ‚ç‚¹åˆ¤æ–­æ¨¡å¼ï¼Œå·¦å­æ ‘ä¸ä¸ºç©ºï¼Œå³å­æ ‘ä¸ºç©º
 				leafJudge = true;
-			}else if(leafJudge && (node.left != null || node.right != null)) {	// ¿ªÆôÒ¶×Ó½ÚµãÄ£Ê½£¬ÇÒ×ó»òÓÒ×ÓÊ÷²»Îª¿Õ
+			}else if(leafJudge && (node.left != null || node.right != null)) {	// å¼€å¯å¶å­èŠ‚ç‚¹æ¨¡å¼ï¼Œä¸”å·¦æˆ–å³å­æ ‘ä¸ä¸ºç©º
 				return false;
 			}
 			if(node.left != null) {
@@ -52,7 +52,7 @@ public class IsBSTAndCBT {
 	}
 	
 	
-	// ÅĞ¶ÏÊÇ·ñËÑË÷¶ş²æÊ÷£¬ÖĞĞò±éÀúÊ±£¬ËÑË÷¶ş²æÊ÷µÄË³ĞòÊÇµİÔöµÄ
+	// åˆ¤æ–­æ˜¯å¦æœç´¢äºŒå‰æ ‘ï¼Œä¸­åºéå†æ—¶ï¼Œæœç´¢äºŒå‰æ ‘çš„é¡ºåºæ˜¯é€’å¢çš„
 	public static boolean isBST(Node root) {
 		if(root == null) {
 			return true;
@@ -70,7 +70,7 @@ public class IsBSTAndCBT {
 				}else if(pre.value > root.value) {
 					return false;
 				}
-				// ÅĞ¶ÏÓÒ×ÓÊ÷ÊÇ·ñÎª¿Õ
+				// åˆ¤æ–­å³å­æ ‘æ˜¯å¦ä¸ºç©º
 				root = root.right;
 			}
 		}

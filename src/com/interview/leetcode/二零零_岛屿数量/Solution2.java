@@ -1,13 +1,13 @@
-package com.interview.leetcode.¶şÁãÁã_µºÓìÊıÁ¿;
+package com.interview.leetcode.äºŒé›¶é›¶_å²›å±¿æ•°é‡;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * # BFSÈ¾É«-AC-5ms 
- * 1. ½øĞĞBFSĞèÒª½èÖú¶ÓÁĞÍê³É£¬¶ÓÁĞ´æ´¢Ò»¸öÊı¾İ£¬Òò´Ë¿ÉÒÔ½«×ø±êÍ¨¹ı¼ÆËãµÄ·½Ê½×ª»»ÎªÒ»¸öÕûÊı 
- * 2. ĞĞ×ø±ê = ÕûÊı / Ã¿ĞĞµÄ¸öÊı 
- * 3. ÁĞ×ø±ê = ÕûÊı % Ã¿ĞĞµÄ¸öÊı
+ * # BFSæŸ“è‰²-AC-5ms 
+ * 1. è¿›è¡ŒBFSéœ€è¦å€ŸåŠ©é˜Ÿåˆ—å®Œæˆï¼Œé˜Ÿåˆ—å­˜å‚¨ä¸€ä¸ªæ•°æ®ï¼Œå› æ­¤å¯ä»¥å°†åæ ‡é€šè¿‡è®¡ç®—çš„æ–¹å¼è½¬æ¢ä¸ºä¸€ä¸ªæ•´æ•° 
+ * 2. è¡Œåæ ‡ = æ•´æ•° / æ¯è¡Œçš„ä¸ªæ•° 
+ * 3. åˆ—åæ ‡ = æ•´æ•° % æ¯è¡Œçš„ä¸ªæ•°
  * 
  * @author Peter
  *
@@ -17,14 +17,14 @@ class Solution2 {
 	int result = 0;
 	int[] vx = { -1, 1, 0, 0 };
 	int[] vy = { 0, 0, -1, 1 };
-	Queue<Integer> queue = new LinkedList<Integer>(); // ´æ·ÅÔªËØµÄ¶ÓÁĞ
+	Queue<Integer> queue = new LinkedList<Integer>(); // å­˜æ”¾å…ƒç´ çš„é˜Ÿåˆ—
 
 	public int numIslands(char[][] grid) {
-		for (int i = 0; i < grid.length; i++) { // ĞĞÊı
-			for (int j = 0; j < grid[i].length; j++) { // ÁĞÊı
+		for (int i = 0; i < grid.length; i++) { // è¡Œæ•°
+			for (int j = 0; j < grid[i].length; j++) { // åˆ—æ•°
 				if (grid[i][j] == '1') {
 					result += 1;
-					// Èë¶Ó²Ù×÷
+					// å…¥é˜Ÿæ“ä½œ
 					queue.offer(grid[i].length * i + j);
 					BFS(grid);
 				}
@@ -35,18 +35,18 @@ class Solution2 {
 
 	public void BFS(char[][] grid) {
 		while (!queue.isEmpty()) {
-			// È¡³ö¶ÓÁĞÔªËØ
+			// å–å‡ºé˜Ÿåˆ—å…ƒç´ 
 			Integer index = queue.poll();
-			// ×ª»»×ø±ê-ĞĞ×ø±ê
+			// è½¬æ¢åæ ‡-è¡Œåæ ‡
 			int indexY = index / grid[0].length;
-			// ×ª»»×ø±ê-ÁĞ×ø±ê
+			// è½¬æ¢åæ ‡-åˆ—åæ ‡
 			int indexX = index % grid[0].length;
-			// È¾É«
+			// æŸ“è‰²
 			grid[indexY][indexX] = '0';
-			// ÒÆ¶¯×ø±ê²¢½øĞĞÅĞ¶Ï
+			// ç§»åŠ¨åæ ‡å¹¶è¿›è¡Œåˆ¤æ–­
 			for (int i = 0; i < 4; i++) {
 				if (valid(grid, indexX + vx[i], indexY + vy[i])) {
-					// ×ª»»×ø±ê
+					// è½¬æ¢åæ ‡
 					Integer indexNew = grid[0].length * (indexY + vy[i]) + indexX + vx[i];
 					if (!queue.contains(indexNew)) {
 						queue.offer(indexNew);
@@ -56,7 +56,7 @@ class Solution2 {
 		}
 	}
 
-	// ÑéÖ¤ÊÇ·ñºÏ·¨
+	// éªŒè¯æ˜¯å¦åˆæ³•
 	public boolean valid(char[][] grid, int x, int y) {
 		if (x < 0 || y < 0 || x >= grid[0].length || y >= grid.length || grid[y][x] == '0') {
 			return false;

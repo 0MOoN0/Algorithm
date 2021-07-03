@@ -1,10 +1,10 @@
-package com.interview.leetcode.��ʮһ_���뷽��;
+package com.interview.leetcode.九十一_解码方法;
 
 /**
- * ʹ�ö�̬�滮��˼�����
+ * 使用动态规划的思想解题
  * @author Peter
  * 
- * �ο���https://leetcode-cn.com/problems/decode-ways/solution/fei-bo-na-qi-si-lu-by-dingmin1860
+ * 参考：https://leetcode-cn.com/problems/decode-ways/solution/fei-bo-na-qi-si-lu-by-dingmin1860
  *
  */
 class Solution {

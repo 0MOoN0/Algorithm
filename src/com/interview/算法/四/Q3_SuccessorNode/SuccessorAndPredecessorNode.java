@@ -1,34 +1,34 @@
-package com.interview.�㷨.��.Q3_SuccessorNode;
+package com.interview.算法.四.Q3_SuccessorNode;
 
 /**
- * �ڶ��������ҵ�һ���ڵ�ĺ�̽ڵ��ǰ�̽ڵ㣬���ñ���������
- * �ڶ��������ҵ�һ���ڵ�ĺ�̽ڵ�
- * ��̽�㣺���һ�ö�����������������£� 1��2��3����2Ϊ1�ĺ�̣�3Ϊ2�ĺ��
- * ������ĳ���ڵ�����������������̽ڵ�Ϊ�ýڵ��������������ߵĽڵ㣨��������Ĺ��ɣ�
- * ������ĳ���ڵ����û�������������̽ڵ�Ϊ�Ըýڵ���Ϊ���������һ���ڵ�Ľڵ㣬����ýڵ㲻���ں��
- * �ڶ��������ҵ�һ���ڵ��ǰ�̽ڵ�
- * ���Һ�̽ڵ�ķ����պ��෴
+ * 在二叉树中找到一个节点的后继节点和前继节点，不用遍历整棵树
+ * 在二叉树中找到一个节点的后继节点
+ * 后继结点：如果一棵二叉树的中序遍历如下： 1、2、3。则2为1的后继，3为2的后继
+ * 二叉树某个节点如果有右子树，则后继节点为该节点的右子树的最左边的节点（中序遍历的规律）
+ * 二叉树某个节点如果没有右子树，则后继节点为以该节点作为左子树最后一个节点的节点，否则该节点不存在后继
+ * 在二叉树中找到一个节点的前继节点
+ * 与找后继节点的方法刚好相反
  * @author Peter
  *
  */
 public class SuccessorAndPredecessorNode {
 	
 	/**
-	 * �ҵ���̽ڵ�
+	 * 找到后继节点
 	 * @param root
 	 * @return
 	 */
 	public static Node findSuccessorNode(Node root) {
-		// ��������
+		// 有右子树
 		if(root != null && root.right != null) {
 			root = root.right;
 			while(root.left != null) {
 				root = root.left;
 			}
 			return root;
-		}else if(root != null){		// û��������
+		}else if(root != null){		// 没有右子树
 			Node pre = root.parent;
-			while(pre != null && pre.left != root) {	// ���ڵ��parent�ڵ�Ϊnull
+			while(pre != null && pre.left != root) {	// 根节点的parent节点为null
 				root = pre;
 				pre = pre.parent;
 			}
@@ -38,7 +38,7 @@ public class SuccessorAndPredecessorNode {
 	}
 	
 	/**
-	 * �ҵ�ǰ�̽ڵ�
+	 * 找到前继节点
 	 * @param root
 	 * @return
 	 */
@@ -46,14 +46,14 @@ public class SuccessorAndPredecessorNode {
 		if(root == null) {
 			return null;
 		}
-		// �ж��Ƿ���������
-		if(root.left != null) {		// ��������������ҵ����������ұߵĽڵ�
+		// 判断是否有左子树
+		if(root.left != null) {		// 如果有左子树，找到左子树最右边的节点
 			root = root.left;
 			while(root.right != null) {
 				root = root.right;
 			}
 			return root;
-		}else {		// û�����������ҵ���һ��������ָ��ǰ�ڵ��ǰ�ڵ����ڵ������Ľڵ㣨�簸����ʾ��7��ǰ�̣�
+		}else {		// 没有左子树，找到第一个右子树指向当前节点或当前节点所在的子树的节点（如案例所示的7的前继）
 			Node pre = root.parent;
 			while(pre != null && pre.right != root) {
 				root = pre;

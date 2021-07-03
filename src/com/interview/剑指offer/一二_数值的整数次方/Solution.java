@@ -1,7 +1,7 @@
-package com.interview.½£Ö¸offer.Ò»¶ş_ÊıÖµµÄÕûÊı´Î·½;
+package com.interview.å‰‘æŒ‡offer.ä¸€äºŒ_æ•°å€¼çš„æ•´æ•°æ¬¡æ–¹;
 
 /**
- * ×¢Òâ´Î·½ÊıÓĞ¿ÉÄÜÎª¸ºÊı
+ * æ³¨æ„æ¬¡æ–¹æ•°æœ‰å¯èƒ½ä¸ºè´Ÿæ•°
  * @author Peter
  *
  */
@@ -12,14 +12,14 @@ public class Solution {
 	}
 
 	public double helper(double base, int exponent) {
-		// µİ¹éÖÕÖ¹Ìõ¼ş
+		// é€’å½’ç»ˆæ­¢æ¡ä»¶
 		if (base == 0)
 			return 0;
 		if (exponent == 0)
 			return 1;
 		int half = exponent / 2;
 		double devide = helper(base, half);
-		if (exponent % 2 == 0) { // ÅĞ¶ÏÃİÊÇ·ñÎªÅ¼Êı
+		if (exponent % 2 == 0) { // åˆ¤æ–­å¹‚æ˜¯å¦ä¸ºå¶æ•°
 			return devide * devide;
 		} else {
 			return devide * devide * base;

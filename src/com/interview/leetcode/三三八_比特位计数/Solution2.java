@@ -1,4 +1,4 @@
-package com.interview.leetcode.ÈıÈı°Ë_±ÈÌØÎ»¼ÆÊı;
+package com.interview.leetcode.ä¸‰ä¸‰å…«_æ¯”ç‰¹ä½è®¡æ•°;
 
 class Solution2 {
 	public int[] countBits(int num) {

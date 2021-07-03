@@ -1,14 +1,14 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.Ê®Ò»_·áÊÕ;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.åä¸€_ä¸°æ”¶;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Ê¹ÓÃ¶ş·Ö²éÕÒ·¨½â¾ö
- * Arrays×Ô´øbinarySearch£¬Ïàµ±ºÃÓÃ
- * 1. Èç¹û²éÕÒµÄÊıÔÚÊı×é·¶Î§ÄÚ£¬Ôò·µ»ØÂÔ´óÓÚÒª²éÕÒµÄÊıµÄ×ø±ê(Õâ¸ö×ø±êÊÇÒ»¸ö¸ºÖµ£¬ÕæÕıÔÚÊı×éÖĞµÄ
- * Î»ÖÃÊÇ£ºMath.abs(index)-1)
- * 2. Èç¹û²»ÔÚÕâ¸öÊı×éµÄ·¶Î§ÄÚ£¬·µ»Ø-1
+ * ä½¿ç”¨äºŒåˆ†æŸ¥æ‰¾æ³•è§£å†³
+ * Arraysè‡ªå¸¦binarySearchï¼Œç›¸å½“å¥½ç”¨
+ * 1. å¦‚æœæŸ¥æ‰¾çš„æ•°åœ¨æ•°ç»„èŒƒå›´å†…ï¼Œåˆ™è¿”å›ç•¥å¤§äºè¦æŸ¥æ‰¾çš„æ•°çš„åæ ‡(è¿™ä¸ªåæ ‡æ˜¯ä¸€ä¸ªè´Ÿå€¼ï¼ŒçœŸæ­£åœ¨æ•°ç»„ä¸­çš„
+ * ä½ç½®æ˜¯ï¼šMath.abs(index)-1)
+ * 2. å¦‚æœä¸åœ¨è¿™ä¸ªæ•°ç»„çš„èŒƒå›´å†…ï¼Œè¿”å›-1
  * @author Peter
  *
  */
@@ -16,7 +16,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int pileSize = sc.nextInt();	// ¶ÑµÄÊıÁ¿
+		int pileSize = sc.nextInt();	// å †çš„æ•°é‡
 		int [] piles = new int[pileSize];
 		piles[0] = sc.nextInt();
 		for(int j=1; j<pileSize; j++) {

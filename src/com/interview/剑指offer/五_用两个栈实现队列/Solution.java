@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.Îå_ÓÃÁ½¸öÕ»ÊµÏÖ¶ÓÁĞ;
+package com.interview.å‰‘æŒ‡offer.äº”_ç”¨ä¸¤ä¸ªæ ˆå®ç°é˜Ÿåˆ—;
 import java.util.Stack;
 
 public class Solution {
@@ -6,14 +6,14 @@ public class Solution {
     Stack<Integer> stack2 = new Stack<Integer>();
     
     public void push(int node) {
-        // Õ»1ÈëÕ»
+        // æ ˆ1å…¥æ ˆ
     	stack1.push(node);
     }
     
     public int pop() {
-    	// ¼ì²éÕ»2ÊÇ·ñÎª¿Õ
+    	// æ£€æŸ¥æ ˆ2æ˜¯å¦ä¸ºç©º
     	if(stack2.isEmpty()) {
-    		// dump³öÕ»1
+    		// dumpå‡ºæ ˆ1
     		while(!stack1.isEmpty()) {
     			stack2.push(stack1.pop());
     		}

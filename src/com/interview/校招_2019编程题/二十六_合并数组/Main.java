@@ -1,4 +1,4 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.¶şÊ®Áù_ºÏ²¢Êı×é;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.äºŒåå…­_åˆå¹¶æ•°ç»„;
 
 import java.util.Scanner;
 

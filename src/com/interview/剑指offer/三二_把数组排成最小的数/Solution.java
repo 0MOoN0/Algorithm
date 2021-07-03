@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.Èı¶ş_°ÑÊı×éÅÅ³É×îĞ¡µÄÊı;
+package com.interview.å‰‘æŒ‡offer.ä¸‰äºŒ_æŠŠæ•°ç»„æ’æˆæœ€å°çš„æ•°;
 import java.util.*;
 
 public class Solution {
@@ -8,11 +8,11 @@ public class Solution {
             strs[i] = numbers[i]+"";
         }
         Arrays.sort(strs, new Comparator<String>(){
-            // "3"<"31" µ«ÊÇ "331">"313"
+            // "3"<"31" ä½†æ˜¯ "331">"313"
             public int compare(String s1, String s2){
                 String a = s1+s2;
                 String b = s2+s1;
-                // Èç¹ûa>bÔòµ÷»»s1ºÍs2µÄË³Ğò
+                // å¦‚æœa>båˆ™è°ƒæ¢s1å’Œs2çš„é¡ºåº
                 return a.compareTo(b);
             }
         });

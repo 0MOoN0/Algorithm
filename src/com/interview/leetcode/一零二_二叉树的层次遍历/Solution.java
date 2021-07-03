@@ -1,4 +1,4 @@
-package com.interview.leetcode.一零二_二叉树的层次遍历;
+package com.interview.leetcode.涓�闆朵簩_浜屽弶鏍戠殑灞傛閬嶅巻;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -17,21 +17,21 @@ import java.util.Queue;
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         if (root==null) return new ArrayList<List<Integer>>();
-        // 结果List
+        // 缁撴灉List
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        // 初始化栈
+        // 鍒濆鍖栨爤
         Queue<TreeNode> stack  = new LinkedList<TreeNode>();
         stack.offer(root);
         while(!stack.isEmpty()){
-            // 计算长度
+            // 璁＄畻闀垮害
             int size = stack.size();
-            // 存放每层元素
+            // 瀛樻斁姣忓眰鍏冪礌
             ArrayList<Integer> innerList = new ArrayList<Integer>(size);
             for(int i=0; i<size; i++){
-                // pop元素
+                // pop鍏冪礌
                 TreeNode num = stack.poll();
                 innerList.add(num.val);
-                // 将子节点入栈
+                // 灏嗗瓙鑺傜偣鍏ユ爤
                 if(num.left != null) stack.offer(num.left);
                 if(num.right != null) stack.offer(num.right);
             }

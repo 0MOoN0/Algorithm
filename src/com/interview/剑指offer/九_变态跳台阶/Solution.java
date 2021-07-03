@@ -1,6 +1,6 @@
-package com.interview.½£Ö¸offer.¾Å_±äÌ¬ÌøÌ¨½×;
+package com.interview.å‰‘æŒ‡offer.ä¹_å˜æ€è·³å°é˜¶;
 
-// ¸ù¾İÉÏÒ»¸öÌâÄ¿µÃ³ö£¬´ÓºóÍùÇ°ÍÆ×îºóÒ»²½£¬Èç¹û×îºóÒ»²½ÊÇÒ»¸ñ¡¢Á½¸ñ...n¸ñ
+// æ ¹æ®ä¸Šä¸€ä¸ªé¢˜ç›®å¾—å‡ºï¼Œä»åå¾€å‰æ¨æœ€åä¸€æ­¥ï¼Œå¦‚æœæœ€åä¸€æ­¥æ˜¯ä¸€æ ¼ã€ä¸¤æ ¼...næ ¼
 // AC-15ms
 public class Solution {
     public int JumpFloorII(int target) {
@@ -11,7 +11,7 @@ public class Solution {
             for(int j=0; j<i; j++){
                 dp[i] += dp[j];
             }
-            // Ò»´ÎÌøn¸ñ
+            // ä¸€æ¬¡è·³næ ¼
             dp[i] += 1;
         }
         return dp[target-1];

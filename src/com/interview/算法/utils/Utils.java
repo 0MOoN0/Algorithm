@@ -1,14 +1,14 @@
-package com.interview.Ëã·¨.utils;
+package com.interview.ç®—æ³•.utils;
 
 import java.util.Arrays;
 import java.util.Random;
 
-import com.interview.Ëã·¨.common.Node;
+import com.interview.ç®—æ³•.common.Node;
 
 public class Utils {
 	
 	/**
-	 *  Éú³ÉÒ»¸öËæ»úÊı×é£¬¹æÄ£Ğ¡ÓÚ¸ø¶¨²ÎÊı¹æÄ£
+	 *  ç”Ÿæˆä¸€ä¸ªéšæœºæ•°ç»„ï¼Œè§„æ¨¡å°äºç»™å®šå‚æ•°è§„æ¨¡
 	 * @return
 	 */
 	public static int[] arrayGenerator(int size) {
@@ -23,7 +23,7 @@ public class Utils {
 	
 	
 	/**
-	 * ¿½±´Êı×é
+	 * æ‹·è´æ•°ç»„
 	 * @param arr
 	 * @return
 	 */
@@ -35,10 +35,10 @@ public class Utils {
 	
 	
 	/**
-	 * ±È½ÏÁ½¸öÊı×éÊÇ·ñÏàµÈ
-	 * @param arr1	Êı×é1
-	 * @param arr2	Êı×é2
-	 * @param printBreakPoint	ÊÇ·ñ´òÓ¡´íÎóÎ»ÖÃ
+	 * æ¯”è¾ƒä¸¤ä¸ªæ•°ç»„æ˜¯å¦ç›¸ç­‰
+	 * @param arr1	æ•°ç»„1
+	 * @param arr2	æ•°ç»„2
+	 * @param printBreakPoint	æ˜¯å¦æ‰“å°é”™è¯¯ä½ç½®
 	 * @return
 	 */
 	public static boolean arrayCompare(int[] arr1, int[] arr2, boolean printBreakPoint) {
@@ -57,13 +57,13 @@ public class Utils {
 			}
 		}
 		if(printBreakPoint) {
-			System.out.println("======breakpoint in : Êı×é³¤¶È²»ÏàµÈ");
+			System.out.println("======breakpoint in : æ•°ç»„é•¿åº¦ä¸ç›¸ç­‰");
 		}
 		return false;
 	}
 	
 	/**
-	 * ´òÓ¡Á´±í
+	 * æ‰“å°é“¾è¡¨
 	 * @param p
 	 */
 	public static void printLinkedList(Node p) {

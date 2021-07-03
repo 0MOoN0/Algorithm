@@ -1,22 +1,22 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.ÈıÊ®¶ş_ÇóÁ¬Ğø×ÓÊı×éµÄ×î´óºÍ;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.ä¸‰åäºŒ_æ±‚è¿ç»­å­æ•°ç»„çš„æœ€å¤§å’Œ;
 
 import java.util.Scanner;
 
 /**
- * ÓëleetcodeµÚ53.×î´ó×ÓĞòºÍÏàÍ¬£¬Ê¹ÓÃ¶¯Ì¬¹æ»®Ë¼Â·Çó½â
+ * ä¸leetcodeç¬¬53.æœ€å¤§å­åºå’Œç›¸åŒï¼Œä½¿ç”¨åŠ¨æ€è§„åˆ’æ€è·¯æ±‚è§£
  * @author Peter
  *
  */
 public class Main {
 
 	public static void main(String[] args) {
-		// ÊäÈë
+		// è¾“å…¥
 		Scanner sc = new Scanner(System.in);
 		String[] split = sc.nextLine().split(",");
 		int ans=0, max=0;
 		for(int i=0; i<split.length; i++) {
 			int num = Integer.parseInt(split[i]);
-			// Ñ¡ÔñÊÇ·ñÖØ¿ª¿ªÊ¼Êı×é
+			// é€‰æ‹©æ˜¯å¦é‡å¼€å¼€å§‹æ•°ç»„
 			if(num>max+num) {
 				max = num;
 			}else {

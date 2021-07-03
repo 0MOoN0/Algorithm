@@ -1,13 +1,13 @@
-package com.interview.½£Ö¸offer.ËÄ_ÖØ½¨¶þ²æÊ÷.solution;
+package com.interview.å‰‘æŒ‡offer.å››_é‡å»ºäºŒå‰æ ‘.solution;
 
-import com.interview.½£Ö¸offer.ËÄ_ÖØ½¨¶þ²æÊ÷.TreeNode;
+import com.interview.å‰‘æŒ‡offer.å››_é‡å»ºäºŒå‰æ ‘.TreeNode;
 
 public class Solution {
     public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
         TreeNode root=reConstructBinaryTree(pre,0,pre.length-1,in,0,in.length-1);
         return root;
     }
-    //Ç°Ðò±éÀú{1,2,4,7,3,5,6,8}ºÍÖÐÐò±éÀúÐòÁÐ{4,7,2,1,5,3,8,6}
+    //å‰åºéåŽ†{1,2,4,7,3,5,6,8}å’Œä¸­åºéåŽ†åºåˆ—{4,7,2,1,5,3,8,6}
     private TreeNode reConstructBinaryTree(int [] pre,int startPre,int endPre,int [] in,int startIn,int endIn) {
          
         if(startPre>endPre||startIn>endIn)

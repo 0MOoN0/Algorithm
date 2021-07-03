@@ -1,15 +1,15 @@
-package com.interview.leetcode.二四二_有效的字母异位词;
+package com.interview.leetcode.浜屽洓浜宊鏈夋晥鐨勫瓧姣嶅紓浣嶈瘝;
 
 import java.util.*;
 
 /**
- * 手写快排
+ * 鎵嬪啓蹇帓
  * @author Peter
  *
  */
 class Solution {
 	public boolean isAnagram(String s, String t) {
-		// 数据校验
+		// 鏁版嵁鏍￠獙
 		if (!(s != null && t != null && s.length() == t.length())) {
 			return false;
 		}

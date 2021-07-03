@@ -1,10 +1,10 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.¶şÊ®°Ë_×îÉÙÊıÁ¿»õÎï×°ÏäÎÊÌâ;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.äºŒåå…«_æœ€å°‘æ•°é‡è´§ç‰©è£…ç®±é—®é¢˜;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Ò»Î¬¶¯Ì¬¹æ»®
+ * ä¸€ç»´åŠ¨æ€è§„åˆ’
  * @author Peter
  *
  */

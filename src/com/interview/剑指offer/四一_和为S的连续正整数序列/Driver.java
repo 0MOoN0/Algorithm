@@ -1,4 +1,4 @@
-package com.interview.剑指offer.四一_和为S的连续正整数序列;
+package com.interview.鍓戞寚offer.鍥涗竴_鍜屼负S鐨勮繛缁鏁存暟搴忓垪;
 
 public class Driver {
 

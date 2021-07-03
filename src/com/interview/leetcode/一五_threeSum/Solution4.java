@@ -1,11 +1,11 @@
-package com.interview.leetcode.Ò»Îå_threeSum;
+package com.interview.leetcode.ä¸€äº”_threeSum;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
- * AC-Ë«ÖØÖ¸Õë£¬ÔÚÌí¼ÓÇ°´¦ÀíÊı¾İÖØ¸´µÄÎÊÌâ
+ * AC-åŒé‡æŒ‡é’ˆï¼Œåœ¨æ·»åŠ å‰å¤„ç†æ•°æ®é‡å¤çš„é—®é¢˜
  * 
  * @author Peter
  *
@@ -15,18 +15,18 @@ class Solution4 {
         List<List<Integer>> ans = new ArrayList<List<Integer>>();
         int len = nums.length;
         if(nums == null || len < 3) return ans;
-        Arrays.sort(nums); // ÅÅĞò
+        Arrays.sort(nums); // æ’åº
         for (int i = 0; i < len ; i++) {
-            if(nums[i] > 0) break; // Èç¹ûµ±Ç°Êı×Ö´óÓÚ0£¬ÔòÈıÊıÖ®ºÍÒ»¶¨´óÓÚ0£¬ËùÒÔ½áÊøÑ­»·
-            if(i > 0 && nums[i] == nums[i-1]) continue; // È¥ÖØ
+            if(nums[i] > 0) break; // å¦‚æœå½“å‰æ•°å­—å¤§äº0ï¼Œåˆ™ä¸‰æ•°ä¹‹å’Œä¸€å®šå¤§äº0ï¼Œæ‰€ä»¥ç»“æŸå¾ªç¯
+            if(i > 0 && nums[i] == nums[i-1]) continue; // å»é‡
             int L = i+1;
             int R = len-1;
             while(L < R){
                 int sum = nums[i] + nums[L] + nums[R];
                 if(sum == 0){
                     ans.add(Arrays.asList(nums[i],nums[L],nums[R]));
-                    while (L<R && nums[L] == nums[L+1]) L++; // È¥ÖØ
-                    while (L<R && nums[R] == nums[R-1]) R--; // È¥ÖØ
+                    while (L<R && nums[L] == nums[L+1]) L++; // å»é‡
+                    while (L<R && nums[R] == nums[R-1]) R--; // å»é‡
                     L++;
                     R--;
                 }

@@ -1,11 +1,11 @@
-package com.basic.²¢·¢._volatile.¿É¼ûĞÔ;
+package com.basic.å¹¶å‘._volatile.å¯è§æ€§;
 
 import java.util.concurrent.TimeUnit;
 
 /**
- * ±äÁ¿¿É¼ûĞÔÎÊÌâ
- * Î´Ê¹ÓÃvolatileĞŞÊÎÊ±£¬Ïß³Ì²»»áÍ£Ö¹
- * Ê¹ÓÃvolatileĞŞÊÎºó£¬Ïß³Ì»áÍ£Ö¹
+ * å˜é‡å¯è§æ€§é—®é¢˜
+ * æœªä½¿ç”¨volatileä¿®é¥°æ—¶ï¼Œçº¿ç¨‹ä¸ä¼šåœæ­¢
+ * ä½¿ç”¨volatileä¿®é¥°åï¼Œçº¿ç¨‹ä¼šåœæ­¢
  * @author Peter
  *
  */

@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.Ò»¾Å_Ë³Ê±Õë´òÓ¡¾ØÕó;
+package com.interview.å‰‘æŒ‡offer.ä¸€ä¹_é¡ºæ—¶é’ˆæ‰“å°çŸ©é˜µ;
 
 import java.util.ArrayList;
 public class Solution {
@@ -10,28 +10,28 @@ public class Solution {
         int xStart = 0, xEnd = col-1, yStart = 0, yEnd = row-1;
         ArrayList<Integer> result = new ArrayList<Integer>();
         while(counter <= size){
-            // ´Ó×óÍùÓÒ
+            // ä»å·¦å¾€å³
             for(int i=xStart; i<=xEnd && counter <= size ;i++){
                 result.add(matrix[yStart][i]);
                 counter++;
             }
-            // ´ÓÉÏÍùÏÂ
+            // ä»ä¸Šå¾€ä¸‹
             for(int i=yStart+1; i<=yEnd && counter <= size; i++){
                 result.add(matrix[i][xEnd]);
                 counter++;
             }
-            // ´ÓÓÒÍù×ó
+            // ä»å³å¾€å·¦
             for(int i=xEnd-1; xStart<=i && counter <= size; i--){
                 result.add(matrix[yEnd][i]);
                 counter++;
             }
-            // ´ÓÏÂµ½ÉÏ
+            // ä»ä¸‹åˆ°ä¸Š
             yStart++;
             for(int i=yEnd-1; i>=yStart && counter <= size; i--){
                 result.add(matrix[i][xStart]);
                 counter++;
             }
-            // ¸Ä±ä×ø±ê
+            // æ”¹å˜åæ ‡
             xStart++;xEnd--;yEnd--;
         }
         return result;

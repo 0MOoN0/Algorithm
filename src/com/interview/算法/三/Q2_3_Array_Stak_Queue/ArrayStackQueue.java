@@ -1,11 +1,11 @@
-package com.interview.Ëã·¨.Èı.Q2_3_Array_Stak_Queue;
+package com.interview.ç®—æ³•.ä¸‰.Q2_3_Array_Stak_Queue;
 
-import com.interview.Ëã·¨.Èı.Q2_3_Array_Stak_Queue.stack2queue.Stack2Queue;
+import com.interview.ç®—æ³•.ä¸‰.Q2_3_Array_Stak_Queue.stack2queue.Stack2Queue;
 
 /**
- * ÈçºÎ½öÓÃ¶ÓÁĞ½á¹¹ÊµÏÖÕ»½á¹¹£¿
-ÈçºÎ½öÓÃÕ»½á¹¹ÊµÏÖ¶ÓÁĞ½á¹¹£¿
-¼òµ¥ÒµÎñ²âÊÔÀà
+ * å¦‚ä½•ä»…ç”¨é˜Ÿåˆ—ç»“æ„å®ç°æ ˆç»“æ„ï¼Ÿ
+å¦‚ä½•ä»…ç”¨æ ˆç»“æ„å®ç°é˜Ÿåˆ—ç»“æ„ï¼Ÿ
+ç®€å•ä¸šåŠ¡æµ‹è¯•ç±»
  * @author Peter
  *
  */

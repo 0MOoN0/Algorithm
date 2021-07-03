@@ -1,23 +1,23 @@
-package com.basic.Àà¼ÓÔØ;
+package com.basic.ç±»åŠ è½½;
 
 
 /*
- * ×ÓÀàµÄ³õÊ¼»¯<clinit>£º
- * £¨1£©j = method();
- * £¨2£©×ÓÀàµÄ¾²Ì¬´úÂë¿é
+ * å­ç±»çš„åˆå§‹åŒ–<clinit>ï¼š
+ * ï¼ˆ1ï¼‰j = method();
+ * ï¼ˆ2ï¼‰å­ç±»çš„é™æ€ä»£ç å—
  * 
- * ÏÈ³õÊ¼»¯¸¸Àà£º(5)(1)
- * ³õÊ¼»¯×ÓÀà£º£¨10£©(6)
+ * å…ˆåˆå§‹åŒ–çˆ¶ç±»ï¼š(5)(1)
+ * åˆå§‹åŒ–å­ç±»ï¼šï¼ˆ10ï¼‰(6)
  * 
- * ×ÓÀàµÄÊµÀý»¯·½·¨<init>£º
- * £¨1£©super()£¨×îÇ°£©      £¨9£©£¨3£©£¨2£©
- * £¨2£©i = test();    £¨9£©
- * £¨3£©×ÓÀàµÄ·Ç¾²Ì¬´úÂë¿é    £¨8£©
- * £¨4£©×ÓÀàµÄÎÞ²Î¹¹Ôì£¨×îºó£© £¨7£©
+ * å­ç±»çš„å®žä¾‹åŒ–æ–¹æ³•<init>ï¼š
+ * ï¼ˆ1ï¼‰super()ï¼ˆæœ€å‰ï¼‰      ï¼ˆ9ï¼‰ï¼ˆ3ï¼‰ï¼ˆ2ï¼‰
+ * ï¼ˆ2ï¼‰i = test();    ï¼ˆ9ï¼‰
+ * ï¼ˆ3ï¼‰å­ç±»çš„éžé™æ€ä»£ç å—    ï¼ˆ8ï¼‰
+ * ï¼ˆ4ï¼‰å­ç±»çš„æ— å‚æž„é€ ï¼ˆæœ€åŽï¼‰ ï¼ˆ7ï¼‰
  * 
- * ÒòÎª´´½¨ÁËÁ½¸öSon¶ÔÏó£¬Òò´ËÊµÀý»¯·½·¨<init>Ö´ÐÐÁ½´Î
+ * å› ä¸ºåˆ›å»ºäº†ä¸¤ä¸ªSonå¯¹è±¡ï¼Œå› æ­¤å®žä¾‹åŒ–æ–¹æ³•<init>æ‰§è¡Œä¸¤æ¬¡
  * 
- * £¨9£©£¨3£©£¨2£©£¨9£©£¨8£©£¨7£©
+ * ï¼ˆ9ï¼‰ï¼ˆ3ï¼‰ï¼ˆ2ï¼‰ï¼ˆ9ï¼‰ï¼ˆ8ï¼‰ï¼ˆ7ï¼‰
  */
 public class Son extends Father{
 	private int i = test();
@@ -26,7 +26,7 @@ public class Son extends Father{
 		System.out.print("(6)");
 	}
 	Son(){
-//		super();//Ð´»ò²»Ð´¶¼ÔÚ£¬ÔÚ×ÓÀà¹¹ÔìÆ÷ÖÐÒ»¶¨»áµ÷ÓÃ¸¸ÀàµÄ¹¹ÔìÆ÷
+//		super();//å†™æˆ–ä¸å†™éƒ½åœ¨ï¼Œåœ¨å­ç±»æž„é€ å™¨ä¸­ä¸€å®šä¼šè°ƒç”¨çˆ¶ç±»çš„æž„é€ å™¨
 		System.out.print("(7)");
 	}
 	{

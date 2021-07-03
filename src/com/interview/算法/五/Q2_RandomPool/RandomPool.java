@@ -1,17 +1,17 @@
-package com.interview.Ëã·¨.Îå.Q2_RandomPool;
+package com.interview.ç®—æ³•.äº”.Q2_RandomPool;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Éè¼ÆRandomPool½á¹¹
- * ¡¾ÌâÄ¿¡¿ Éè¼ÆÒ»ÖÖ½á¹¹£¬ÔÚ¸Ã½á¹¹ÖĞÓĞÈçÏÂÈı¸ö¹¦ÄÜ£º 
-	insert(key)£º½«Ä³¸ökey¼ÓÈëµ½¸Ã½á¹¹£¬×öµ½²»ÖØ¸´¼ÓÈë¡£ 
-	delete(key)£º½«Ô­±¾ÔÚ½á¹¹ÖĞµÄÄ³¸ökeyÒÆ³ı¡£ getRandom()£º
-	µÈ¸ÅÂÊËæ»ú·µ»Ø½á¹¹ÖĞµÄÈÎºÎÒ»¸ökey¡£
-	¡¾ÒªÇó¡¿ Insert¡¢deleteºÍgetRandom·½·¨µÄÊ±¼ä¸´ÔÓ¶È¶¼ÊÇ
+ * è®¾è®¡RandomPoolç»“æ„
+ * ã€é¢˜ç›®ã€‘ è®¾è®¡ä¸€ç§ç»“æ„ï¼Œåœ¨è¯¥ç»“æ„ä¸­æœ‰å¦‚ä¸‹ä¸‰ä¸ªåŠŸèƒ½ï¼š 
+	insert(key)ï¼šå°†æŸä¸ªkeyåŠ å…¥åˆ°è¯¥ç»“æ„ï¼Œåšåˆ°ä¸é‡å¤åŠ å…¥ã€‚ 
+	delete(key)ï¼šå°†åŸæœ¬åœ¨ç»“æ„ä¸­çš„æŸä¸ªkeyç§»é™¤ã€‚ getRandom()ï¼š
+	ç­‰æ¦‚ç‡éšæœºè¿”å›ç»“æ„ä¸­çš„ä»»ä½•ä¸€ä¸ªkeyã€‚
+	ã€è¦æ±‚ã€‘ Insertã€deleteå’ŒgetRandomæ–¹æ³•çš„æ—¶é—´å¤æ‚åº¦éƒ½æ˜¯
 	O(1)
-	Ë¼Â·£¬Ê¹ÓÃÁ½¸öHashMap¡£map1:¶ÔÏó-Î»ÖÃ£¬map2:Î»ÖÃ-¶ÔÏó£¬É¾³ıÊ±£¬ÔÚmap2ÖĞ½«×îºóÒ»¸öentryÌîµ½±»É¾³ıµÄ¿ÕÎ»ÖĞ
+	æ€è·¯ï¼Œä½¿ç”¨ä¸¤ä¸ªHashMapã€‚map1:å¯¹è±¡-ä½ç½®ï¼Œmap2:ä½ç½®-å¯¹è±¡ï¼Œåˆ é™¤æ—¶ï¼Œåœ¨map2ä¸­å°†æœ€åä¸€ä¸ªentryå¡«åˆ°è¢«åˆ é™¤çš„ç©ºä½ä¸­
  * @author Peter
  *
  */
@@ -21,7 +21,7 @@ public class RandomPool {
 	Map<Integer, Object> map2 = new HashMap<Integer,Object>();
 	int size = 0;
 	
-	// É¾³ı
+	// åˆ é™¤
 	public void delete(Object o) {
 		if(map.containsKey(o)) {
 			int deleteIndex = map.get(o);

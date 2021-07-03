@@ -1,25 +1,25 @@
-package com.interview.½£Ö¸offer.ËÄÁã_Êı×éÖĞÖ»³öÏÖÒ»´ÎµÄÊı×Ö;
+package com.interview.å‰‘æŒ‡offer.å››é›¶_æ•°ç»„ä¸­åªå‡ºç°ä¸€æ¬¡çš„æ•°å­—;
 
-//num1,num2·Ö±ğÎª³¤¶ÈÎª1µÄÊı×é¡£´«³ö²ÎÊı
-//½«num1[0],num2[0]ÉèÖÃÎª·µ»Ø½á¹û
+//num1,num2åˆ†åˆ«ä¸ºé•¿åº¦ä¸º1çš„æ•°ç»„ã€‚ä¼ å‡ºå‚æ•°
+//å°†num1[0],num2[0]è®¾ç½®ä¸ºè¿”å›ç»“æœ
 import java.util.*;
 public class Solution {
     public void FindNumsAppearOnce(int [] array,int num1[] , int num2[]) {
         Arrays.sort(array);
         int flag = 0;
         for(int i=0; i<array.length; i++){
-            // ×îºóÒ»Î»
+            // æœ€åä¸€ä½
             if(i == array.length-1){
                 num2[0] = array[i];
                 break;
             }
-            // Èç¹ûÏàµÈ
+            // å¦‚æœç›¸ç­‰
             if(array[i]==array[i+1]){
-                // iÌøÁ½Î»
+                // iè·³ä¸¤ä½
                 i++;
                 continue;
             }
-            // Èç¹û²»ÏàµÈ
+            // å¦‚æœä¸ç›¸ç­‰
             if(flag==0){
                 num1[0] = array[i];
                 flag = 1;

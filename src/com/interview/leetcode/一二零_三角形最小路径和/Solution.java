@@ -1,8 +1,8 @@
-package com.interview.leetcode.Ò»¶şÁã_Èı½ÇĞÎ×îĞ¡Â·¾¶ºÍ;
+package com.interview.leetcode.ä¸€äºŒé›¶_ä¸‰è§’å½¢æœ€å°è·¯å¾„å’Œ;
 
 import java.util.List;
 
-// µİ¹é
+// é€’å½’
 class Solution {
 
 	int result = Integer.MAX_VALUE;
@@ -14,7 +14,7 @@ class Solution {
 	}
 
 	public void recursive(int m, int n, List<List<Integer>> triangle) {
-		// ÅĞ¶Ïµ±Ç°ÎªÖ¹ÊÇ·ñÎªÄ©Î²
+		// åˆ¤æ–­å½“å‰ä¸ºæ­¢æ˜¯å¦ä¸ºæœ«å°¾
 		if (m >= triangle.size() - 1) {
 			if (triangle.get(m).get(n) + count < result) {
 				result = triangle.get(m).get(n) + count;
@@ -22,14 +22,14 @@ class Solution {
 			}
 			return;
 		}
-		// ½«µ±Ç°½á¹û¼ÓÈë¼ÆÊıÆ÷
+		// å°†å½“å‰ç»“æœåŠ å…¥è®¡æ•°å™¨
 		count += triangle.get(m).get(n);
-		// Ñ­»·¿É·ÃÎÊµÄ½Úµã£¬¶Ô½Úµã½øĞĞµİ¹é
+		// å¾ªç¯å¯è®¿é—®çš„èŠ‚ç‚¹ï¼Œå¯¹èŠ‚ç‚¹è¿›è¡Œé€’å½’
 		for (int i = 0; i < 2; i++) {
-			// ÓÒ½Úµã
+			// å³èŠ‚ç‚¹
 			recursive(m + 1, n + i, triangle);
 		}
-		// »Ø¹éµ±Ç°½á¹û
+		// å›å½’å½“å‰ç»“æœ
 		count -= triangle.get(m).get(n);
 	}
 }

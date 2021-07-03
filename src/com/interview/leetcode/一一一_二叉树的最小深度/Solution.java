@@ -1,6 +1,6 @@
-package com.interview.leetcode.Ò»Ò»Ò»_¶ş²æÊ÷µÄ×îĞ¡Éî¶È;
+package com.interview.leetcode.ä¸€ä¸€ä¸€_äºŒå‰æ ‘çš„æœ€å°æ·±åº¦;
 /**
- * µİ¹é DFS
+ * é€’å½’ DFS
  * Definition for a binary tree node.
  * public class TreeNode {
  *     int val;
@@ -11,14 +11,14 @@ package com.interview.leetcode.Ò»Ò»Ò»_¶ş²æÊ÷µÄ×îĞ¡Éî¶È;
  */
 class Solution {
     public int minDepth(TreeNode root) {
-        // µİ¹é½áÊøÌõ¼ş
+        // é€’å½’ç»“æŸæ¡ä»¶
         if(root == null){
             return 0;
         }
         int left = minDepth(root.left);
         int right = minDepth(root.right);
-        // Èç¹û×ó×ÓÊ÷»òÕßÓÒ×ÓÊ÷Îª¿Õ£¬Ôò¸ß¶ÈÎª·Ç¿Õ×óÓÒ×ÓÊ÷µÄ¸ß¶È
-        // Èç¹û¶¼²»Îª¿Õ£¬ÔòÑ¡Ôñ¸ß¶È×îĞ¡µÄ×ÓÊ÷
+        // å¦‚æœå·¦å­æ ‘æˆ–è€…å³å­æ ‘ä¸ºç©ºï¼Œåˆ™é«˜åº¦ä¸ºéç©ºå·¦å³å­æ ‘çš„é«˜åº¦
+        // å¦‚æœéƒ½ä¸ä¸ºç©ºï¼Œåˆ™é€‰æ‹©é«˜åº¦æœ€å°çš„å­æ ‘
         return (left==0 || right==0)?(left+right+1):Math.min(left, right)+1;
     }
 }

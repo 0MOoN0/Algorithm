@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.¶şÎå_¸´ÔÓÁ´±íµÄ¸´ÖÆ;
+package com.interview.å‰‘æŒ‡offer.äºŒäº”_å¤æ‚é“¾è¡¨çš„å¤åˆ¶;
 
 public class RandomListNode {
 	int label;

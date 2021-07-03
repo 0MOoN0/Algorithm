@@ -1,6 +1,6 @@
-package com.interview.leetcode.¶şÁãÁù_·´×ªÁ´±í;
+package com.interview.leetcode.äºŒé›¶å…­_åè½¬é“¾è¡¨;
 /**
- * Ê¹ÓÃµü´úµÄ·½·¨£¬Ê¹ÓÃÒ»¸öÍ·½Úµã£¬Ã¿´ÎÌí¼ÓÏàµ±ÓÚÔÚÍ·½ÚµãºóÃæ²åÈë
+ * ä½¿ç”¨è¿­ä»£çš„æ–¹æ³•ï¼Œä½¿ç”¨ä¸€ä¸ªå¤´èŠ‚ç‚¹ï¼Œæ¯æ¬¡æ·»åŠ ç›¸å½“äºåœ¨å¤´èŠ‚ç‚¹åé¢æ’å…¥
  * 
  * Definition for singly-linked list.
  * public class ListNode {
@@ -14,12 +14,12 @@ class Solution {
         ListNode pre = new ListNode(0);
         ListNode result = pre;
         while(head!=null){
-            // ĞÂ½¨½Úµã
+            // æ–°å»ºèŠ‚ç‚¹
             ListNode node = new ListNode(head.val);
             node.next = pre.next;
-            // ÈÃÉÏÒ»¸ö½ÚµãÖ¸Ïòµ±Ç°½Úµã
+            // è®©ä¸Šä¸€ä¸ªèŠ‚ç‚¹æŒ‡å‘å½“å‰èŠ‚ç‚¹
             pre.next = node;
-            // Ô­Ê¼Í·½ÚµãÖ¸ÏòÏÂÒ»¸ö
+            // åŸå§‹å¤´èŠ‚ç‚¹æŒ‡å‘ä¸‹ä¸€ä¸ª
             head = head.next;
         }
         return result.next;

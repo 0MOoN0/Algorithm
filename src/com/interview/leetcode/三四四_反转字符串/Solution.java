@@ -1,7 +1,7 @@
-package com.interview.leetcode.������_��ת�ַ���;
+package com.interview.leetcode.三四四_反转字符串;
 /**
- * ʹ��˫��ָ���˼�룬��Ҫһ���ַ��Ŀռ俪��
- * һ��ָ��ָ�������ͷ��һ��ָ��ָ�������β�������������ݣ����ƶ���ֱ����ָ�벻С����ָ��
+ * 使用双重指针的思想，需要一个字符的空间开销
+ * 一个指针指向数组的头，一个指针指向数组的尾，交换两者内容，再移动，直到左指针不小于右指针
  * @author Peter
  *
  */

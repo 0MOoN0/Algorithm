@@ -1,4 +1,4 @@
-package com.interview.�㷨.graph;
+package com.interview.算法.graph;
 
 public class GraphGenerator {
 

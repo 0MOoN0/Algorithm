@@ -1,4 +1,4 @@
-package com.basic.²¢·¢.Í¬²½Æ÷._countdownlatch.ÇØÃğÁù¹ú;
+package com.basic.å¹¶å‘.åŒæ­¥å™¨._countdownlatch.ç§¦ç­å…­å›½;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -8,13 +8,13 @@ public class CountDownLatchDemo {
 		CountDownLatch latch = new CountDownLatch(6);
 		for (int i = 1; i <= 6; i++) {
 			new Thread(()->{
-				System.out.println(Thread.currentThread().getName()+"\t ±»Ãğ");
+				System.out.println(Thread.currentThread().getName()+"\t è¢«ç­");
 				latch.countDown();
 			}
 			,CountryEnum.forEach(i).getName()).start();
 		}
 		latch.await();
-		System.out.println("ÇØ¹úÍ³Ò»");
+		System.out.println("ç§¦å›½ç»Ÿä¸€");
 	}
 
 }

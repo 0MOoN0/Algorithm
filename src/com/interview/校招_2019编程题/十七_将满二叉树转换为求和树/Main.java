@@ -1,4 +1,4 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.Ê®Æß_½«Âú¶ş²æÊ÷×ª»»ÎªÇóºÍÊ÷;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.åä¸ƒ_å°†æ»¡äºŒå‰æ ‘è½¬æ¢ä¸ºæ±‚å’Œæ ‘;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -12,12 +12,12 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-		//Â¼ÈëÊı¾İ
+		//å½•å…¥æ•°æ®
 		String[] preStr = reader.readLine().split(" ");
 		String[] inStr = reader.readLine().split(" ");
 		int[] pre = new int[preStr.length];
 		int[] in = new int[inStr.length];
-		// Êı¾İ×ª»»
+		// æ•°æ®è½¬æ¢
 		for(int i=0; i<pre.length; i++) {
 			pre[i] = Integer.parseInt(preStr[i]);
 			in[i] = Integer.parseInt(inStr[i]);
@@ -30,16 +30,16 @@ public class Main {
 		
 	}
 	public static int fracture(int [] arr, int begin, int end, int index) {
-		// µ½Êı×éÄ©Î²
+		// åˆ°æ•°ç»„æœ«å°¾
 		if(end - begin <=1) {
 			return 0;
 		}
 		int nextIndex = begin+end/2;
 		int left = fracture(arr, 0, index-1, nextIndex);
 		int right = fracture(arr, index+1, arr.length-1, nextIndex);
-		// ÖØĞÂ¸øµ±Ç°Î»ÖÃ¸³Öµ
+		// é‡æ–°ç»™å½“å‰ä½ç½®èµ‹å€¼
 		arr[index] = left+right;
-		// Ò»²¢·µ»Øµ±Ç°Öµ
+		// ä¸€å¹¶è¿”å›å½“å‰å€¼
 		return right+left+arr[index];
 	}
 	

@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.¶şÎå_¸´ÔÓÁ´±íµÄ¸´ÖÆ;
+package com.interview.å‰‘æŒ‡offer.äºŒäº”_å¤æ‚é“¾è¡¨çš„å¤åˆ¶;
 /*
 public class RandomListNode {
     int label;
@@ -15,7 +15,7 @@ public class Solution {
     {
         if(pHead==null) return null;
         RandomListNode qHead = new RandomListNode(pHead.label);
-        // ¸´ÖÆnextµ¥Á´
+        // å¤åˆ¶nextå•é“¾
         RandomListNode p = pHead.next;
         RandomListNode q = qHead;
         while(p!=null){
@@ -23,13 +23,13 @@ public class Solution {
             p = p.next;
             q=q.next;
         }
-        // ¸´ÖÆËæ»úÖ¸Õë
+        // å¤åˆ¶éšæœºæŒ‡é’ˆ
         p = pHead;
         q = qHead;
         while(p!=null){
-            // ÅĞ¶ÏrandomÖ¸ÕëÊÇ·ñÎª¿Õ
+            // åˆ¤æ–­randomæŒ‡é’ˆæ˜¯å¦ä¸ºç©º
             if(p.random!=null){
-                // Ë«Ö¸ÕëÍ¬²½½øĞĞ±éÀú£¬ÕÒ³öp randomÖ¸ÏòµÄ½Úµã
+                // åŒæŒ‡é’ˆåŒæ­¥è¿›è¡Œéå†ï¼Œæ‰¾å‡ºp randomæŒ‡å‘çš„èŠ‚ç‚¹
                 RandomListNode pHead_=pHead, qHead_=qHead;
                 while(p.random!=pHead_){
                     pHead_ = pHead_.next;

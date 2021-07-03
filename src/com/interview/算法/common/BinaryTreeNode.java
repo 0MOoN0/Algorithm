@@ -1,7 +1,7 @@
-package com.interview.Ëã·¨.common;
+package com.interview.ç®—æ³•.common;
 
 /**
- * ¶ş²æÊ÷½ÚµãÊı¾İ½á¹¹
+ * äºŒå‰æ ‘èŠ‚ç‚¹æ•°æ®ç»“æ„
  * 
  * @author Peter
  *

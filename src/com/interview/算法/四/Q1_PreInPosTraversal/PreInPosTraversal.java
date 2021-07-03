@@ -1,18 +1,18 @@
-package com.interview.Ëã·¨.ËÄ.Q1_PreInPosTraversal;
+package com.interview.ç®—æ³•.å››.Q1_PreInPosTraversal;
 
 import java.util.Stack;
 
-import com.interview.Ëã·¨.common.BinaryTreeNode;
+import com.interview.ç®—æ³•.common.BinaryTreeNode;
 
 /**
- * ¸÷ÖÖ·½Ê½±éÀú¶ş²æÊ÷
+ * å„ç§æ–¹å¼éå†äºŒå‰æ ‘
  * @author Peter
  *
  */
 public class PreInPosTraversal {
 
 	/**
-	 * ÏÈĞò±éÀú¶ş²æÊ÷£¬µİ¹é·½Ê½
+	 * å…ˆåºéå†äºŒå‰æ ‘ï¼Œé€’å½’æ–¹å¼
 	 * @param node
 	 */
 	public static void preOrderRecur(BinaryTreeNode node) {
@@ -24,7 +24,7 @@ public class PreInPosTraversal {
 	}
 	
 	/**
-	 * ÖĞĞò±éÀú¶ş²æÊ÷£¬µİ¹é·½Ê½
+	 * ä¸­åºéå†äºŒå‰æ ‘ï¼Œé€’å½’æ–¹å¼
 	 * @param node
 	 */
 	public static void inOrderRecur(BinaryTreeNode node) {
@@ -37,7 +37,7 @@ public class PreInPosTraversal {
 	}
 	
 	/**
-	 * ºóĞò±éÀú£¬µİ¹é·½Ê½
+	 * ååºéå†ï¼Œé€’å½’æ–¹å¼
 	 * @param node
 	 */
 	public static void posOrderRecur(BinaryTreeNode node) {
@@ -50,7 +50,7 @@ public class PreInPosTraversal {
 	}
 	
 	/**
-	 * Ê¹ÓÃÕ»½á¹¹Íê³ÉÏÈĞò±éÀú£¬ÓÒ×ÓÊ÷ÏÈÈëÕ»£¬×ó×ÓÊ÷ºóÈëÕ»
+	 * ä½¿ç”¨æ ˆç»“æ„å®Œæˆå…ˆåºéå†ï¼Œå³å­æ ‘å…ˆå…¥æ ˆï¼Œå·¦å­æ ‘åå…¥æ ˆ
 	 * @param node
 	 */
 	public static void preOrderUnRecur(BinaryTreeNode node) {
@@ -60,11 +60,11 @@ public class PreInPosTraversal {
 			while(!stack.isEmpty()) {
 				node = stack.pop();
 				System.out.println(node);
-				// ÓÒ×ÓÊ÷ÈëÕ»
+				// å³å­æ ‘å…¥æ ˆ
 				if(node.right != null) {
 					stack.push(node.right);
 				}
-				// ×ó×ÓÊ÷ÈëÕ»
+				// å·¦å­æ ‘å…¥æ ˆ
 				if(node.left != null) {
 					stack.push(node.left);
 				}
@@ -73,7 +73,7 @@ public class PreInPosTraversal {
 	}
 	
 	/**
-	 * ÖĞĞò±éÀú£¬Ê¹ÓÃÒ»¸öÕ»£¬[Ò»Â·ÈÃ×ó×ÓÊ÷ÈëÕ»£¬Èç¹û×ó×ÓÊ÷Îª¿Õ£¬µ¯Õ»£¬ÓÒ×ÓÊ÷ÈëÕ»]£¬ÖØ¸´´Ë²Ù×÷
+	 * ä¸­åºéå†ï¼Œä½¿ç”¨ä¸€ä¸ªæ ˆï¼Œ[ä¸€è·¯è®©å·¦å­æ ‘å…¥æ ˆï¼Œå¦‚æœå·¦å­æ ‘ä¸ºç©ºï¼Œå¼¹æ ˆï¼Œå³å­æ ‘å…¥æ ˆ]ï¼Œé‡å¤æ­¤æ“ä½œ
 	 * @param node
 	 */
 	public static void inOrderUnRecur(BinaryTreeNode node) {
@@ -81,12 +81,12 @@ public class PreInPosTraversal {
 		if(node != null) {
 			Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
 			while(!stack.isEmpty() || node != null) {
-				// Èç¹û×ó×ÓÊ÷²»Îª¿Õ£¬Ò»Â·½«×ó×ÓÊ÷Ñ¹Õ»
+				// å¦‚æœå·¦å­æ ‘ä¸ä¸ºç©ºï¼Œä¸€è·¯å°†å·¦å­æ ‘å‹æ ˆ
 				if(node != null) {
 					stack.push(node);
 					node = node.left;
 				}else {
-					// Èç¹û×ó×ÓÊ÷Îª¿Õ£¬·ÃÎÊÕ»¶¥ÔªËØ£¬ºÍÓÒ×ÓÊ÷
+					// å¦‚æœå·¦å­æ ‘ä¸ºç©ºï¼Œè®¿é—®æ ˆé¡¶å…ƒç´ ï¼Œå’Œå³å­æ ‘
 					node = stack.pop();
 					System.out.println(node);
 					node = node.right;
@@ -96,11 +96,11 @@ public class PreInPosTraversal {
 	}
 	
 	/**
-	 * ºóĞò±éÀú£¬·½·¨1£¬Ê¹ÓÃÁ½¸öÕ»£¬ÔÚËüÒªÊä³öµÄÊ±ºòÑ¹µ½ÁíÒ»¸öÕ»£¬×îºóÍ³Ò»Êä³ö
-	 * ¿ÉÒÔ½«ºóĞò±éÀúµÄ·½Ê½ÓëÇ°Ğò±éÀú×öÒ»¸ö±È½Ï£¬Ç°Ğò±éÀúÏÈÑ¹ÓÒ×ÓÊ÷£¬ºóĞø±éÀúÏÈÑ¹×ó×ÓÊ÷£»Ç°Ğò±éÀúµ¯Õ»ºóÊä³öÔªËØ£¬ºóĞø±éÀúµ¯Õ»ºóÑ¹ÈëÁíÒ»¸öÕ»(ÒÔÉÏÁ½¸ö²Ù×÷ÊµÏÖÁË½«ÖĞ¼ä½ÚµãºóÃæÊä³öµÄĞ§¹û)
-	 * Õ»µÄ¹æÔò£ºÏÈÑ¹Õ»£¬ºóÊä³ö£»ºóÑ¹Õ»£¬ÏÈÊä³ö
-	 * ºóĞò±éÀú£ºÏÈÊä³ö×ó±ß¡¢ÔÙÊä³öÓÒ±ß¡¢×îºóÊä³öÖĞ¼ä
-	 * ÏÈĞò±éÀú£ºÏÈÊä³öÖĞ¼ä£¬ÔÙÊä³ö×ó±ß£¬ºóÊä³öÓÒ±ß
+	 * ååºéå†ï¼Œæ–¹æ³•1ï¼Œä½¿ç”¨ä¸¤ä¸ªæ ˆï¼Œåœ¨å®ƒè¦è¾“å‡ºçš„æ—¶å€™å‹åˆ°å¦ä¸€ä¸ªæ ˆï¼Œæœ€åç»Ÿä¸€è¾“å‡º
+	 * å¯ä»¥å°†ååºéå†çš„æ–¹å¼ä¸å‰åºéå†åšä¸€ä¸ªæ¯”è¾ƒï¼Œå‰åºéå†å…ˆå‹å³å­æ ‘ï¼Œåç»­éå†å…ˆå‹å·¦å­æ ‘ï¼›å‰åºéå†å¼¹æ ˆåè¾“å‡ºå…ƒç´ ï¼Œåç»­éå†å¼¹æ ˆåå‹å…¥å¦ä¸€ä¸ªæ ˆ(ä»¥ä¸Šä¸¤ä¸ªæ“ä½œå®ç°äº†å°†ä¸­é—´èŠ‚ç‚¹åé¢è¾“å‡ºçš„æ•ˆæœ)
+	 * æ ˆçš„è§„åˆ™ï¼šå…ˆå‹æ ˆï¼Œåè¾“å‡ºï¼›åå‹æ ˆï¼Œå…ˆè¾“å‡º
+	 * ååºéå†ï¼šå…ˆè¾“å‡ºå·¦è¾¹ã€å†è¾“å‡ºå³è¾¹ã€æœ€åè¾“å‡ºä¸­é—´
+	 * å…ˆåºéå†ï¼šå…ˆè¾“å‡ºä¸­é—´ï¼Œå†è¾“å‡ºå·¦è¾¹ï¼Œåè¾“å‡ºå³è¾¹
 	 * @param noe
 	 */
 	public static void posOrderUnRecur(BinaryTreeNode node) {
@@ -111,7 +111,7 @@ public class PreInPosTraversal {
 			while(!s1.isEmpty()) {
 				node = s1.pop();
 				s2.push(node);
-				// ×ó×ÓÊ÷ÏÈÈëÕ»
+				// å·¦å­æ ‘å…ˆå…¥æ ˆ
 				if(node.left != null) {
 					s1.push(node.left);
 				}

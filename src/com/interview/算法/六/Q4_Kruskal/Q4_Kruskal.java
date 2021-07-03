@@ -1,4 +1,4 @@
-package com.interview.Ëã·¨.Áù.Q4_Kruskal;
+package com.interview.ç®—æ³•.å…­.Q4_Kruskal;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -6,12 +6,12 @@ import java.util.HashSet;
 import java.util.PriorityQueue;
 import java.util.Set;
 
-import com.interview.Ëã·¨.graph.Edge;
-import com.interview.Ëã·¨.graph.Graph;
-import com.interview.Ëã·¨.graph.Node;
+import com.interview.ç®—æ³•.graph.Edge;
+import com.interview.ç®—æ³•.graph.Graph;
+import com.interview.ç®—æ³•.graph.Node;
 
-// ¿ËÂ³Ë¹¿¨¶û×îĞ¡Éú³ÉÊ÷µÄËã·¨£¬ÊÊÓÃ·¶Î§£ºÎŞÏòÍ¼
-// ½«ËùÓĞ±ß°´È¨ÖØÅÅĞò£¬±éÀú±ß£¬½«±ß¼ÓÈë¼¯ºÏ£¬×îºóÉú³ÉµÄ¼¯ºÏ¾ÍÊÇ½á¹û
+// å…‹é²æ–¯å¡å°”æœ€å°ç”Ÿæˆæ ‘çš„ç®—æ³•ï¼Œé€‚ç”¨èŒƒå›´ï¼šæ— å‘å›¾
+// å°†æ‰€æœ‰è¾¹æŒ‰æƒé‡æ’åºï¼Œéå†è¾¹ï¼Œå°†è¾¹åŠ å…¥é›†åˆï¼Œæœ€åç”Ÿæˆçš„é›†åˆå°±æ˜¯ç»“æœ
 public class Q4_Kruskal {
 
 	public static class UnionFind {
@@ -65,20 +65,20 @@ public class Q4_Kruskal {
 	}
 	
 	public static Set<Edge> Kruskal(Graph graph) {
-		//²¢²é¼¯£¬ÓÃÓÚ²é¿´µã¼¯ºÏ£¬Èç¹ûÁ½¸ö½ÚµãÔÚÍ¬Ò»¸ö¼¯ºÏÄÚ£¬ÔòÁ½µãÖ®¼äÁ¬Í¨
+		//å¹¶æŸ¥é›†ï¼Œç”¨äºæŸ¥çœ‹ç‚¹é›†åˆï¼Œå¦‚æœä¸¤ä¸ªèŠ‚ç‚¹åœ¨åŒä¸€ä¸ªé›†åˆå†…ï¼Œåˆ™ä¸¤ç‚¹ä¹‹é—´è¿é€š
 		UnionFind uf = new UnionFind();
-		// ³õÊ¼»¯²¢²é¼¯
+		// åˆå§‹åŒ–å¹¶æŸ¥é›†
 		uf.makeSet(graph.nodes.values());
-		// ½«±ß°´´ÓĞ¡µ½´óµÄË³ĞòÅÅÁĞ
+		// å°†è¾¹æŒ‰ä»å°åˆ°å¤§çš„é¡ºåºæ’åˆ—
 		PriorityQueue<Edge> queue = new PriorityQueue<Edge>((e1,e2)->e1.weight-e2.weight);
 		for(Edge e : graph.edges) {
 			queue.offer(e);
 		}
 		Set<Edge> result = new HashSet<Edge>();
-		// ½«ËùÓĞ±ß³ö¶Ó
+		// å°†æ‰€æœ‰è¾¹å‡ºé˜Ÿ
 		while(!queue.isEmpty()) {
 			Edge edge = queue.poll();
-			// ÅĞ¶Ï±ßµÄÁ½¸öµãÊÇ·ñÔÚÍ¬Ò»¸ö¼¯ºÏÄÚ
+			// åˆ¤æ–­è¾¹çš„ä¸¤ä¸ªç‚¹æ˜¯å¦åœ¨åŒä¸€ä¸ªé›†åˆå†…
 			if(!uf.isSameSet(edge.from, edge.to)) {
 				uf.union(edge.from, edge.to);
 				result.add(edge);

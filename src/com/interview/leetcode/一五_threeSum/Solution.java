@@ -1,10 +1,10 @@
-package com.interview.leetcode.Ò»Îå_threeSum;
+package com.interview.leetcode.ä¸€äº”_threeSum;
 
 import java.util.*;
 
 /**
- * ³¬Ê±£º311/313²âÊÔÓÃÀıÍ¨¹ı
- * ±©Á¦Ã¶¾Ù£¬¶àÖØÑ­»·
+ * è¶…æ—¶ï¼š311/313æµ‹è¯•ç”¨ä¾‹é€šè¿‡
+ * æš´åŠ›æšä¸¾ï¼Œå¤šé‡å¾ªç¯
  * @author Peter
  *
  */
@@ -13,7 +13,7 @@ class Solution {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         List<Integer> innerList = null;
         boolean flag = true;
-        // ±©Á¦Ã¶¾Ù
+        // æš´åŠ›æšä¸¾
         for(int i=0; i<=nums.length-2; i++){
             for(int j=i+1; j<=nums.length-1; j++){
                 for(int k=j+1; k<nums.length; k++){

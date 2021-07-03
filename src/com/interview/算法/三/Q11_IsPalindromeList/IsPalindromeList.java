@@ -1,11 +1,11 @@
-package com.interview.Ëã·¨.Èı.Q11_IsPalindromeList;
+package com.interview.ç®—æ³•.ä¸‰.Q11_IsPalindromeList;
 
 import java.util.Stack;
 
 /**
- * ÅĞ¶ÏÁ´±íÊÇ·ñÎª»ØÎÄÁ´±í ½ø½×£º Èç¹ûÁ´±í³¤¶ÈÎªN£¬Ê±¼ä¸´ÔÓ¶È´ïµ½O(N)£¬¶îÍâ¿Õ¼ä¸´ÔÓ¶È´ïµ½O(1)¡£
+ * åˆ¤æ–­é“¾è¡¨æ˜¯å¦ä¸ºå›æ–‡é“¾è¡¨ è¿›é˜¶ï¼š å¦‚æœé“¾è¡¨é•¿åº¦ä¸ºNï¼Œæ—¶é—´å¤æ‚åº¦è¾¾åˆ°O(N)ï¼Œé¢å¤–ç©ºé—´å¤æ‚åº¦è¾¾åˆ°O(1)ã€‚
  * 
- * ·½·¨Ò»£ºÊ¹ÓÃÒ»¸ö´óĞ¡ÎªNµÄÕ» ·½·¨¶ş£º¿ìÂıÖ¸Õë+´óĞ¡ÎªN/2µÄÕ» ·½·¨Èı£º¿ìÂıÖ¸Õë+·´×ªÁ´±í Ê±¼ä¸´ÔÓ¶È´ïµ½O(N)£¬¶îÍâ¿Õ¼ä¸´ÔÓ¶È´ïµ½O(1)
+ * æ–¹æ³•ä¸€ï¼šä½¿ç”¨ä¸€ä¸ªå¤§å°ä¸ºNçš„æ ˆ æ–¹æ³•äºŒï¼šå¿«æ…¢æŒ‡é’ˆ+å¤§å°ä¸ºN/2çš„æ ˆ æ–¹æ³•ä¸‰ï¼šå¿«æ…¢æŒ‡é’ˆ+åè½¬é“¾è¡¨ æ—¶é—´å¤æ‚åº¦è¾¾åˆ°O(N)ï¼Œé¢å¤–ç©ºé—´å¤æ‚åº¦è¾¾åˆ°O(1)
  * 
  * @author Peter
  *
@@ -28,7 +28,7 @@ public class IsPalindromeList {
 			s.push(q);
 			q = q.next;
 		}
-		// ÅĞ¶ÏÊÇ·ñ»ØÎÄ
+		// åˆ¤æ–­æ˜¯å¦å›æ–‡
 		while (!s.isEmpty()) {
 			if (s.pop().value == p.value) {
 				p = p.next;
@@ -40,25 +40,25 @@ public class IsPalindromeList {
 	}
 
 	public static boolean isPalindromeList2(Node p) {
-		// Èç¹ûÁ´±íÎª¿Õ»òÕßÖ»ÓĞÒ»¸öÔªËØ£¬·µ»Øtrue
+		// å¦‚æœé“¾è¡¨ä¸ºç©ºæˆ–è€…åªæœ‰ä¸€ä¸ªå…ƒç´ ï¼Œè¿”å›true
 		if (p == null || p.next == null) {
 			return true;
 		}
-		// ¿ìÂıÖ¸Õë
+		// å¿«æ…¢æŒ‡é’ˆ
 		Node fasterP = p;
 		Node cur = p;
 		while (fasterP.next != null && fasterP.next.next != null) {
 			cur = cur.next;
 			fasterP = fasterP.next.next;
 		}
-		// ÊÕ¼¯½Úµã
+		// æ”¶é›†èŠ‚ç‚¹
 		Stack<Node> s = new Stack<Node>();
 //		cur = cur.next; 
 		while (cur != null) {
 			s.push(cur);
 			cur = cur.next;
 		}
-		// ±È½Ï½Úµã£¬ÅĞ¶ÏÊÇ·ñ»ØÎÄ
+		// æ¯”è¾ƒèŠ‚ç‚¹ï¼Œåˆ¤æ–­æ˜¯å¦å›æ–‡
 		while (!s.isEmpty()) {
 			if (s.pop().value != p.value) {
 				return false;
@@ -72,7 +72,7 @@ public class IsPalindromeList {
 		if (p == null || p.next == null) {
 			return true;
 		}
-		// ¿ìÂıÖ¸Õë
+		// å¿«æ…¢æŒ‡é’ˆ
 		Node p1 = p;
 		Node p2 = p;
 		while (p2.next != null && p2.next.next != null) {
@@ -82,18 +82,18 @@ public class IsPalindromeList {
 		p2 = p1.next;
 		p1.next = null;
 		Node p3 = null;
-		// ·´×ªÁ´±í
+		// åè½¬é“¾è¡¨
 		while(p2 != null) {
 			p3 = p2.next;
 			p2.next = p1;
 			p1 = p2;
 			p2 = p3;
 		}
-		// ·´×ªºó£¬n1Îª·´×ªºóÁ´±íµÄÍ·½Úµã
+		// åè½¬åï¼Œn1ä¸ºåè½¬åé“¾è¡¨çš„å¤´èŠ‚ç‚¹
 		p3 = p1;
 		p2 = p;
 		boolean res = true;
-		// ¿ªÊ¼Á´±í±È½Ï
+		// å¼€å§‹é“¾è¡¨æ¯”è¾ƒ
 		while(p2 != null && p1 != null) {
 			if(p2.value != p1.value){
 				res = false;
@@ -102,7 +102,7 @@ public class IsPalindromeList {
 			p2 = p2.next;
 			p1 = p1.next;
 		}
-		// »Ö¸´Á´±í
+		// æ¢å¤é“¾è¡¨
 		p1 = p3.next;
 		p3.next = null;
 		while(p1 != null) {
@@ -126,10 +126,10 @@ public class IsPalindromeList {
 		node2.next.next.next = new Node(1);
 		System.out.println(isPalindromeList1(node1));
 		System.out.println(isPalindromeList1(node2));
-		// =================·½·¨¶ş²âÊÔ=======================
+		// =================æ–¹æ³•äºŒæµ‹è¯•=======================
 		System.out.println(isPalindromeList2(node1));
 		System.out.println(isPalindromeList2(node2));
-		// =================·½·¨Èı²âÊÔ=======================
+		// =================æ–¹æ³•ä¸‰æµ‹è¯•=======================
 		System.out.println(isPalindromeList3(node1));
 		System.out.println(isPalindromeList3(node2));
 	}

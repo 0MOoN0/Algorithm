@@ -13,7 +13,7 @@ public class Main {
 			alert[i][0] = sc.nextInt();
 			alert[i][1] = sc.nextInt();
 		}
-		// ÅÅÐò
+		// æŽ’åº
 		Arrays.sort(alert, (x, y )->{
 			if(x[0]-y[0]<0) {
 				return -1;
@@ -23,9 +23,9 @@ public class Main {
 				return x[1]-y[1];
 			}
 		});
-		// Â·³Ì0<=x<=100
+		// è·¯ç¨‹0<=x<=100
 		int x = sc.nextInt();
-		// ÉÏ¿ÎÊ±¼ä
+		// ä¸Šè¯¾æ—¶é—´
 		int hour = sc.nextInt();
 		int min = sc.nextInt();
 		if(min - x <0) {
@@ -42,9 +42,9 @@ public class Main {
 		int resultHour = 0;
 		int resultMin = 0;
 		for(int i=alert.length-1; 0<=i ;i--) {
-			// Ê±ÖÓÏàµÈ»òÐ¡ÓÚ
+			// æ—¶é’Ÿç›¸ç­‰æˆ–å°äºŽ
 			if(alert[i][0]<=hour) {
-				//·ÖÖÓÏàµÈ»òÐ¡ÓÚ
+				//åˆ†é’Ÿç›¸ç­‰æˆ–å°äºŽ
 				if(alert[i][1]<=min) {
 					resultHour = alert[i][0];
 					resultMin = alert[i][1];

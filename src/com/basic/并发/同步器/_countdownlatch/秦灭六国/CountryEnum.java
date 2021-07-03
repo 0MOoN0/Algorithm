@@ -1,10 +1,10 @@
-package com.basic.²¢·¢.Í¬²½Æ÷._countdownlatch.ÇØÃğÁù¹ú;
+package com.basic.å¹¶å‘.åŒæ­¥å™¨._countdownlatch.ç§¦ç­å…­å›½;
 
 import lombok.Getter;
 
 /**
  * Description
- * Ã¶¾ÙµÄÊ¹ÓÃ
+ * æšä¸¾çš„ä½¿ç”¨
  *
  * @author veliger@163.com
  * @version 1.0
@@ -14,27 +14,27 @@ public enum CountryEnum {
     /**
      *
      */
-    ONE(1, "Æë"),
+    ONE(1, "é½"),
     /**
      *
      */
-    TWO(2, "³ş"),
+    TWO(2, "æ¥š"),
     /**
      *
      */
-    THREE(3, "Ñà"),
+    THREE(3, "ç‡•"),
     /**
      *
      */
-    FOUR(4, "ÕÔ"),
+    FOUR(4, "èµµ"),
     /**
      *
      */
-    FIVE(5, "Îº"),
+    FIVE(5, "é­"),
     /**
      *
      */
-    SIX(6, "º«");
+    SIX(6, "éŸ©");
 
     CountryEnum(Integer code, String name) {
         this.code = code;

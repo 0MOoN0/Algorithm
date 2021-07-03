@@ -1,14 +1,14 @@
-package com.interview.Ëã·¨.Èı.Q7_ReverseList;
+package com.interview.ç®—æ³•.ä¸‰.Q7_ReverseList;
 
 /**
- * ·´×ªÁ´±í
+ * åè½¬é“¾è¡¨
  *
  * @author Peter
  *
  */
 public class ReverseList {
 	
-	// µ¥Á´±í½Úµã
+	// å•é“¾è¡¨èŠ‚ç‚¹
 	public static class Node {
 		public int value;
 		public Node next;
@@ -17,9 +17,9 @@ public class ReverseList {
 		}
 	}	
 	
-	// TODO: ·´×ªË«Á´±í
+	// TODO: åè½¬åŒé“¾è¡¨
 	
-	// ·´×ªµ¥Á´±í
+	// åè½¬å•é“¾è¡¨
 	public static Node reverseList(Node p) {
 		Node p2 = null;
 		Node p0 = null;
@@ -34,7 +34,7 @@ public class ReverseList {
 	}
 
 	
-	// ´òÓ¡Á´±í
+	// æ‰“å°é“¾è¡¨
 	public static void printLinkedList(Node p) {
 		while(p!=null) {
 			System.out.print(p.value+" ");
@@ -48,11 +48,11 @@ public class ReverseList {
 		node1.next = new Node(2);
 		node1.next.next = new Node(5);
 		node1.next.next.next = new Node(2);
-		// ·´×ªÇ°
+		// åè½¬å‰
 		printLinkedList(node1);
-		// ·´×ªÁ´±í
+		// åè½¬é“¾è¡¨
 		Node reverseList = reverseList(node1);
-		// ·´×ªºó
+		// åè½¬å
 		printLinkedList(reverseList);
 	}
 

@@ -1,4 +1,4 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.Ê®ËÄ_Ëş.solution2;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.åå››_å¡”.solution2;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * Ê¹ÓÃCollections.maxºÍCollections.minº¯Êı
+ * ä½¿ç”¨Collections.maxå’ŒCollections.minå‡½æ•°
  * @author Peter
  *
  */
@@ -35,7 +35,7 @@ public class Main {
 			result.add(maxIndex+1);
 			result.add(minIndex+1);
 		}
-		// Êä³ö
+		// è¾“å‡º
 		System.out.println(Collections.max(towers) - Collections.min(towers) +" "+ (result.size()/2));
 		for(int i=0; i<result.size(); i+=2) {
 			System.out.println(result.get(i)+" "+result.get(i+1));

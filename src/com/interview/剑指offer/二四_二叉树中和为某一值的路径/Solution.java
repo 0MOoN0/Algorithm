@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.¶şËÄ_¶ş²æÊ÷ÖĞºÍÎªÄ³Ò»ÖµµÄÂ·¾¶;
+package com.interview.å‰‘æŒ‡offer.äºŒå››_äºŒå‰æ ‘ä¸­å’Œä¸ºæŸä¸€å€¼çš„è·¯å¾„;
 import java.util.ArrayList;
 /**
 public class TreeNode {
@@ -22,7 +22,7 @@ public class Solution {
     public ArrayList<ArrayList<Integer>> FindPath(TreeNode root,int target) {
         if(root==null || root.val>target) return result;
         DFS(new ArrayList<Integer>(), 0, root, target);
-        // ÅÅĞò
+        // æ’åº
         if(result.size()>2){
                 	Collections.sort(result, new Comparator<ArrayList<Integer>>() {
 			@Override
@@ -36,23 +36,23 @@ public class Solution {
     }
     
     public void DFS(ArrayList<Integer> conList, int conResult,TreeNode node, int target){
-        // µİ¹éÖÕÖ¹Ìõ¼ş
-        // 1.½ÚµãÎª¿Õ
+        // é€’å½’ç»ˆæ­¢æ¡ä»¶
+        // 1.èŠ‚ç‚¹ä¸ºç©º
         if(node==null) return ;
         
-        // 2.ÅĞ¶ÏÊÇ·ñÎªÒ¶×Ó½Úµã
+        // 2.åˆ¤æ–­æ˜¯å¦ä¸ºå¶å­èŠ‚ç‚¹
         if(node.left==null && node.right==null && (conResult+=node.val)==target){
             ArrayList<Integer> list = new ArrayList<Integer>(conList);
             list.add(node.val);
             result.add(list);
             return ;
         }
-        // Èç¹û²»ÊÇÒ¶×Ó½Úµã£¬¼ÌĞøÍù×óÓÒ×ÓÊ÷ËÑË÷
+        // å¦‚æœä¸æ˜¯å¶å­èŠ‚ç‚¹ï¼Œç»§ç»­å¾€å·¦å³å­æ ‘æœç´¢
         conList.add(node.val);
         conResult+=node.val;
         DFS(conList, conResult, node.left, target);
         DFS(conList, conResult, node.right, target);
-        // »ØËİ
+        // å›æº¯
         conList.remove(conList.size()-1);
         conResult-=node.val;
     }

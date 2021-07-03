@@ -1,7 +1,7 @@
-package com.interview.leetcode.Ò»ÆßÒ»_Excel±íĞòÁĞºÅ;
+package com.interview.leetcode.ä¸€ä¸ƒä¸€_Excelè¡¨åºåˆ—å·;
 /**
- * ¸ù¾İ¹æÂÉ£¬¿ÉÒÔµÃ³öµÚnÎ»µÄÖµÎª:26^(n-1)*ÊıÖµ
- * ÊıÖµ£º×Ö·ûÖµ-'A'+1
+ * æ ¹æ®è§„å¾‹ï¼Œå¯ä»¥å¾—å‡ºç¬¬nä½çš„å€¼ä¸º:26^(n-1)*æ•°å€¼
+ * æ•°å€¼ï¼šå­—ç¬¦å€¼-'A'+1
  * @author Peter
  *
  */
@@ -10,9 +10,9 @@ class Solution {
         int pow = s.length()-1;
         int result = 0;
         for(int i=0; i<s.length(); i++){
-            // »ñÈ¡µ±Ç°×Ö·û
+            // è·å–å½“å‰å­—ç¬¦
             char indexC = s.charAt(i);
-            // µ±Ç°Öµ
+            // å½“å‰å€¼
             int indexI = (indexC-'A'+1);
             result += indexI * Math.pow(26,pow);
             pow--;

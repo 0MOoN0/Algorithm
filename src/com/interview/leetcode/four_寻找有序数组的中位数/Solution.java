@@ -1,13 +1,13 @@
-package com.interview.leetcode.four_Ñ°ÕÒÓĞĞòÊı×éµÄÖĞÎ»Êı;
+package com.interview.leetcode.four_å¯»æ‰¾æœ‰åºæ•°ç»„çš„ä¸­ä½æ•°;
 class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
     	int mergeLength = nums1.length + nums2.length;
     	int q = 0, p = 0;
-    	// ³õÊ¼»¯ºÏ²¢Êı×é³¤¶È
+    	// åˆå§‹åŒ–åˆå¹¶æ•°ç»„é•¿åº¦
     	int [] mergeArray = new int [mergeLength];
-    	// Ä¿±êÊıË÷Òı
+    	// ç›®æ ‡æ•°ç´¢å¼•
     	int targetIndex = mergeLength / 2 ;
-    	// ¼ÆËãÖĞÎ»Êı
+    	// è®¡ç®—ä¸­ä½æ•°
     	for(int i=0; i <= targetIndex; i++) {
     		if(! (nums1.length > q)) {
     			mergeArray[i] = nums2[p++];
@@ -18,10 +18,10 @@ class Solution {
     		}
     	}
     	if(mergeLength % 2 ==0) {
-    		// Å¼Êı
+    		// å¶æ•°
     		return ((float)mergeArray[targetIndex] + mergeArray[targetIndex-1])/2;
     	}else {
-    		// ÆæÊı
+    		// å¥‡æ•°
     		return mergeArray[targetIndex];
     	}
     }

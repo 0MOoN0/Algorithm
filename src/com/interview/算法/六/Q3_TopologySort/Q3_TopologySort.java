@@ -1,4 +1,4 @@
-package com.interview.Ëã·¨.Áù.Q3_TopologySort;
+package com.interview.ç®—æ³•.å…­.Q3_TopologySort;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,29 +7,29 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 
-import com.interview.Ëã·¨.graph.Graph;
-import com.interview.Ëã·¨.graph.Node;
+import com.interview.ç®—æ³•.graph.Graph;
+import com.interview.ç®—æ³•.graph.Node;
 
-// ÍØÆËÅÅĞò£¬Í¼±ØĞëÊÇÓĞÏòÎŞ»·Í¼
+// æ‹“æ‰‘æ’åºï¼Œå›¾å¿…é¡»æ˜¯æœ‰å‘æ— ç¯å›¾
 public class Q3_TopologySort {
 
 	public static List<Node> topologySort(Graph graph) {
-		// ±éÀú½Úµã£¬¼ÇÂ¼ËùÓĞ½ÚµãµÄÈë¶ÈºÍÈë¶ÈÎªÁãµÄ½Úµã
-		Queue<Node> zeroQueue = new LinkedList<Node>(); // Èë¶ÈÎªÁãµÄ½Úµã
-		Map<Node, Integer> inMap = new HashMap<Node, Integer>(); // ½ÚµãÓëÈë¶È
+		// éå†èŠ‚ç‚¹ï¼Œè®°å½•æ‰€æœ‰èŠ‚ç‚¹çš„å…¥åº¦å’Œå…¥åº¦ä¸ºé›¶çš„èŠ‚ç‚¹
+		Queue<Node> zeroQueue = new LinkedList<Node>(); // å…¥åº¦ä¸ºé›¶çš„èŠ‚ç‚¹
+		Map<Node, Integer> inMap = new HashMap<Node, Integer>(); // èŠ‚ç‚¹ä¸å…¥åº¦
 		for (Node node : graph.nodes.values()) {
 			inMap.put(node, node.in);
 			if (node.in == 0) {
 				zeroQueue.offer(node);
 			}
 		}
-		// »ñÈ¡Èë¶ÈÎªÁãµÄ½Úµã£¬É¾³ıÕâ¸ö½Úµã£¬²¢¼õÉÙ¶ÔÓ¦½ÚµãµÄÈë¶È£¬É¾³ıË³Ğò¼´ÎªÍØÆËÅÅĞòµÄË³Ğò
+		// è·å–å…¥åº¦ä¸ºé›¶çš„èŠ‚ç‚¹ï¼Œåˆ é™¤è¿™ä¸ªèŠ‚ç‚¹ï¼Œå¹¶å‡å°‘å¯¹åº”èŠ‚ç‚¹çš„å…¥åº¦ï¼Œåˆ é™¤é¡ºåºå³ä¸ºæ‹“æ‰‘æ’åºçš„é¡ºåº
 		List<Node> result = new ArrayList<Node>();
 		while (!zeroQueue.isEmpty()) {
 			Node cur = zeroQueue.poll();
 			result.add(cur);
 			for (Node next : cur.nexts) {
-				inMap.put(next, inMap.get(next)-1);	// Èë¶È¼õÒ»
+				inMap.put(next, inMap.get(next)-1);	// å…¥åº¦å‡ä¸€
 				if(inMap.get(next) == 0) {
 					zeroQueue.add(next);
 				}

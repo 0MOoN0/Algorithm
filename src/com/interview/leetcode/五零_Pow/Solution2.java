@@ -1,5 +1,5 @@
-package com.interview.leetcode.ÎåÁã_Pow;
-// ·ÖÖÎ·¨-µü´ú
+package com.interview.leetcode.äº”é›¶_Pow;
+// åˆ†æ²»æ³•-è¿­ä»£
 class Solution2 {
     public double myPow(double x, int n) {
         long N = n;

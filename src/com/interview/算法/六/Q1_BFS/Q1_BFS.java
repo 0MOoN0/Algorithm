@@ -1,15 +1,15 @@
-package com.interview.Ëã·¨.Áù.Q1_BFS;
+package com.interview.ç®—æ³•.å…­.Q1_BFS;
 
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Set;
 
-import com.interview.Ëã·¨.graph.Node;
+import com.interview.ç®—æ³•.graph.Node;
 
 public class Q1_BFS {
 
-	// ¶ÔÍ¼½øĞĞBFS±éÀú£¬´Óµ¥¸ö½Úµã¿ªÊ¼
+	// å¯¹å›¾è¿›è¡ŒBFSéå†ï¼Œä»å•ä¸ªèŠ‚ç‚¹å¼€å§‹
 	public static void bfs(Node node) {
 		if(node == null) {
 			return;

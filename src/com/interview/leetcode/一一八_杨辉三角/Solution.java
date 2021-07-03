@@ -1,9 +1,9 @@
-package com.interview.leetcode.Ò»Ò»°Ë_Ñî»ÔÈı½Ç;
+package com.interview.leetcode.ä¸€ä¸€å…«_æ¨è¾‰ä¸‰è§’;
 import java.util.*;
 class Solution {
     public List<List<Integer>> generate(int numRows) {
         ArrayList<List<Integer>> list = new ArrayList<List<Integer>>(numRows);
-        // numRowsÎª×îÍâ²ãÑ­»·Êı
+        // numRowsä¸ºæœ€å¤–å±‚å¾ªç¯æ•°
         for(int i=1; i<=numRows; i++){
             ArrayList<Integer> innerList = new ArrayList<Integer>();
             for(int j=0; j<i; j++){

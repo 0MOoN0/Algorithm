@@ -1,8 +1,8 @@
-package com.interview.算法.graph;
+package com.interview.绠楁硶.graph;
 
-// 边的描述
+// 杈圭殑鎻忚堪
 public class Edge {
-	public int weight;	// 权重/代价
+	public int weight;	// 鏉冮噸/浠ｄ环
 	public Node from;
 	public Node to;
 

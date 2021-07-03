@@ -1,16 +1,16 @@
-package com.interview.leetcode.¶ş¶ş_À¨ºÅÉú³É;
+package com.interview.leetcode.äºŒäºŒ_æ‹¬å·ç”Ÿæˆ;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ×óÓÒÀ¨ºÅĞèÒªÂú×ãµÄÌõ¼ş:
- * 1. ×óÓÒÀ¨ºÅµÄ×ÜÊıÁ¿ÏàµÈ
- * 2¡£µİ¹éÊ±£º×óÀ¨ºÅµÄÊıÁ¿>=ÓÒÀ¨ºÅÊıÁ¿
- * 3. ×óÀ¨ºÅÊıÁ¿²»¿É´óÓÚn
+ * å·¦å³æ‹¬å·éœ€è¦æ»¡è¶³çš„æ¡ä»¶:
+ * 1. å·¦å³æ‹¬å·çš„æ€»æ•°é‡ç›¸ç­‰
+ * 2ã€‚é€’å½’æ—¶ï¼šå·¦æ‹¬å·çš„æ•°é‡>=å³æ‹¬å·æ•°é‡
+ * 3. å·¦æ‹¬å·æ•°é‡ä¸å¯å¤§äºn
  */
 class Solution {
-    // ¹¹½¨½á¹ûList
+    // æ„å»ºç»“æœList
     List<String> result = new ArrayList<String>();
     
     public List<String> generateParenthesis(int n) {
@@ -19,19 +19,19 @@ class Solution {
     }
 
     public void gen(int left, int right, int n, String str){
-        // µİ¹éÖÕÖ¹Ìõ¼ş
+        // é€’å½’ç»ˆæ­¢æ¡ä»¶
         if(left == n && right == n){
             result.add(str);
             return ;
         }
 
-        // Ìí¼Ó×óÀ¨ºÅµÄÇé¿ö
-        if(left < n){ // left Ğ¡ÓÚn À¨ºÅ¿ÉÒÔËæ±ã¼Ó
+        // æ·»åŠ å·¦æ‹¬å·çš„æƒ…å†µ
+        if(left < n){ // left å°äºn æ‹¬å·å¯ä»¥éšä¾¿åŠ 
             gen(left+1, right, n, str+"(");
         }
 
-        // Ìí¼ÓÓÒÀ¨ºÅµÄÇé¿ö
-        // rightĞ¡ÓÚn²¢ÇÒÓÒÀ¨ºÅÊıÁ¿±È×óÀ¨ºÅÉÙÊ±£¬¿ÉÒÔÌí¼ÓÓÒÀ¨ºÅÓë×óÀ¨ºÅÅä¶Ô
+        // æ·»åŠ å³æ‹¬å·çš„æƒ…å†µ
+        // rightå°äºnå¹¶ä¸”å³æ‹¬å·æ•°é‡æ¯”å·¦æ‹¬å·å°‘æ—¶ï¼Œå¯ä»¥æ·»åŠ å³æ‹¬å·ä¸å·¦æ‹¬å·é…å¯¹
         if(right<n && right<left){ 
             gen(left, right+1, n, str+")");
         }

@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.Èı°Ë_¶ş²æÊ÷µÄÉî¶È;
+package com.interview.å‰‘æŒ‡offer.ä¸‰å…«_äºŒå‰æ ‘çš„æ·±åº¦;
 /**
 public class TreeNode {
     int val = 0;
@@ -11,8 +11,8 @@ public class TreeNode {
     }
 }
 */
-// µİ¹é
-// µ±Ç°½Úµã×î³¤Â·¾¶ = ×óÓÒ×ÓÊ÷×î³¤Â·¾¶Êı+1
+// é€’å½’
+// å½“å‰èŠ‚ç‚¹æœ€é•¿è·¯å¾„ = å·¦å³å­æ ‘æœ€é•¿è·¯å¾„æ•°+1
 public class Solution {
     public int TreeDepth(TreeNode root) {
         if(root==null) return 0;

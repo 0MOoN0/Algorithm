@@ -1,4 +1,4 @@
-package com.basic.²¢·¢.Éú²úÕßÏû·ÑÕßÄ£Ê½.Ê¹ÓÃlock;
+package com.basic.å¹¶å‘.ç”Ÿäº§è€…æ¶ˆè´¹è€…æ¨¡å¼.ä½¿ç”¨lock;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
@@ -6,7 +6,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * ¹²Ïí×ÊÔ´Àà
+ * å…±äº«èµ„æºç±»
  */
 class ShareData {
     private int num = 0;
@@ -16,15 +16,15 @@ class ShareData {
     public void increment() throws Exception {
         lock.lock();
         try {
-            //ÅĞ¶Ï
+            //åˆ¤æ–­
             while (num != 0) {
-                //µÈ´ı ²»Éú²ú
+                //ç­‰å¾… ä¸ç”Ÿäº§
                 condition.await();
             }
-            //¸É»î
+            //å¹²æ´»
             num++;
             System.out.println(Thread.currentThread().getName() + "\t" + num);
-            //Í¨Öª»½ĞÑ
+            //é€šçŸ¥å”¤é†’
             condition.signalAll();
         } finally {
             lock.unlock();
@@ -34,15 +34,15 @@ class ShareData {
     public void deIncrement() throws Exception {
         lock.lock();
         try {
-            //ÅĞ¶Ï
+            //åˆ¤æ–­
             while (num == 0) {
-                //µÈ´ı ²»Éú²ú
+                //ç­‰å¾… ä¸ç”Ÿäº§
                 condition.await();
             }
-            //¸É»î
+            //å¹²æ´»
             num--;
             System.out.println(Thread.currentThread().getName() + "\t" + num);
-            //Í¨Öª»½ĞÑ
+            //é€šçŸ¥å”¤é†’
             condition.signalAll();
         } finally {
             lock.unlock();
@@ -51,7 +51,7 @@ class ShareData {
 }
 /**
  * Description
- * Ò»¸ö³õÊ¼ÖµÎª0µÄ±äÁ¿ Á½¸öÏß³Ì½»Ìæ²Ù×÷ Ò»¸ö¼Ó1 Ò»¸ö¼õ1À´5ÂÖ
+ * ä¸€ä¸ªåˆå§‹å€¼ä¸º0çš„å˜é‡ ä¸¤ä¸ªçº¿ç¨‹äº¤æ›¿æ“ä½œ ä¸€ä¸ªåŠ 1 ä¸€ä¸ªå‡1æ¥5è½®
  *
  * @author veliger@163.com
  * @version 1.0

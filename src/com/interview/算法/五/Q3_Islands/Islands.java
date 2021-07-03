@@ -1,9 +1,9 @@
-package com.interview.Ëã·¨.Îå.Q3_Islands;
+package com.interview.ç®—æ³•.äº”.Q3_Islands;
 
 /**
- * µºÎÊÌâ Ò»¸ö¾ØÕóÖÐÖ»ÓÐ0ºÍ1Á½ÖÖÖµ£¬Ã¿¸öÎ»ÖÃ¶¼¿ÉÒÔºÍ×Ô¼ºµÄÉÏ¡¢ÏÂ¡¢×ó¡¢ÓÒ ËÄ¸öÎ»ÖÃÏàÁ¬£¬Èç¹ûÓÐÒ»Æ¬1Á¬ÔÚÒ»Æð£¬Õâ¸ö²¿·Ö½Ð×öÒ»¸öµº£¬ÇóÒ»¸ö
- * ¾ØÕóÖÐÓÐ¶àÉÙ¸öµº£¿ ¾ÙÀý£º 0 0 1 0 1 0 1 1 1 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 Õâ¸ö¾ØÕóÖÐÓÐÈý¸öµº¡£
- * Ê¹ÓÃÉîËÑ½â¾ö£¬½«µºÈ¾É«
+ * å²›é—®é¢˜ ä¸€ä¸ªçŸ©é˜µä¸­åªæœ‰0å’Œ1ä¸¤ç§å€¼ï¼Œæ¯ä¸ªä½ç½®éƒ½å¯ä»¥å’Œè‡ªå·±çš„ä¸Šã€ä¸‹ã€å·¦ã€å³ å››ä¸ªä½ç½®ç›¸è¿žï¼Œå¦‚æžœæœ‰ä¸€ç‰‡1è¿žåœ¨ä¸€èµ·ï¼Œè¿™ä¸ªéƒ¨åˆ†å«åšä¸€ä¸ªå²›ï¼Œæ±‚ä¸€ä¸ª
+ * çŸ©é˜µä¸­æœ‰å¤šå°‘ä¸ªå²›ï¼Ÿ ä¸¾ä¾‹ï¼š 0 0 1 0 1 0 1 1 1 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 è¿™ä¸ªçŸ©é˜µä¸­æœ‰ä¸‰ä¸ªå²›ã€‚
+ * ä½¿ç”¨æ·±æœè§£å†³ï¼Œå°†å²›æŸ“è‰²
  * 
  * @author Peter
  *
@@ -15,14 +15,14 @@ public class Islands {
 	public static void search(int[][] matrix, int curX, int curY, int x, int y) {
 		if (isOk(curX, curY, x, y) && matrix[curY][curX] == 1) {
 			matrix[curY][curX] = 2;
-			search(matrix, curX + 1, curY, x, y); // ÏòÓÒÒÆ¶¯Ò»²½
-			search(matrix, curX, curY + 1, x, y); // ÏòÏÂÒÆ¶¯Ò»²½
-			search(matrix, curX - 1, curY, x, y); // Ïò×óÒÆ¶¯Ò»²½
-			search(matrix, curX, curY - 1, x, y); // ÏòÉÏÒÆ¶¯Ò»²½
+			search(matrix, curX + 1, curY, x, y); // å‘å³ç§»åŠ¨ä¸€æ­¥
+			search(matrix, curX, curY + 1, x, y); // å‘ä¸‹ç§»åŠ¨ä¸€æ­¥
+			search(matrix, curX - 1, curY, x, y); // å‘å·¦ç§»åŠ¨ä¸€æ­¥
+			search(matrix, curX, curY - 1, x, y); // å‘ä¸Šç§»åŠ¨ä¸€æ­¥
 		}
 	}
 
-	// ÅÐ¶Ï×ø±êÊÇ·ñºÏ·¨
+	// åˆ¤æ–­åæ ‡æ˜¯å¦åˆæ³•
 	public static boolean isOk(int curX, int curY, int x, int y) {
 		if (curX >= 0 && curX <= x && curY >= 0 && curY <= y) {
 			return true;

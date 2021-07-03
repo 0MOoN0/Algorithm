@@ -1,8 +1,8 @@
-package com.interview.leetcode.Ò»Îå_threeSum;
+package com.interview.leetcode.ä¸€äº”_threeSum;
 import java.util.*;
 
 /**
- * Ã¶¾ÙÓÅ»¯
+ * æšä¸¾ä¼˜åŒ–
  *
  */
 class Solution2 {
@@ -10,10 +10,10 @@ class Solution2 {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         List<Integer> innerList = null;
         boolean flag = true;
-        // ±©Á¦Ã¶¾Ù,Ë«ÖØÑ­»· Ñ°ÕÒ¹ØÏµÊ½Âú×ã: -c = a+b
+        // æš´åŠ›æšä¸¾,åŒé‡å¾ªç¯ å¯»æ‰¾å…³ç³»å¼æ»¡è¶³: -c = a+b
         for(int i=0; i<nums.length-2; i++){
             for(int j=i+1; j<nums.length-1; j++){
-                // ¶ş·Ö²éÕÒ
+                // äºŒåˆ†æŸ¥æ‰¾
                 int resultIndex = Arrays.binarySearch(nums, j+1, nums.length, -(nums[i]+nums[j]));
                 if(resultIndex>0){
                     innerList = Arrays.asList(nums[i], nums[j], nums[resultIndex]);

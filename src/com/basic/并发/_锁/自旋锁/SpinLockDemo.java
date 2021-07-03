@@ -1,10 +1,10 @@
-package com.basic.²¢·¢._Ëø.×ÔĞıËø;
+package com.basic.å¹¶å‘._é”.è‡ªæ—‹é”;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * Ğ´Ò»¸ö×ÔĞıËø
+ * å†™ä¸€ä¸ªè‡ªæ—‹é”
  * @author Peter
  *
  */
@@ -15,7 +15,7 @@ public class SpinLockDemo {
 	public void myLock() {
 		Thread thread = Thread.currentThread();
 		System.out.println(Thread.currentThread().getName()+"Come in ...");
-		// Èç¹ûµ±Ç°Ô­×ÓÒıÓÃÒÑ¾­ÓĞÖµ£¬ÔòÑ­»·µÈ´ı£¬Ö±µ½referenceµÄÖµÎªnullÎªÖ¹
+		// å¦‚æœå½“å‰åŸå­å¼•ç”¨å·²ç»æœ‰å€¼ï¼Œåˆ™å¾ªç¯ç­‰å¾…ï¼Œç›´åˆ°referenceçš„å€¼ä¸ºnullä¸ºæ­¢
 		while(!reference.compareAndSet(null, thread)) {
 		}
 		System.out.println(Thread.currentThread().getName()+"Locking ...");

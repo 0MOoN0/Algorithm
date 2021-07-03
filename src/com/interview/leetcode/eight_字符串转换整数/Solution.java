@@ -1,4 +1,4 @@
-package com.interview.leetcode.eight_×Ö·û´®×ª»»ÕûÊý;
+package com.interview.leetcode.eight_å­—ç¬¦ä¸²è½¬æ¢æ•´æ•°;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -13,20 +13,20 @@ class Solution {
     		String resultStr = "";
     		Pattern compile = Pattern.compile("-?\\d+");
     		Matcher matcher = null;
-    		// Èç¹ûµÚÒ»Î»ÊÇÕý»òÕß¸ººÅ£¬¼ì²éµÚ¶þ¸ö×Ö·û
+    		// å¦‚æžœç¬¬ä¸€ä½æ˜¯æ­£æˆ–è€…è´Ÿå·ï¼Œæ£€æŸ¥ç¬¬äºŒä¸ªå­—ç¬¦
     		if(str.charAt(0)=='+' || str.charAt(0)=='-') {
     			if(str.length()>1 && str.charAt(1)>='0' && str.charAt(1)<='9') {
-    				// Í¨¹ýÕýÔò±í´ïÊ½½øÐÐÉ¸Ñ¡
+    				// é€šè¿‡æ­£åˆ™è¡¨è¾¾å¼è¿›è¡Œç­›é€‰
     		    	matcher = compile.matcher(str);
     			}else {
     				return 0;
     			}
     		}else {
-    			// Èç¹û·ÇÕý¸º£¬ÔòÅÐ¶ÏÊÇ·ñÎªÓÐÐ§×Ö·û
+    			// å¦‚æžœéžæ­£è´Ÿï¼Œåˆ™åˆ¤æ–­æ˜¯å¦ä¸ºæœ‰æ•ˆå­—ç¬¦
     			if(str.charAt(0)>='0' && str.charAt(0)<='9') {
     		    	matcher = compile.matcher(str);
     			}else {
-    				// ·ÇÓÐÐ£×Ö·û£¬·µ»Ø0
+    				// éžæœ‰æ ¡å­—ç¬¦ï¼Œè¿”å›ž0
     				return 0;
     			}
     		}

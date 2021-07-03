@@ -1,13 +1,13 @@
-package com.interview.Ëã·¨.Èý.Q12_SmallerEqualBigger;
+package com.interview.ç®—æ³•.ä¸‰.Q12_SmallerEqualBigger;
 
-import com.interview.Ëã·¨.common.Node;
-import com.interview.Ëã·¨.utils.Utils;
+import com.interview.ç®—æ³•.common.Node;
+import com.interview.ç®—æ³•.utils.Utils;
 
 /**
- * ½«µ¥ÏòÁ´±í°´Ä³Öµ»®·Ö³É×ó±ßÐ¡¡¢ÖÐ¼äÏàµÈ¡¢ÓÒ±ß´óµÄÐÎÊ½
- * ½«Á´±í»®·ÖÎªÐ¡ÓÚK£¬µÈÓÚK£¬´óÓÚKÈý²¿·Ö
- * ·½·¨Ò»£ºÊ¹ÓÃÊý×é+Êý×éµÄºÉÀ¼¹úÆìÎÊÌâ (ÎÞ·¨±£Ö¤ÔªËØµÄÎÈ¶¨ÐÔ)
- * ·½·¨¶þ£ºÀàËÆºÉÀ¼¹úÆìÎÊÌâ£¬Ê¹ÓÃÁ´±íÍê³É£¬½«Á´±í»®·ÖÎª´óÓÚK£¬µÈÓÚK£¬Ð¡ÓÚK£¬ÈýÌõÁ´±í£¬ ÔÙ½«ËûÃÇÁ¬½ÓÆðÀ´(¿ÉÒÔ±£Ö¤ÔªËØµÄÎÈ¶¨ÐÔ)
+ * å°†å•å‘é“¾è¡¨æŒ‰æŸå€¼åˆ’åˆ†æˆå·¦è¾¹å°ã€ä¸­é—´ç›¸ç­‰ã€å³è¾¹å¤§çš„å½¢å¼
+ * å°†é“¾è¡¨åˆ’åˆ†ä¸ºå°äºŽKï¼Œç­‰äºŽKï¼Œå¤§äºŽKä¸‰éƒ¨åˆ†
+ * æ–¹æ³•ä¸€ï¼šä½¿ç”¨æ•°ç»„+æ•°ç»„çš„è·å…°å›½æ——é—®é¢˜ (æ— æ³•ä¿è¯å…ƒç´ çš„ç¨³å®šæ€§)
+ * æ–¹æ³•äºŒï¼šç±»ä¼¼è·å…°å›½æ——é—®é¢˜ï¼Œä½¿ç”¨é“¾è¡¨å®Œæˆï¼Œå°†é“¾è¡¨åˆ’åˆ†ä¸ºå¤§äºŽKï¼Œç­‰äºŽKï¼Œå°äºŽKï¼Œä¸‰æ¡é“¾è¡¨ï¼Œ å†å°†ä»–ä»¬è¿žæŽ¥èµ·æ¥(å¯ä»¥ä¿è¯å…ƒç´ çš„ç¨³å®šæ€§)
  * @author Peter
  *
  */
@@ -16,35 +16,35 @@ public class SmallerEqualBigger {
 	public static Node smallerEqualBigger(Node p, int K) {
 		Node cur = p;
 		int size = 0;
-		// ¼ÆËãÁ´±í³¤¶È
+		// è®¡ç®—é“¾è¡¨é•¿åº¦
 		while(cur != null) {
 			size++;
 			cur = cur.next;
 		}
 		Node[] nodes = new Node[size];
 		cur = p;
-		// ½«Á´±í×ªÎªÊý×é
+		// å°†é“¾è¡¨è½¬ä¸ºæ•°ç»„
 		for(int i=0; i<nodes.length; i++) {
 			nodes[i] = cur;
 			cur = cur.next;
 		}
-		int lesA=-1,curA = 0, bigA=size;	// Ð¡ÓÚÓò£¬µÈÓÚÓò£¬´óÓÚÓò
-		// Á´±í½Úµã·ÖÅÉ
+		int lesA=-1,curA = 0, bigA=size;	// å°äºŽåŸŸï¼Œç­‰äºŽåŸŸï¼Œå¤§äºŽåŸŸ
+		// é“¾è¡¨èŠ‚ç‚¹åˆ†æ´¾
 		while(curA < bigA) {
-			// Èç¹ûµ±Ç°ÊýÐ¡ÓÚK£¬Ôòµ±Ç°ÊýÓëÐ¡ÓÚÓòµÄÇ°Ò»¸öÊý½øÐÐ½»»»£¬µ±Ç°Ö¸Õë++
+			// å¦‚æžœå½“å‰æ•°å°äºŽKï¼Œåˆ™å½“å‰æ•°ä¸Žå°äºŽåŸŸçš„å‰ä¸€ä¸ªæ•°è¿›è¡Œäº¤æ¢ï¼Œå½“å‰æŒ‡é’ˆ++
 			if(nodes[curA].value < K) {
 				swap(nodes, ++lesA, curA++);
-			}else if(nodes[curA].value == K) {	// Èç¹ûµ±Ç°ÊýµÈÓÚK£¬Ôò±È½ÏÏÂÒ»¸öÊý
+			}else if(nodes[curA].value == K) {	// å¦‚æžœå½“å‰æ•°ç­‰äºŽKï¼Œåˆ™æ¯”è¾ƒä¸‹ä¸€ä¸ªæ•°
 				curA++;
-			}else {	// Èç¹ûµ±Ç°Êý´óÓÚK£¬ Ôò½«µ±Ç°ÊýÓë´óÓÚÓòµÄÇ°Ò»¸ö½øÐÐ½»»»
+			}else {	// å¦‚æžœå½“å‰æ•°å¤§äºŽKï¼Œ åˆ™å°†å½“å‰æ•°ä¸Žå¤§äºŽåŸŸçš„å‰ä¸€ä¸ªè¿›è¡Œäº¤æ¢
 				swap(nodes, --bigA, curA);
 			}
 		}
-		// ÐÂÉú³ÉÁ´±í
+		// æ–°ç”Ÿæˆé“¾è¡¨
 		for(int i=1; i<nodes.length; i++) {
 			nodes[i-1].next = nodes[i];
 		}
-		// Î²Ö¸Õë´¦Àí
+		// å°¾æŒ‡é’ˆå¤„ç†
 		nodes[size-1].next = null;
 		return nodes[0];
 	}
@@ -57,14 +57,14 @@ public class SmallerEqualBigger {
 	
 	
 	public static Node smallerEqualBigger2(Node p, int K) {
-		// ¶¨ÒåÈý¸öÁ´±íÓò£¬´óÓÚ£¬Ð¡ÓÚ£¬µÈÓÚ
-		Node bigH = null;	// ´óÓÚÓòµÄÍ·
-		Node bigT = null;	// ´óÓÚÓòµÄÎ²
+		// å®šä¹‰ä¸‰ä¸ªé“¾è¡¨åŸŸï¼Œå¤§äºŽï¼Œå°äºŽï¼Œç­‰äºŽ
+		Node bigH = null;	// å¤§äºŽåŸŸçš„å¤´
+		Node bigT = null;	// å¤§äºŽåŸŸçš„å°¾
 		Node equalH = null;
 		Node equalT = null;
 		Node smallH = null;
 		Node smallT = null;
-		Node next = null;	// ÏÂÒ»¸ö½Úµã
+		Node next = null;	// ä¸‹ä¸€ä¸ªèŠ‚ç‚¹
 		while(p != null) {
 			next = p.next;
 			p.next = null;
@@ -96,7 +96,7 @@ public class SmallerEqualBigger {
 			}
 			p = next;
 		}
-		// Á¬½ÓÈýÌõÁ´±í
+		// è¿žæŽ¥ä¸‰æ¡é“¾è¡¨
 		if(smallH != null) {
 			smallT.next = equalH != null ? equalH : bigH;
 		}

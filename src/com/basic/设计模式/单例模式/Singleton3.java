@@ -1,4 +1,4 @@
-package com.basic.设计模式.单例模式;
+package com.basic.璁捐妯″紡.鍗曚緥妯″紡;
 
 import java.io.IOException;
 import java.util.Properties;

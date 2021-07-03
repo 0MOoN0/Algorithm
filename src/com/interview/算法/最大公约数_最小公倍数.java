@@ -1,37 +1,37 @@
-package com.interview.Ëã·¨;
+package com.interview.ç®—æ³•;
 
-public class ×î´ó¹«Ô¼Êı_×îĞ¡¹«±¶Êı {
-	// µİ¹é·¨Çó×î´ó¹«Ô¼Êı
+public class æœ€å¤§å…¬çº¦æ•°_æœ€å°å…¬å€æ•° {
+	// é€’å½’æ³•æ±‚æœ€å¤§å…¬çº¦æ•°
 	public static int maxCommonDivisor2(int m, int n) {
-		if (m < n) {// ±£Ö¤m>n,Èôm<n,Ôò½øĞĞÊı¾İ½»»»
+		if (m < n) {// ä¿è¯m>n,è‹¥m<n,åˆ™è¿›è¡Œæ•°æ®äº¤æ¢
 			int temp = m;
 			m = n;
 			n = temp;
 		}
-		if (m % n == 0) {// ÈôÓàÊıÎª0,·µ»Ø×î´ó¹«Ô¼Êı
+		if (m % n == 0) {// è‹¥ä½™æ•°ä¸º0,è¿”å›æœ€å¤§å…¬çº¦æ•°
 			return n;
-		} else { // ·ñÔò,½øĞĞµİ¹é,°Ñn¸³¸øm,°ÑÓàÊı¸³¸øn
+		} else { // å¦åˆ™,è¿›è¡Œé€’å½’,æŠŠnèµ‹ç»™m,æŠŠä½™æ•°èµ‹ç»™n
 			return maxCommonDivisor2(n, m % n);
 		}
 	}
 
-	// ×î´ó¹«Ô¼Êı
+	// æœ€å¤§å…¬çº¦æ•°
 	public static int maxCommonDivisor(int m, int n) {
  
-		if (m < n) {// ±£Ö¤m>n,Èôm<n,Ôò½øĞĞÊı¾İ½»»»
+		if (m < n) {// ä¿è¯m>n,è‹¥m<n,åˆ™è¿›è¡Œæ•°æ®äº¤æ¢
 			int temp = m;
 			m = n;
 			n = temp;
 		}
-		while (m % n != 0) {// ÔÚÓàÊı²»ÄÜÎª0Ê±,½øĞĞÑ­»·
+		while (m % n != 0) {// åœ¨ä½™æ•°ä¸èƒ½ä¸º0æ—¶,è¿›è¡Œå¾ªç¯
 			int temp = m % n;
 			m = n;
 			n = temp;
 		}
-		return n;// ·µ»Ø×î´ó¹«Ô¼Êı
+		return n;// è¿”å›æœ€å¤§å…¬çº¦æ•°
 	}
 	
-	// Çó×îĞ¡¹«±¶Êı
+	// æ±‚æœ€å°å…¬å€æ•°
 	public static int minCommonMultiple(int m, int n) {
 		return m * n / maxCommonDivisor(m, n);
 	}

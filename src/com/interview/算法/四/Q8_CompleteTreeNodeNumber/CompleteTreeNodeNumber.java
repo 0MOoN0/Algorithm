@@ -1,11 +1,11 @@
-package com.interview.Ëã·¨.ËÄ.Q8_CompleteTreeNodeNumber;
+package com.interview.ç®—æ³•.å››.Q8_CompleteTreeNodeNumber;
 
 /**
- * ¼ÆËãÍêÈ«¶þ²æÊ÷µÄ½ÚµãÊý
- * ¸ß¶ÈÎªLµÄÂú¶þ²æÊ÷µÄ½Úµã¸öÊýÎª2^L-1
-1. Ò»Â·×óÏÂ£¬¿ÉÒÔÌ½²âµ½Ê÷µÄ¸ß¶È
-   1. ²é¿´¸ù½ÚµãµÄÓÒ×ÓÊ÷£¬Èç¹ûÓÒ×ÓÊ÷µÄ¸ß¶ÈÓë×ó×ÓÊ÷µÄ¸ß¶ÈÏàÍ¬£¬Ôò¿ÉÒÔÇó³ö×ó×ÓÊ÷½Úµã¸öÊý£¬ÓÒ×ÓÊ÷µÄ½Úµã¸öÊý¿ÉÒÔ»®·ÖÎªÏàÍ¬µÄ×ÓÎÊÌâµÝ¹éÇó½â
-   2. Èç¹ûÓÒ×ÓÊ÷µÄ¸ß¶ÈÓë×ó×ÓÊ÷²»Í¬£¬ÔòÓÒ×ÓÊ÷Ò»¶¨ÊÇÒ»¸öÂú¶þ²æÊ÷£¨ÍêÈ«¶þ²æÊ÷µÄ¶¨Òå£©£¬¿ÉÒÔÇó³öÓÒ×ÓÊ÷µÄ¸ß¶È
+ * è®¡ç®—å®Œå…¨äºŒå‰æ ‘çš„èŠ‚ç‚¹æ•°
+ * é«˜åº¦ä¸ºLçš„æ»¡äºŒå‰æ ‘çš„èŠ‚ç‚¹ä¸ªæ•°ä¸º2^L-1
+1. ä¸€è·¯å·¦ä¸‹ï¼Œå¯ä»¥æŽ¢æµ‹åˆ°æ ‘çš„é«˜åº¦
+   1. æŸ¥çœ‹æ ¹èŠ‚ç‚¹çš„å³å­æ ‘ï¼Œå¦‚æžœå³å­æ ‘çš„é«˜åº¦ä¸Žå·¦å­æ ‘çš„é«˜åº¦ç›¸åŒï¼Œåˆ™å¯ä»¥æ±‚å‡ºå·¦å­æ ‘èŠ‚ç‚¹ä¸ªæ•°ï¼Œå³å­æ ‘çš„èŠ‚ç‚¹ä¸ªæ•°å¯ä»¥åˆ’åˆ†ä¸ºç›¸åŒçš„å­é—®é¢˜é€’å½’æ±‚è§£
+   2. å¦‚æžœå³å­æ ‘çš„é«˜åº¦ä¸Žå·¦å­æ ‘ä¸åŒï¼Œåˆ™å³å­æ ‘ä¸€å®šæ˜¯ä¸€ä¸ªæ»¡äºŒå‰æ ‘ï¼ˆå®Œå…¨äºŒå‰æ ‘çš„å®šä¹‰ï¼‰ï¼Œå¯ä»¥æ±‚å‡ºå³å­æ ‘çš„é«˜åº¦
  * 
  * @author Peter
  *
@@ -30,11 +30,11 @@ public class CompleteTreeNodeNumber {
 	}
 	
 	/**
-	 * »ñÈ¡root½ÚµãµÄ×Ó½Úµã¸öÊý
+	 * èŽ·å–rootèŠ‚ç‚¹çš„å­èŠ‚ç‚¹ä¸ªæ•°
 	 * 
-	 * @param root			Ä¿±ê½Úµã
-	 * @param curLevel		µ±Ç°½ÚµãËùÔÚ²ãÊý
-	 * @param maxLevel		µ±Ç°½ÚµãËùÔÚµÄ×î´ó²ãÊý
+	 * @param root			ç›®æ ‡èŠ‚ç‚¹
+	 * @param curLevel		å½“å‰èŠ‚ç‚¹æ‰€åœ¨å±‚æ•°
+	 * @param maxLevel		å½“å‰èŠ‚ç‚¹æ‰€åœ¨çš„æœ€å¤§å±‚æ•°
 	 * @return
 	 */
 	public static int count(Node root, int curLevel, int maxLevel) {

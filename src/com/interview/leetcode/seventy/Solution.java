@@ -8,9 +8,9 @@ class Solution {
         }else if(n==0) {
         	return 0;
         }
-    	// n-1По
+    	// n-1йЎ№
     	int a=2;
-    	// n-2По
+    	// n-2йЎ№
     	int b=1;
     	int result = 0;
     	for(int i=3; i<=n; i++) {

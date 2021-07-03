@@ -1,8 +1,8 @@
-package com.interview.Ëã·¨.Èý.Q9_FindNumInSortedMatrix;
+package com.interview.ç®—æ³•.ä¸‰.Q9_FindNumInSortedMatrix;
 
 /**
- * ÔÚÐÐÁÐ¶¼ÅÅºÃÐòµÄ¾ØÕóÖÐÕÒÊý
- * ¡¾ÒªÇó¡¿ Ê±¼ä¸´ÔÓ¶ÈÎªO(N+M)£¬¶îÍâ¿Õ¼ä¸´ÔÓ¶ÈÎªO(1)¡£
+ * åœ¨è¡Œåˆ—éƒ½æŽ’å¥½åºçš„çŸ©é˜µä¸­æ‰¾æ•°
+ * ã€è¦æ±‚ã€‘ æ—¶é—´å¤æ‚åº¦ä¸ºO(N+M)ï¼Œé¢å¤–ç©ºé—´å¤æ‚åº¦ä¸ºO(1)ã€‚
  * input: 		  int[][] matrix = { 
 				  { 0, 1, 2, 5 }, 
 				  { 2, 3, 4, 7 }, 
@@ -19,10 +19,10 @@ package com.interview.Ëã·¨.Èý.Q9_FindNumInSortedMatrix;
 public class FindNumInSortedMatrix {
 	
 	public static boolean findNum(int [][] matrix, int k) {
-		// ×óÏÂ½Ç
+		// å·¦ä¸‹è§’
 		int RR = matrix.length-1;
 		int RC = matrix[0].length-1;
-		// Ö¸Õë
+		// æŒ‡é’ˆ
 		int curC = RC;
 		int curR = 0;
 		while(curC>=0 && curC<=RC && curR>=0 && curR <=RR) {

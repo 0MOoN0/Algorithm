@@ -1,4 +1,4 @@
-package com.basic.²¢·¢._Ëø.»¥³âËø;
+package com.basic.å¹¶å‘._é”.äº’æ–¥é”;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,18 +7,18 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
- * ×ÊÔ´Àà
+ * èµ„æºç±»
  */
 class MyCaChe {
     /**
-     * ±£Ö¤¿É¼ûĞÔ
+     * ä¿è¯å¯è§æ€§
      */
     private volatile Map<String, Object> map = new HashMap<>();
     private ReentrantReadWriteLock reentrantReadWriteLock = new ReentrantReadWriteLock();
     private ReentrantLock lock = new ReentrantLock();
 
     /**
-     * Ğ´
+     * å†™
      *
      * @param key
      * @param value
@@ -27,15 +27,15 @@ class MyCaChe {
         reentrantReadWriteLock.writeLock().lock();
 //    	lock.lock();
         try {
-            System.out.println(Thread.currentThread().getName() + "\tÕıÔÚĞ´Èë" + key);
-            //Ä£ÄâÍøÂçÑÓÊ±
+            System.out.println(Thread.currentThread().getName() + "\tæ­£åœ¨å†™å…¥" + key);
+            //æ¨¡æ‹Ÿç½‘ç»œå»¶æ—¶
             try {
                 TimeUnit.MICROSECONDS.sleep(300);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             map.put(key, value);
-            System.out.println(Thread.currentThread().getName() + "\tĞ´ÈëÍê³É"+ key);
+            System.out.println(Thread.currentThread().getName() + "\tå†™å…¥å®Œæˆ"+ key);
         } finally {
             reentrantReadWriteLock.writeLock().unlock();
 //        	lock.unlock();
@@ -43,7 +43,7 @@ class MyCaChe {
     }
 
     /**
-     * ¶Á
+     * è¯»
      *
      * @param key
      */
@@ -51,15 +51,15 @@ class MyCaChe {
         reentrantReadWriteLock.readLock().lock();
 //    	lock.lock();
         try {
-            System.out.println(Thread.currentThread().getName() + "\tÕıÔÚ¶ÁÈ¡");
-            //Ä£ÄâÍøÂçÑÓÊ±
+            System.out.println(Thread.currentThread().getName() + "\tæ­£åœ¨è¯»å–");
+            //æ¨¡æ‹Ÿç½‘ç»œå»¶æ—¶
             try {
                 TimeUnit.MICROSECONDS.sleep(300);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             Object result = map.get(key);
-            System.out.println(Thread.currentThread().getName() + "\t¶ÁÈ¡Íê³É" + result);
+            System.out.println(Thread.currentThread().getName() + "\tè¯»å–å®Œæˆ" + result);
         } finally {
             reentrantReadWriteLock.readLock().unlock();
 //        	lock.unlock();
@@ -74,16 +74,16 @@ class MyCaChe {
 
 /**
  * Description:
- * ¶à¸öÏß³ÌÍ¬Ê±²Ù×÷ Ò»¸ö×ÊÔ´ÀàÃ»ÓĞÈÎºÎÎÊÌâ ËùÒÔÎªÁËÂú×ã²¢·¢Á¿
- * ¶ÁÈ¡¹²Ïí×ÊÔ´Ó¦¸Ã¿ÉÒÔÍ¬Ê±½øĞĞ
- * µ«ÊÇ
- * Èç¹ûÓĞÒ»¸öÏß³ÌÏëÈ¥Ğ´¹²Ïí×ÊÔ´À´  ¾Í²»Ó¦¸ÃÓĞÆäËûÏß³Ì¿ÉÒÔ¶Ô×ÊÔ´½øĞĞ¶Á»òĞ´
+ * å¤šä¸ªçº¿ç¨‹åŒæ—¶æ“ä½œ ä¸€ä¸ªèµ„æºç±»æ²¡æœ‰ä»»ä½•é—®é¢˜ æ‰€ä»¥ä¸ºäº†æ»¡è¶³å¹¶å‘é‡
+ * è¯»å–å…±äº«èµ„æºåº”è¯¥å¯ä»¥åŒæ—¶è¿›è¡Œ
+ * ä½†æ˜¯
+ * å¦‚æœæœ‰ä¸€ä¸ªçº¿ç¨‹æƒ³å»å†™å…±äº«èµ„æºæ¥  å°±ä¸åº”è¯¥æœ‰å…¶ä»–çº¿ç¨‹å¯ä»¥å¯¹èµ„æºè¿›è¡Œè¯»æˆ–å†™
  * <p>
- * Ğ¡×Ü½á:
- * ¶Á ¶ÁÄÜ¹²´æ
- * ¶Á Ğ´²»ÄÜ¹²´æ
- * Ğ´ Ğ´²»ÄÜ¹²´æ
- * Ğ´²Ù×÷ Ô­×Ó+¶ÀÕ¼ Õû¸ö¹ı³Ì±ØĞëÊÇÒ»¸öÍê³ÉµÄÍ³Ò»ÕûÌå ÖĞ¼ä²»ÔÊĞí±»·Ö¸î ±»´ò¶Ï
+ * å°æ€»ç»“:
+ * è¯» è¯»èƒ½å…±å­˜
+ * è¯» å†™ä¸èƒ½å…±å­˜
+ * å†™ å†™ä¸èƒ½å…±å­˜
+ * å†™æ“ä½œ åŸå­+ç‹¬å  æ•´ä¸ªè¿‡ç¨‹å¿…é¡»æ˜¯ä¸€ä¸ªå®Œæˆçš„ç»Ÿä¸€æ•´ä½“ ä¸­é—´ä¸å…è®¸è¢«åˆ†å‰² è¢«æ‰“æ–­
  *
  * @author veliger@163.com
  * @date 2019-04-13 0:45

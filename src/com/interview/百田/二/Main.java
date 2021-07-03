@@ -1,4 +1,4 @@
-package com.interview.°ÙÌï.¶ş;
+package com.interview.ç™¾ç”°.äºŒ;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,7 @@ public class Main {
 	
 	public static List<List<Integer>> printSum(int a[], int m){
 		List<List<Integer>> result = new ArrayList<List<Integer>>();
-		// Ğ£ÑéÊı¾İ
+		// æ ¡éªŒæ•°æ®
 		if(a==null) {
 			return null;
 		}
@@ -31,7 +31,7 @@ public class Main {
 		}
 		if(value + a[index] == m) {
 			result.add(index);
-			// ½áÊøµİ¹é
+			// ç»“æŸé€’å½’
 			return ;
 		}
 		if(value + a[index] < m) {

@@ -1,4 +1,4 @@
-package com.interview.leetcode.thirteenth_ÂŞÂíÊı×Ö×ªÕûÊı;
+package com.interview.leetcode.thirteenth_ç½—é©¬æ•°å­—è½¬æ•´æ•°;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -18,7 +18,7 @@ class Solution {
         map.put("M", 1000);
         char[] cs = s.toCharArray();
         for(int i=0; i<cs.length; i++) {
-        	// ÅĞ¶ÏÈıÖÖÌØÊâ×Ö·û
+        	// åˆ¤æ–­ä¸‰ç§ç‰¹æ®Šå­—ç¬¦
         	if(cs[i] == 'I' && i<cs.length-1) {
         		if(cs[i+1] == 'V') {
         			result += 4;
@@ -52,7 +52,7 @@ class Solution {
         			continue;
         		}
         	}
-        	// ÆäËûÇé¿ö
+        	// å…¶ä»–æƒ…å†µ
         	result += map.getOrDefault(cs[i]+"", 0);
         }
     	

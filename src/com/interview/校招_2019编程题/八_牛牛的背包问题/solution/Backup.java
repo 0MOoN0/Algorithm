@@ -1,4 +1,4 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.°Ë_Å£Å£µÄ±³°üÎÊÌâ.solution;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.å…«_ç‰›ç‰›çš„èƒŒåŒ…é—®é¢˜.solution;
 
 import java.util.Scanner;
 
@@ -21,7 +21,7 @@ public class Backup {
 				System.out.println((int) Math.pow(2, n));
 			} else {
 				dfs(0, 0, n, nums, total);
-//            ¾ù²»Ìí¼ÓÒ²ÊÇÒ»ÖÖÇé¿ö
+//            å‡ä¸æ·»åŠ ä¹Ÿæ˜¯ä¸€ç§æƒ…å†µ
 				System.out.println(count + 1);
 			}
 		}
@@ -31,9 +31,9 @@ public class Backup {
 			if (sum > total) {
 				return;
 			}
-//            ²»Ìí¼ÓÕâ¼şÁãÊ³
+//            ä¸æ·»åŠ è¿™ä»¶é›¶é£Ÿ
 			dfs(sum, cur + 1, n, nums, total);
-			// µ±Ç°ÕâÖÖÌí¼Ó·½Ê½ºÏÀí,Ìí¼ÓÕâ¼şÁãÊ³
+			// å½“å‰è¿™ç§æ·»åŠ æ–¹å¼åˆç†,æ·»åŠ è¿™ä»¶é›¶é£Ÿ
 			if (sum + nums[cur] <= total) {
 				count++;
 				dfs(sum + nums[cur], cur + 1, n, nums, total);

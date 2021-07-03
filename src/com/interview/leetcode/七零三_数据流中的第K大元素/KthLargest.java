@@ -1,4 +1,4 @@
-package com.interview.leetcode.ÆßÁãÈı_Êı¾İÁ÷ÖĞµÄµÚK´óÔªËØ;
+package com.interview.leetcode.ä¸ƒé›¶ä¸‰_æ•°æ®æµä¸­çš„ç¬¬Kå¤§å…ƒç´ ;
 
 import java.util.*;
 class KthLargest {
@@ -6,20 +6,20 @@ class KthLargest {
     PriorityQueue<Integer> queue;
 
     public KthLargest(int k, int[] nums) {
-        // ´´½¨Ò»¸ö´óĞ¡ÎªKµÄ×îĞ¡¶Ñ¶Ñ¶¥ÔªËØ¼´Îª½á¹û
+        // åˆ›å»ºä¸€ä¸ªå¤§å°ä¸ºKçš„æœ€å°å †å †é¡¶å…ƒç´ å³ä¸ºç»“æœ
         queue = new PriorityQueue<Integer>(k);
         this.k = k;
-        // ÓÃËù¸øµÄÊı¾İ³õÊ¼»¯
+        // ç”¨æ‰€ç»™çš„æ•°æ®åˆå§‹åŒ–
         for(int n: nums)
             add(n);
     }
     
     public int add(int val) {
-        // ¼ì²é¶ÓÁĞÊÇ·ñÒÑÂú
+        // æ£€æŸ¥é˜Ÿåˆ—æ˜¯å¦å·²æ»¡
         if(queue.size()<k){
-            // Èë¶Ó
+            // å…¥é˜Ÿ
             queue.offer(val);
-        }else if(queue.peek()<val){ // ¶ÓÁĞÒÑÂú£¬¼ì²éÔªËØÊÇ·ñ´óÓÚ¶Ñ¶¥
+        }else if(queue.peek()<val){ // é˜Ÿåˆ—å·²æ»¡ï¼Œæ£€æŸ¥å…ƒç´ æ˜¯å¦å¤§äºå †é¡¶
             queue.poll();
             queue.offer(val);
         }

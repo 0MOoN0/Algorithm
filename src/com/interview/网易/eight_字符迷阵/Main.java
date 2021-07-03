@@ -1,4 +1,4 @@
-package com.interview.网易.eight_字符迷阵;
+package com.interview.缃戞槗.eight_瀛楃杩烽樀;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,8 +17,8 @@ public class Main {
 		char[] chars;
 		for(int i=0; i<testSize; i++) {
 			String[] split = reader.readLine().split(" ");
-			x = Integer.parseInt(split[0]);	// 行数
-			y = Integer.parseInt(split[1]); // 列数
+			x = Integer.parseInt(split[0]);	// 琛屾暟
+			y = Integer.parseInt(split[1]); // 鍒楁暟
 			strMatrx = new char[x][y];
 			for(int j=0;j<x;j++) {
 				strMatrx[j] = reader.readLine().toCharArray();

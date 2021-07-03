@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.ÈıÆß_Êı×ÖÔÚÅÅĞòÊı×éÖĞ³öÏÖµÄ´ÎÊı;
+package com.interview.å‰‘æŒ‡offer.ä¸‰ä¸ƒ_æ•°å­—åœ¨æ’åºæ•°ç»„ä¸­å‡ºç°çš„æ¬¡æ•°;
 public class Solution {
     public int GetNumberOfK(int [] array , int k) {
        int result = 0;

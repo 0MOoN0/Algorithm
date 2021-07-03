@@ -1,10 +1,10 @@
-package com.interview.leetcode.Ò»Áã¶ş_¶ş²æÊ÷µÄ²ã´Î±éÀú;
+package com.interview.leetcode.ä¸€é›¶äºŒ_äºŒå‰æ ‘çš„å±‚æ¬¡éå†;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * µİ¹éDFS
+ * é€’å½’DFS
  * Definition for a binary tree node.
  * public class TreeNode {
  *     int val;
@@ -14,7 +14,7 @@ import java.util.List;
  * }
  */
 class Solution2 {
-    // ¶¨ÒåÒ»¸ö½á¹ûList
+    // å®šä¹‰ä¸€ä¸ªç»“æœList
     List<List<Integer>> result = new ArrayList<List<Integer>>();
 
     public List<List<Integer>> levelOrder(TreeNode root) {
@@ -24,9 +24,9 @@ class Solution2 {
     }
 
     public void DFS(TreeNode node, int level){
-        // µİ¹éÌõ¼ş
+        // é€’å½’æ¡ä»¶
         if(node == null) return;
-        // ½«µ±Ç°½á¹û¼ÓÈëListÖĞ
+        // å°†å½“å‰ç»“æœåŠ å…¥Listä¸­
         if(result.size()>level){
             result.get(level).add(node.val);
         }else{
@@ -34,9 +34,9 @@ class Solution2 {
             innerList.add(node.val);
             result.add(innerList);
         }
-        // ×ó×ÓÊ÷¼ÌĞøµİ¹é
+        // å·¦å­æ ‘ç»§ç»­é€’å½’
         DFS(node.left, level+1);
-        // ÓÒ×ÓÊ÷¼ÌĞøµİ¹é
+        // å³å­æ ‘ç»§ç»­é€’å½’
         DFS(node.right, level+1);
     }
 }

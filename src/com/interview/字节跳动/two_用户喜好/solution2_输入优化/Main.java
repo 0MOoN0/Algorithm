@@ -1,4 +1,4 @@
-package com.interview.字节跳动.two_用户喜好.solution2_输入优化;
+package com.interview.瀛楄妭璺冲姩.two_鐢ㄦ埛鍠滃ソ.solution2_杈撳叆浼樺寲;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.interview.пёуп_2019╠ЮЁллБ.one.solution;
+package com.interview.Ф═║Ф▀⌡_2019Г╪√Г╗▀И╒≤.one.solution;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -17,10 +17,10 @@ public class Main {
 		}
 		TreeMap map = new TreeMap();
 		
-		// ╤тдя╤х╫ЬппеепР
+		// Е╞╧И ╬Е╨╕Х©⌡Х║▄Ф▌▓Е╨▐
 		Arrays.sort(arr, (x,y) -> x[0] - y[0]);
 		
-		// ╠ёж╓дя╤хп║╣д╠╗ЁЙ╡╩╩А╢Ссздя╤х╢С╣д╠╗ЁЙ
+		// Д©²Х╞│И ╬Е╨╕Е╟▐Г └Ф┼╔И┘╛Д╦█Д╪ Е╓╖Д╨▌И ╬Е╨╕Е╓╖Г └Ф┼╔И┘╛
 		for(int i=1;i<arr.length; i++) {
 			arr[i][1] = Math.max(arr[i-1][1], arr[i][1]);
 		}

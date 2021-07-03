@@ -1,9 +1,9 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.¶şÊ®¾Å_»ØÎÄ×Ó´®;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.äºŒåä¹_å›æ–‡å­ä¸²;
 
 import java.util.Scanner;
 
 /**
- * ÖĞĞÄÍØÕ¹Ëã·¨
+ * ä¸­å¿ƒæ‹“å±•ç®—æ³•
  * @author Peter
  *
  */

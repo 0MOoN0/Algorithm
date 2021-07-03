@@ -1,13 +1,13 @@
-package com.basic.���ģʽ.����ģʽ;
+package com.basic.设计模式.单例模式;
 
 
 /*
- * ����ʽ��
- * 	�ӳٴ������ʵ������
+ * 懒汉式：
+ * 	延迟创建这个实例对象
  * 
- * (1)������˽�л�
- * (2)��һ����̬�����������Ψһ��ʵ��
- * (3)�ṩһ����̬��������ȡ���ʵ������
+ * (1)构造器私有化
+ * (2)用一个静态变量保存这个唯一的实例
+ * (3)提供一个静态方法，获取这个实例对象
  */
 public class Singleton4 {
 	private static Singleton4 instance;

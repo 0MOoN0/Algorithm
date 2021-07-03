@@ -1,13 +1,13 @@
-package com.interview.leetcode.five_×î³¤»ØÎÄ×Ö´®.solution;
+package com.interview.leetcode.five_æœ€é•¿å›žæ–‡å­—ä¸².solution;
 
 /**
- * Ê¹ÓÃÁËÖÐÐÄÍØÕ¹Ëã·¨£¬ ¸ù¾Ý»ØÎÄ×Ö·û´®µÄÌØÐÔÉè¼Æ³öÀ´µÄÒ»ÖÖËã·¨
- * ´Ó×Ö´®µÄÖÐÐÄ¿ªÊ¼£¬ÓÎ±êÏò×óÓÒÁ½±ßÍØÕ¹£¬Èç¹ûÓÐÒ»±ß²»Âú×ãÇé¿öÔò±íÊ¾
- * ×¢ÒâÓÐÁ½ÖÖÇé¿ö£º
- *  1. »ØÎÄ×Ö´®ÊÇÅ¼Êý
- *   ´Ói , i+1 ×÷ÎªÓÎ±êÁ½±ß£¬ÏòÍâÍØÕ¹
- *  2. »ØÎÄ×Ö´®ÊÇÆæÊý
- *   ´Ói×÷ÎªÓÎ±ê£¬ÏòÁ½±ßÍØÕ¹
+ * ä½¿ç”¨äº†ä¸­å¿ƒæ‹“å±•ç®—æ³•ï¼Œ æ ¹æ®å›žæ–‡å­—ç¬¦ä¸²çš„ç‰¹æ€§è®¾è®¡å‡ºæ¥çš„ä¸€ç§ç®—æ³•
+ * ä»Žå­—ä¸²çš„ä¸­å¿ƒå¼€å§‹ï¼Œæ¸¸æ ‡å‘å·¦å³ä¸¤è¾¹æ‹“å±•ï¼Œå¦‚æžœæœ‰ä¸€è¾¹ä¸æ»¡è¶³æƒ…å†µåˆ™è¡¨ç¤º
+ * æ³¨æ„æœ‰ä¸¤ç§æƒ…å†µï¼š
+ *  1. å›žæ–‡å­—ä¸²æ˜¯å¶æ•°
+ *   ä»Ži , i+1 ä½œä¸ºæ¸¸æ ‡ä¸¤è¾¹ï¼Œå‘å¤–æ‹“å±•
+ *  2. å›žæ–‡å­—ä¸²æ˜¯å¥‡æ•°
+ *   ä»Žiä½œä¸ºæ¸¸æ ‡ï¼Œå‘ä¸¤è¾¹æ‹“å±•
  * 
  * @author Peter
  *
@@ -17,10 +17,10 @@ class Solution {
         if (s == null || s.length() < 1) return "";
         int start = 0, end = 0;
         for (int i = 0; i < s.length(); i++) {
-            int len1 = expandAroundCenter(s, i, i);    //»ØÎÄ×Ó´®µÄ³¤¶ÈÎªÆæÊýÊ±
-            int len2 = expandAroundCenter(s, i, i + 1);    //»ØÎÄ×Ó´®µÄ³¤¶ÈÎªÅ¼ÊýÊ±
-            int len = Math.max(len1, len2);        //È¡Á½ÖÖÇé¿öÖÐµÄ×î´óÖµ
-            if (len > end - start) {                //Âú×ã¸ÃÌõ¼þÔòÎªµ±Ç°µÄ×î³¤»ØÎÄ×Ó´®
+            int len1 = expandAroundCenter(s, i, i);    //å›žæ–‡å­ä¸²çš„é•¿åº¦ä¸ºå¥‡æ•°æ—¶
+            int len2 = expandAroundCenter(s, i, i + 1);    //å›žæ–‡å­ä¸²çš„é•¿åº¦ä¸ºå¶æ•°æ—¶
+            int len = Math.max(len1, len2);        //å–ä¸¤ç§æƒ…å†µä¸­çš„æœ€å¤§å€¼
+            if (len > end - start) {                //æ»¡è¶³è¯¥æ¡ä»¶åˆ™ä¸ºå½“å‰çš„æœ€é•¿å›žæ–‡å­ä¸²
                 start = i - (len - 1) / 2;
                 end = i + len / 2;
             }

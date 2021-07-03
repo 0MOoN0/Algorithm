@@ -1,7 +1,7 @@
-package com.interview.leetcode.Ò»ËÄÒ»_»·ĞÎÁ´±í;
+package com.interview.leetcode.ä¸€å››ä¸€_ç¯å½¢é“¾è¡¨;
 
 /**
- * ÔÚleetcodeÉÏ³¬Ê±
+ * åœ¨leetcodeä¸Šè¶…æ—¶
  * Definition for singly-linked list.
  * class ListNode {
  *     int val;

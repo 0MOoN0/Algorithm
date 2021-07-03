@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.Ò»Ò»_¶þ½øÖÆÖÐ1µÄ¸öÊý;
+package com.interview.å‰‘æŒ‡offer.ä¸€ä¸€_äºŒè¿›åˆ¶ä¸­1çš„ä¸ªæ•°;
 
 public class Solution2 {
 	public int NumberOf1(int n) {

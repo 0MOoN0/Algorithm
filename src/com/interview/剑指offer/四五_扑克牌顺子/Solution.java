@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.ËÄÎå_ÆË¿ËÅÆË³×Ó;
+package com.interview.å‰‘æŒ‡offer.å››äº”_æ‰‘å…‹ç‰Œé¡ºå­;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -10,11 +10,11 @@ public class Solution {
 		int zeroNum = 0;
 		int size = numbers.length;
 		Arrays.sort(numbers);
-		// ¼ÆËãÁãµÄ¸öÊı
+		// è®¡ç®—é›¶çš„ä¸ªæ•°
 		for (int i = 0; i < 5 && numbers[i] == 0; i++) {
 			zeroNum++;
 		}
-		// È¥ÖØ
+		// å»é‡
 		HashSet<Integer> set = new HashSet<Integer>();
 		for (int i = 0; i < numbers.length; i++) {
 			set.add(numbers[i]);

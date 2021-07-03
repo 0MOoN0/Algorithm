@@ -1,4 +1,4 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.¶şÊ®Æß_×Ö·û´®°üº¬;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.äºŒåä¸ƒ_å­—ç¬¦ä¸²åŒ…å«;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class Main {
 
 	public static void main(String[] args) {
-		// ÊäÈë
+		// è¾“å…¥
 		Scanner sc = new Scanner(System.in);
 		while(sc.hasNext()) {
 			String[] strLine = sc.nextLine().split(" ");

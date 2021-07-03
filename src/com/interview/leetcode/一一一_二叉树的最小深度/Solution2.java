@@ -1,10 +1,10 @@
-package com.interview.leetcode.Ò»Ò»Ò»_¶ş²æÊ÷µÄ×îĞ¡Éî¶È;
+package com.interview.leetcode.ä¸€ä¸€ä¸€_äºŒå‰æ ‘çš„æœ€å°æ·±åº¦;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * BFS ÕÒµ½µÚÒ»¸öÒ¶×Ó½ÚµãËùÔÚµÄÉî¶È¼´¿É
+ * BFS æ‰¾åˆ°ç¬¬ä¸€ä¸ªå¶å­èŠ‚ç‚¹æ‰€åœ¨çš„æ·±åº¦å³å¯
  * Definition for a binary tree node.
  * public class TreeNode {
  *     int val;
@@ -15,11 +15,11 @@ import java.util.Queue;
  */
 class Solution2 {
     public int minDepth(TreeNode root) {
-        // ÅĞ¶ÏÊı¾İ
+        // åˆ¤æ–­æ•°æ®
         if(root == null) return 0;
-        // ³õÊ¼»¯¶ÓÁĞ
+        // åˆå§‹åŒ–é˜Ÿåˆ—
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
-        // ¸ù½ÚµãÈë¶Ó
+        // æ ¹èŠ‚ç‚¹å…¥é˜Ÿ
         queue.offer(root);
         int level = 0;
         // BFS
@@ -28,11 +28,11 @@ class Solution2 {
             level ++;
             for(int i=0; i<size; i++){
                 TreeNode node = queue.poll();
-                // ÅĞ¶ÏÊÇ·ñÎª×Ó½Úµã
+                // åˆ¤æ–­æ˜¯å¦ä¸ºå­èŠ‚ç‚¹
                 if(node.left == null && node.right == null){
                     return level;
                 }
-                // ×óÓÒ×ÓÊ÷Èë¶Ó
+                // å·¦å³å­æ ‘å…¥é˜Ÿ
                 if(node.left != null) queue.offer(node.left);
                 if(node.right != null) queue.offer(node.right); 
             }

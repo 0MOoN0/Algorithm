@@ -1,9 +1,9 @@
-package com.interview.Ëã·¨.Èı.Q2_3_Array_Stak_Queue.stack2queue;
+package com.interview.ç®—æ³•.ä¸‰.Q2_3_Array_Stak_Queue.stack2queue;
 
-import com.interview.Ëã·¨.Èı.Q2_stack_queue.Array_To_Stack;
+import com.interview.ç®—æ³•.ä¸‰.Q2_stack_queue.Array_To_Stack;
 
 /**
- * Ê¹ÓÃÕ»Ä£Äâ¶ÓÁĞ
+ * ä½¿ç”¨æ ˆæ¨¡æ‹Ÿé˜Ÿåˆ—
  * @author Peter
  *
  */

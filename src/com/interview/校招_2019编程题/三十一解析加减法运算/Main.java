@@ -1,4 +1,4 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.ÈıÊ®Ò»½âÎö¼Ó¼õ·¨ÔËËã;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.ä¸‰åä¸€è§£æåŠ å‡æ³•è¿ç®—;
 
 import java.util.Scanner;
 
@@ -14,7 +14,7 @@ public class Main {
 				pos = i;
 			}
 		}
-		// ×îºóÒ»¸ö×Ö·û
+		// æœ€åä¸€ä¸ªå­—ç¬¦
 		result += Integer.parseInt(line.substring(pos,line.length()));
 		System.out.println(result);
 	}

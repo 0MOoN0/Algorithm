@@ -1,14 +1,14 @@
-package com.interview.½£Ö¸offer.ÈıÁã_Á¬Ğø×ÓÊı×éµÄ×î´óºÍ;
+package com.interview.å‰‘æŒ‡offer.ä¸‰é›¶_è¿ç»­å­æ•°ç»„çš„æœ€å¤§å’Œ;
 
 public class Solution {
     public int FindGreatestSumOfSubArray(int[] array) {
         int result = array[0];
         int sum = 0;
         for(int i=0; i<array.length; i++){
-            if(sum+array[i] > array[i]){ // Èç¹û¼ÓÈëµ±Ç°Öµ±Èµ±Ç°Öµ¸ü´ó£¬Ôò¼ÓÈëµ±Ç°Öµ
+            if(sum+array[i] > array[i]){ // å¦‚æœåŠ å…¥å½“å‰å€¼æ¯”å½“å‰å€¼æ›´å¤§ï¼Œåˆ™åŠ å…¥å½“å‰å€¼
                 sum+=array[i];
             }else{
-                sum = array[i];  // Èç¹û¼ÓÈëµ±Ç°ÖµµÄ½á¹û±Èµ±Ç°Öµ¸üĞ¡£¬ÔòÖ±½ÓÊ¹ÓÃµ±Ç°Öµ
+                sum = array[i];  // å¦‚æœåŠ å…¥å½“å‰å€¼çš„ç»“æœæ¯”å½“å‰å€¼æ›´å°ï¼Œåˆ™ç›´æ¥ä½¿ç”¨å½“å‰å€¼
             }
             result = sum>result ? sum : result;
         }

@@ -1,43 +1,43 @@
-package com.interview.Ëã·¨.Èı.Q14_FindFirstIntersectNode;
+package com.interview.ç®—æ³•.ä¸‰.Q14_FindFirstIntersectNode;
 
 import java.util.Optional;
 
-import com.interview.Ëã·¨.common.Node;
+import com.interview.ç®—æ³•.common.Node;
 
 /**
- * Á½¸öµ¥Á´±íÏà½»µÄÒ»ÏµÁĞÎÊÌâ
- * 1. Á´±íÊÇ·ñÓĞ»·£¬»·µÄÈë¿ÚÊÇÄÄÀï
- * 2. Á´±íÊÇ·ñÏà½»£¬´ø»·Ïà½»ÓĞ¶àÉÙÖÖÇé¿ö
- * Ò»¸öÓĞ»·Á´±íÓëÒ»¸öÎŞ»·Á´±íÎŞ·¨Ïà½»
- * Á½¸öÓĞ»·Á´±íÏà½»£¬Ôò½»µãºóµÄ½Úµã¶¼ÏàÍ¬
- * Á½¸öÓĞ»·Á´±íÏà½»ÓĞÈıÖÖĞÎÌ¬
+ * ä¸¤ä¸ªå•é“¾è¡¨ç›¸äº¤çš„ä¸€ç³»åˆ—é—®é¢˜
+ * 1. é“¾è¡¨æ˜¯å¦æœ‰ç¯ï¼Œç¯çš„å…¥å£æ˜¯å“ªé‡Œ
+ * 2. é“¾è¡¨æ˜¯å¦ç›¸äº¤ï¼Œå¸¦ç¯ç›¸äº¤æœ‰å¤šå°‘ç§æƒ…å†µ
+ * ä¸€ä¸ªæœ‰ç¯é“¾è¡¨ä¸ä¸€ä¸ªæ— ç¯é“¾è¡¨æ— æ³•ç›¸äº¤
+ * ä¸¤ä¸ªæœ‰ç¯é“¾è¡¨ç›¸äº¤ï¼Œåˆ™äº¤ç‚¹åçš„èŠ‚ç‚¹éƒ½ç›¸åŒ
+ * ä¸¤ä¸ªæœ‰ç¯é“¾è¡¨ç›¸äº¤æœ‰ä¸‰ç§å½¢æ€
  * @author Peter
  *
  */
 public class FindFirstIntersectNode {
 	
-	// ÕÒµ½Á´±íÏà½»µÄµÚÒ»¸ö½Úµã
+	// æ‰¾åˆ°é“¾è¡¨ç›¸äº¤çš„ç¬¬ä¸€ä¸ªèŠ‚ç‚¹
 	public static Node findFirstIntersectNode(Node head1, Node head2) {
 		if(head1 == null || head2 == null) {
 			return null;
 		}
 		Node loopNode1 = getLoopNode(head1);
 		Node loopNode2 = getLoopNode(head2);
-		// ÊÇ·ñÓĞ»·
+		// æ˜¯å¦æœ‰ç¯
 		if(loopNode1 != null && loopNode2 != null) {
 			return bothLoop(head1, loopNode1, head2, loopNode2);
 		}else if(loopNode1 == null && loopNode2 ==null) {
 			return noLoop(head1, head2);
 		}
-		// ÆäËûÇé¿öÎŞ½»µã
+		// å…¶ä»–æƒ…å†µæ— äº¤ç‚¹
 		return null;
 	}
 	
-	// Á½¸öÓĞ»·Á´±íÏà½»
+	// ä¸¤ä¸ªæœ‰ç¯é“¾è¡¨ç›¸äº¤
 	public static Node bothLoop(Node head1, Node loppNode1, Node head2, Node loopNode2) {
-		// µÚÒ»ÖÖÇé¿ö
-		if(loppNode1 == loopNode2) {	// Á½¸öÁ´±íÏà½»£¬²¢ÔÚÍ¬Ò»¸ö»·ÄÚ£¬ÇÒ»·Èë¿ÚÏàµÈ
-			// ½â¾ö·½°¸£ºÀàËÆÎŞ»·Á´±íÏà½»
+		// ç¬¬ä¸€ç§æƒ…å†µ
+		if(loppNode1 == loopNode2) {	// ä¸¤ä¸ªé“¾è¡¨ç›¸äº¤ï¼Œå¹¶åœ¨åŒä¸€ä¸ªç¯å†…ï¼Œä¸”ç¯å…¥å£ç›¸ç­‰
+			// è§£å†³æ–¹æ¡ˆï¼šç±»ä¼¼æ— ç¯é“¾è¡¨ç›¸äº¤
 			Node cur1 = head1;
 			Node cur2 = head2;
 			int n=0;
@@ -49,8 +49,8 @@ public class FindFirstIntersectNode {
 				n--;
 				cur2 = cur2.next;
 			}
-			// ÅĞ¶ÏÁ½ÌõÁ´±íµÄ³¤¶È
-			cur1 = n > 0 ? head1 : head2;	// ½Ï³¤µÄÁ´±í
+			// åˆ¤æ–­ä¸¤æ¡é“¾è¡¨çš„é•¿åº¦
+			cur1 = n > 0 ? head1 : head2;	// è¾ƒé•¿çš„é“¾è¡¨
 			cur2 = cur1 == head1 ? head2 : head1;
 			n = Math.abs(n);
 			while(n != 0) {
@@ -63,21 +63,21 @@ public class FindFirstIntersectNode {
 			}
 			return cur1;
 		}else {
-			// Çé¿ö1£ºÁ½¸öÓĞ»·Á´±í²»Ïà½»
-			// Çé¿ö2£ºÁ½¸öÓĞ»·Á´±íÏà½»£¬ÇÒ»·Èë¿Ú²»ÏàµÈ
-			// Çé¿ö1£¬Á½¸öÈë¿Ú²»ÔÚÒ»¸ö»·ÉÏ£¬ÎŞ·¨´Óloop1µ½loop2
+			// æƒ…å†µ1ï¼šä¸¤ä¸ªæœ‰ç¯é“¾è¡¨ä¸ç›¸äº¤
+			// æƒ…å†µ2ï¼šä¸¤ä¸ªæœ‰ç¯é“¾è¡¨ç›¸äº¤ï¼Œä¸”ç¯å…¥å£ä¸ç›¸ç­‰
+			// æƒ…å†µ1ï¼Œä¸¤ä¸ªå…¥å£ä¸åœ¨ä¸€ä¸ªç¯ä¸Šï¼Œæ— æ³•ä»loop1åˆ°loop2
 			Node cur1 = loppNode1.next;
 			while(cur1 != loppNode1) {
-				if(cur1 == loopNode2) return cur1;	//Ïà½»£¬ÇÒ½»µãÓĞÁ½¸ö
+				if(cur1 == loopNode2) return cur1;	//ç›¸äº¤ï¼Œä¸”äº¤ç‚¹æœ‰ä¸¤ä¸ª
 				cur1 = cur1.next;
 			}
-			return null;	// ²»Ïà½»
+			return null;	// ä¸ç›¸äº¤
 		}
 	}
 
-	// ÅĞ¶ÏÒ»¸öÁ´±íÊÇ·ñÓĞ»·£¬Èç¹ûÓĞ»·Ôò·µ»ØÈë¿Ú½Úµã
+	// åˆ¤æ–­ä¸€ä¸ªé“¾è¡¨æ˜¯å¦æœ‰ç¯ï¼Œå¦‚æœæœ‰ç¯åˆ™è¿”å›å…¥å£èŠ‚ç‚¹
 	public static Node getLoopNode(Node head) {
-		// ²»¿ÉÄÜĞÎ³É»·
+		// ä¸å¯èƒ½å½¢æˆç¯
 		if(head == null || head.next == null || head.next.next == null) {
 			return null;
 		}
@@ -86,7 +86,7 @@ public class FindFirstIntersectNode {
 		while(fastNode != slowNode) {
 			fastNode = fastNode.next.next;
 			slowNode = slowNode.next;
-			// Ã»ÓĞ±Õ»·
+			// æ²¡æœ‰é—­ç¯
 			if(fastNode == null || fastNode.next == null) {
 				return null;
 			}
@@ -99,35 +99,35 @@ public class FindFirstIntersectNode {
 		return fastNode;
 	}
 	
-	// ÎŞ»·Á´±íµÄ¹²Í¬½Úµã£¬ÎŞ»·Á´±íÏà½»£¬¿ÉÄÜ³ÊY×Ö»òV×ÖĞÎ£¬Èç¹ûÏà½»µÄ»°£¬ËûÃÇµÄ×îºóÒ»¸ö½ÚµãÒ»¶¨ÊÇÏàÍ¬µÄ
+	// æ— ç¯é“¾è¡¨çš„å…±åŒèŠ‚ç‚¹ï¼Œæ— ç¯é“¾è¡¨ç›¸äº¤ï¼Œå¯èƒ½å‘ˆYå­—æˆ–Vå­—å½¢ï¼Œå¦‚æœç›¸äº¤çš„è¯ï¼Œä»–ä»¬çš„æœ€åä¸€ä¸ªèŠ‚ç‚¹ä¸€å®šæ˜¯ç›¸åŒçš„
 	public static Node noLoop(Node head1, Node head2) {
 		Node cur1 = head1;
 		Node cur2 = head2;
 		int n = 0;
-		// ¼ÆËãhead1µÄ³¤¶È£¬²¢Ö¸Ïò×îºóÒ»¸ö½Úµã
+		// è®¡ç®—head1çš„é•¿åº¦ï¼Œå¹¶æŒ‡å‘æœ€åä¸€ä¸ªèŠ‚ç‚¹
 		while(cur1.next != null) {
 			n++;
 			cur1 = cur1.next;
 		}
-		// ¼ÆËãhead2µÄ³¤¶È£¬²¢Ö¸Ïò×îºóÒ»¸ö½Úµã
+		// è®¡ç®—head2çš„é•¿åº¦ï¼Œå¹¶æŒ‡å‘æœ€åä¸€ä¸ªèŠ‚ç‚¹
 		while(cur2.next != null) {
 			n--;
 			cur2 = cur2.next;
 		}
-		// Èç¹û×îºóÒ»¸ö½Úµã²»ÏàµÈ£¬ÔòËµÃ÷Á½ÌõÁ´±í²»Ïà½»
+		// å¦‚æœæœ€åä¸€ä¸ªèŠ‚ç‚¹ä¸ç›¸ç­‰ï¼Œåˆ™è¯´æ˜ä¸¤æ¡é“¾è¡¨ä¸ç›¸äº¤
 		if(cur2 != cur1) {
 			return null;
 		}
-		// cur1ÎªÁ´±í½Ï³¤Ò»¶Ë£¬cur2Îª½Ï¶ÌÒ»¶Ë
+		// cur1ä¸ºé“¾è¡¨è¾ƒé•¿ä¸€ç«¯ï¼Œcur2ä¸ºè¾ƒçŸ­ä¸€ç«¯
 		cur1 = n > 0 ? head1 : head2;
 		cur2 = cur1 == head1 ? head2 : head1;
-		// ¼ÆËãÁ½ÌõÁ´±íµÄ³¤¶È²î£¬²¢ÈÃ½Ï³¤µÄÁ´±í×ßn²½
+		// è®¡ç®—ä¸¤æ¡é“¾è¡¨çš„é•¿åº¦å·®ï¼Œå¹¶è®©è¾ƒé•¿çš„é“¾è¡¨èµ°næ­¥
 		n = Math.abs(n);
 		while(n != 0) {
 			cur1 = cur1.next;
 			n--;
 		}
-		// ´ËÊ±Á½¸öÖ¸ÕëÖ¸ÏòµÄÁ´±íÊ£Óà³¤¶ÈÏàµÈ
+		// æ­¤æ—¶ä¸¤ä¸ªæŒ‡é’ˆæŒ‡å‘çš„é“¾è¡¨å‰©ä½™é•¿åº¦ç›¸ç­‰
 		while(cur1 != cur2) {
 			cur1 = cur1.next;
 			cur2 = cur2.next;
@@ -183,7 +183,7 @@ public class FindFirstIntersectNode {
 		head2.next.next.next = new Node(6);
 //		Optional.ofNullable(getLoopNode(head2)).ifPresent(h -> System.out.println(h.value));
 		
-		//==========ÎŞ»·Á´±íÏà½»²âÊÔ==========
+		//==========æ— ç¯é“¾è¡¨ç›¸äº¤æµ‹è¯•==========
 		Node head3 = new Node(0);
 		head3.next = new Node(9);
 		head3.next.next = new Node(8);
@@ -191,11 +191,11 @@ public class FindFirstIntersectNode {
 		Node head4 = new Node(10);
 		head4.next = new Node(9);
 		head4.next.next = head3.next.next;
-		head4.next.next.next = head3.next.next.next;	// 10->9(·ÇÍ¬µØÖ·)->8->6->null
+		head4.next.next.next = head3.next.next.next;	// 10->9(éåŒåœ°å€)->8->6->null
 //		Optional.ofNullable(findFirstIntersectNode(head3, head4)).ifPresent(h -> System.out.println(h.value));
 //		Optional.ofNullable(FindFirstCommonNode2(head3, head4)).ifPresent(h->System.out.println(h));
 		
-		//=========ÎŞ»·Á´±í²»Ïà½»²âÊÔ=========
+		//=========æ— ç¯é“¾è¡¨ä¸ç›¸äº¤æµ‹è¯•=========
 		Node head5 = new Node(0);
 		head5.next = new Node(9);
 		head5.next.next = new Node(8);
@@ -207,7 +207,7 @@ public class FindFirstIntersectNode {
 		Node result = findFirstIntersectNode(head5, head6);
 //		System.out.println(result);
 		
-		// ÓĞ»·²»Ïà½»
+		// æœ‰ç¯ä¸ç›¸äº¤
 		Node head7 = new Node(0);
 		head7.next = new Node(9);
 		head7.next.next = new Node(8);
@@ -222,14 +222,14 @@ public class FindFirstIntersectNode {
 		System.out.println(result2);
 		
 		
-		// ÓĞ»·Ïà½»£¬ÇÒ½»µãÏàÍ¬
-		// 0->9->8->6(½»µã)->14->15->16->6(½»µã)
+		// æœ‰ç¯ç›¸äº¤ï¼Œä¸”äº¤ç‚¹ç›¸åŒ
+		// 0->9->8->6(äº¤ç‚¹)->14->15->16->6(äº¤ç‚¹)
 		Node head9 = new Node(10);
 		head9.next = new Node(9);
 		head9.next.next = new Node(8);
 		head9.next.next.next = new Node(6);	
 		
-		// 11->12->13->6(½»µã)->14->15->16->6(½»µã)
+		// 11->12->13->6(äº¤ç‚¹)->14->15->16->6(äº¤ç‚¹)
 		Node head10 = new Node(11);
 		head10.next = new Node(12);
 		head10.next.next = new Node(13);	
@@ -240,17 +240,17 @@ public class FindFirstIntersectNode {
 		head10.next.next.next.next.next.next.next = head10.next.next.next;
 //		System.out.println(findFirstIntersectNode(head10, head9));
 		
-		// ÓĞ»·Ïà½»£¬½»µã²»Í¬
-		// 11->12->13(½»µã»·Èë¿Ú)->14->15->16->17->13(½»µã»·Èë¿Ú)
+		// æœ‰ç¯ç›¸äº¤ï¼Œäº¤ç‚¹ä¸åŒ
+		// 11->12->13(äº¤ç‚¹ç¯å…¥å£)->14->15->16->17->13(äº¤ç‚¹ç¯å…¥å£)
 		Node head11 = new Node(11);
 		head11.next = new Node(12);
-		head11.next.next = new Node(13);	// »·Èë¿Ú
+		head11.next.next = new Node(13);	// ç¯å…¥å£
 		head11.next.next.next = new Node(14);
 		head11.next.next.next.next = new Node(15);
 		head11.next.next.next.next.next = new Node(16);
 		head11.next.next.next.next.next.next = new Node(17);
 		head11.next.next.next.next.next.next.next = head11.next.next;
-		// Á´±í2£º 18->19-15>(½»µã»·Èë¿Ú)->16->17->13->14->15(½»µã»·Èë¿Ú)
+		// é“¾è¡¨2ï¼š 18->19-15>(äº¤ç‚¹ç¯å…¥å£)->16->17->13->14->15(äº¤ç‚¹ç¯å…¥å£)
 		Node head12 = new Node(18);
 		head12.next = new Node(19);
 		head12.next.next = head11.next.next.next.next;

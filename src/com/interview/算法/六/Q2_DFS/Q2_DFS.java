@@ -1,28 +1,28 @@
-package com.interview.Ëã·¨.Áù.Q2_DFS;
+package com.interview.ç®—æ³•.å…­.Q2_DFS;
 
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
 
-import com.interview.Ëã·¨.graph.Node;
+import com.interview.ç®—æ³•.graph.Node;
 
 public class Q2_DFS {
 	
-	// DFS£¨·Çµİ¹é£©
+	// DFSï¼ˆéé€’å½’ï¼‰
 	public static void DFS(Node node) {
 		Stack<Node> nodeStack = new Stack<Node>();
 		Set<Node> sameSet = new HashSet<Node>();
 		nodeStack.push(node);
 		sameSet.add(node);
-		System.out.println(node.value);	// ´òÓ¡ÆğÊ¼½Úµã
+		System.out.println(node.value);	// æ‰“å°èµ·å§‹èŠ‚ç‚¹
 		while(!nodeStack.isEmpty()) {
 			Node cur = nodeStack.pop();
 			for(Node next : cur.nexts) {
 				if(!sameSet.contains(next)) {
-					nodeStack.push(cur);	// ÏÈÈë¸¸½Úµã
+					nodeStack.push(cur);	// å…ˆå…¥çˆ¶èŠ‚ç‚¹
 					nodeStack.push(next);
 					sameSet.add(next);
-					System.out.println(next.value);	// µÚÒ»´ÎÓö¼ûĞÂ½Úµã£¬´òÓ¡
+					System.out.println(next.value);	// ç¬¬ä¸€æ¬¡é‡è§æ–°èŠ‚ç‚¹ï¼Œæ‰“å°
 					break;
 				}
 			}

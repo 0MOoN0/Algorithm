@@ -1,25 +1,25 @@
-package com.interview.leetcode.¶şÈı¾Å_»¬¶¯´°¿Ú×î´óÖµ;
+package com.interview.leetcode.äºŒä¸‰ä¹_æ»‘åŠ¨çª—å£æœ€å¤§å€¼;
 
 import java.util.*;
 
 /**
- * Ê¹ÓÃË«¶Ë¶ÓÁĞÍê³É
+ * ä½¿ç”¨åŒç«¯é˜Ÿåˆ—å®Œæˆ
  */
 class Solution {
 	public int[] maxSlidingWindow(int[] nums, int k) {
 		if (nums == null || nums.length <= 0)
 			return new int[] {};
-		// ½á¹ûÊı×é
+		// ç»“æœæ•°ç»„
 		int[] result = new int[nums.length - k + 1];
 		Deque<Integer> deque = new LinkedList<Integer>();
 
 		for (int i = 0, j = 0; i < nums.length; i++) {
-			// ´ÓºóÍùÇ°pollµô±È½«Èë¶ÓÔªËØĞ¡µÄÔªËØ
+			// ä»åå¾€å‰pollæ‰æ¯”å°†å…¥é˜Ÿå…ƒç´ å°çš„å…ƒç´ 
 			while (!deque.isEmpty() && nums[deque.peekLast()] < nums[i]) {
 				deque.pollLast();
 			}
 			deque.addLast(i);
-			// pollµô»¬¶¯´°¿Úºó£¬´°¿ÚÍâµÄÔªËØ
+			// pollæ‰æ»‘åŠ¨çª—å£åï¼Œçª—å£å¤–çš„å…ƒç´ 
 			if (deque.peekFirst() == i - k) {
 				deque.pollFirst();
 			}

@@ -1,9 +1,9 @@
-package com.interview.leetcode.¶şÈı¾Å_»¬¶¯´°¿Ú×î´óÖµ;
+package com.interview.leetcode.äºŒä¸‰ä¹_æ»‘åŠ¨çª—å£æœ€å¤§å€¼;
 
 import java.util.*;
 
 /**
- * Ê¹ÓÃ×î´ó¶ÑÍê³É
+ * ä½¿ç”¨æœ€å¤§å †å®Œæˆ
  * @author Peter
  *
  */
@@ -11,13 +11,13 @@ class Solution2 {
 	public int[] maxSlidingWindow(int[] nums, int k) {
 		if (nums == null || nums.length <= 0)
 			return new int[] {};
-		// ½á¹ûÊı×é
+		// ç»“æœæ•°ç»„
 		int[] result = new int[nums.length - k + 1];
 		PriorityQueue<Integer> queue = new PriorityQueue<Integer>(k, (o1, o2) -> -(o1 - o2));
 		int loder = Integer.MAX_VALUE;
 
 		for (int i = 0, j = 0; i < nums.length; i++) {
-			// ÒÆ³ı´°¿ÚÍâÔªËØ
+			// ç§»é™¤çª—å£å¤–å…ƒç´ 
 			if (queue.size() == k) {
 				queue.remove(nums[i - k]);
 			}

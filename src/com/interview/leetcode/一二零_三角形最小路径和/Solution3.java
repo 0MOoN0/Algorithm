@@ -1,20 +1,20 @@
-package com.interview.leetcode.Ò»¶şÁã_Èı½ÇĞÎ×îĞ¡Â·¾¶ºÍ;
+package com.interview.leetcode.ä¸€äºŒé›¶_ä¸‰è§’å½¢æœ€å°è·¯å¾„å’Œ;
 
 import java.util.List;
 
 /**
-¶¯Ì¬¹æ»®(×´Ì¬Ñ¹Ëõ)-AC-2ms
-1. Ã¿ĞĞµÄÊı×Ö¶¼Ö»»áÊ¹ÓÃÒ»´Î
-2. Ã¿Ò»ĞĞµÄÊı×Ö¸öÊı=µ±Ç°ĞĞÊı
+åŠ¨æ€è§„åˆ’(çŠ¶æ€å‹ç¼©)-AC-2ms
+1. æ¯è¡Œçš„æ•°å­—éƒ½åªä¼šä½¿ç”¨ä¸€æ¬¡
+2. æ¯ä¸€è¡Œçš„æ•°å­—ä¸ªæ•°=å½“å‰è¡Œæ•°
  * @author Peter
  *
  */
 class Solution3 {
 	public int minimumTotal(List<List<Integer>> triangle) {
-		int rowNum = triangle.size(); // ĞĞÊı
+		int rowNum = triangle.size(); // è¡Œæ•°
 		int[] nums = new int[rowNum + 1];
 		for (int row = rowNum - 1; row >= 0; row--) {
-			// ¼ÆËãµÚrowĞĞµÄ×î¼Ñ×´Ì¬£¬Èç¹ûÊÇ×îºóÒ»ĞĞ£¬Ôò¶ÔÊı×é½øĞĞ³õÊ¼»¯
+			// è®¡ç®—ç¬¬rowè¡Œçš„æœ€ä½³çŠ¶æ€ï¼Œå¦‚æœæ˜¯æœ€åä¸€è¡Œï¼Œåˆ™å¯¹æ•°ç»„è¿›è¡Œåˆå§‹åŒ–
 			for (int col = 0; col <= row; col++) {
 				nums[col] = Math.min(nums[col], nums[col + 1]) + triangle.get(row).get(col);
 			}

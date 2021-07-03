@@ -1,14 +1,14 @@
-package com.interview.leetcode.Ò»¾ÅÒ»_Î»1µÄ¸öÊı;
+package com.interview.leetcode.ä¸€ä¹ä¸€_ä½1çš„ä¸ªæ•°;
 
-// °´Î»Ñ­»·±éÀú£¬ÒòÎª¸ø³öµÄÊı×î¶àÊÇ32Î»£¬ËùÒÔ¸´ÔÓ¶ÈÎªO(32)
-// &£¬ÓëÔËËã£¬ÏàÍ¬ÎªÒ»£¬²»Í¬ÎªÁã
+// æŒ‰ä½å¾ªç¯éå†ï¼Œå› ä¸ºç»™å‡ºçš„æ•°æœ€å¤šæ˜¯32ä½ï¼Œæ‰€ä»¥å¤æ‚åº¦ä¸ºO(32)
+// &ï¼Œä¸è¿ç®—ï¼Œç›¸åŒä¸ºä¸€ï¼Œä¸åŒä¸ºé›¶
 public class Solution2 {
 	// you need to treat n as an unsigned value
 	public int hammingWeight(int n) {
 		int result = 0;
 		int point = 1;
 		for (int i = 0; i < 32; i++) {
-			if ((n & point) != 0) { // ºËĞÄ´úÂë£¬Èç¹ûnµÄµ±Ç°Î»ÊıÎª1£¬½á¹ûÎª1£¬·ñÎªÎª0
+			if ((n & point) != 0) { // æ ¸å¿ƒä»£ç ï¼Œå¦‚æœnçš„å½“å‰ä½æ•°ä¸º1ï¼Œç»“æœä¸º1ï¼Œå¦ä¸ºä¸º0
 				result++;
 			}
 			point <<= 1;

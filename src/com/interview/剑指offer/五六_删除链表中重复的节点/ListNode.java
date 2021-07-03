@@ -1,4 +1,4 @@
-package com.interview.剑指offer.五六_删除链表中重复的节点;
+package com.interview.鍓戞寚offer.浜斿叚_鍒犻櫎閾捐〃涓噸澶嶇殑鑺傜偣;
  public class ListNode {
     int val;
     ListNode next = null;

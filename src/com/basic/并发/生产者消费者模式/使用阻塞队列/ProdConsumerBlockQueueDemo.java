@@ -1,4 +1,4 @@
-package com.basic.²¢·¢.Éú²úÕßÏû·ÑÕßÄ£Ê½.Ê¹ÓÃ×èÈû¶ÓÁĞ;
+package com.basic.å¹¶å‘.ç”Ÿäº§è€…æ¶ˆè´¹è€…æ¨¡å¼.ä½¿ç”¨é˜»å¡é˜Ÿåˆ—;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
@@ -7,11 +7,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 class MyResource {
     /**
-     * Ä¬ÈÏ¿ªÆô ½øĞĞÉú²úÏû·ÑµÄ½»»¥
+     * é»˜è®¤å¼€å¯ è¿›è¡Œç”Ÿäº§æ¶ˆè´¹çš„äº¤äº’
      */
     private volatile boolean flag = true;
     /**
-     * Ä¬ÈÏÖµÊÇ0
+     * é»˜è®¤å€¼æ˜¯0
      */
     private AtomicInteger atomicInteger = new AtomicInteger();
 
@@ -29,13 +29,13 @@ class MyResource {
             data = atomicInteger.incrementAndGet() + "";
             returnValue = blockingQueue.offer(data, 2L, TimeUnit.SECONDS);
             if (returnValue) {
-                System.out.println(Thread.currentThread().getName() + "\t ²åÈë¶ÓÁĞÊı¾İ" + data + "³É¹¦");
+                System.out.println(Thread.currentThread().getName() + "\t æ’å…¥é˜Ÿåˆ—æ•°æ®" + data + "æˆåŠŸ");
             } else {
-                System.out.println(Thread.currentThread().getName() + "\t ²åÈë¶ÓÁĞÊı¾İ" + data + "Ê§°Ü");
+                System.out.println(Thread.currentThread().getName() + "\t æ’å…¥é˜Ÿåˆ—æ•°æ®" + data + "å¤±è´¥");
             }
             TimeUnit.SECONDS.sleep(1);
         }
-        System.out.println(Thread.currentThread().getName() + "\t Í£Ö¹ ±íÊ¾ flag" + flag);
+        System.out.println(Thread.currentThread().getName() + "\t åœæ­¢ è¡¨ç¤º flag" + flag);
     }
 
     public void myConsumer() throws Exception {
@@ -44,12 +44,12 @@ class MyResource {
             result = blockingQueue.poll(2L, TimeUnit.SECONDS);
             if(null==result||"".equalsIgnoreCase(result)){
                 flag=false;
-                System.out.println(Thread.currentThread().getName()+"\t"+"³¬¹ı2mÃ»ÓĞÈ¡µ½ Ïû·ÑÍË³ö");
+                System.out.println(Thread.currentThread().getName()+"\t"+"è¶…è¿‡2mæ²¡æœ‰å–åˆ° æ¶ˆè´¹é€€å‡º");
                 System.out.println();
                 System.out.println();
                 return;
             }
-            System.out.println(Thread.currentThread().getName() + "Ïû·Ñ¶ÓÁĞ" + result + "³É¹¦");
+            System.out.println(Thread.currentThread().getName() + "æ¶ˆè´¹é˜Ÿåˆ—" + result + "æˆåŠŸ");
 
         }
     }
@@ -60,7 +60,7 @@ class MyResource {
 
 /**
  * Description
- * volatile/CAS/atomicInteger/BlockQueue/Ïß³Ì½»»¥/Ô­×ÓÒıÓÃ
+ * volatile/CAS/atomicInteger/BlockQueue/çº¿ç¨‹äº¤äº’/åŸå­å¼•ç”¨
  *
  * @author veliger@163.com
  * @version 1.0
@@ -70,7 +70,7 @@ public class ProdConsumerBlockQueueDemo {
     public static void main(String[] args) throws Exception {
         MyResource myResource = new MyResource(new ArrayBlockingQueue<>(10));
         new Thread(()->{
-            System.out.println(Thread.currentThread().getName()+"\tÉú²úÏß³ÌÆô¶¯");
+            System.out.println(Thread.currentThread().getName()+"\tç”Ÿäº§çº¿ç¨‹å¯åŠ¨");
             try {
                 myResource.myProd();
             } catch (Exception e) {
@@ -79,7 +79,7 @@ public class ProdConsumerBlockQueueDemo {
         },"Prod").start();
 
         new Thread(()->{
-            System.out.println(Thread.currentThread().getName()+"\tÏû·ÑÏß³ÌÆô¶¯");
+            System.out.println(Thread.currentThread().getName()+"\tæ¶ˆè´¹çº¿ç¨‹å¯åŠ¨");
             try {
                 myResource.myConsumer();
             } catch (Exception e) {
@@ -90,7 +90,7 @@ public class ProdConsumerBlockQueueDemo {
         System.out.println();
         System.out.println();
         System.out.println();
-        System.out.println("Ê±¼äµ½,Í£Ö¹»î¶¯");
+        System.out.println("æ—¶é—´åˆ°,åœæ­¢æ´»åŠ¨");
         myResource.stop();
     }
 }

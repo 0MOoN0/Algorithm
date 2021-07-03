@@ -1,9 +1,9 @@
-package com.interview.½£Ö¸offer.ËÄÆß_Çó1µ½nµÄºÍ_µİ¹é¼Ó¶ÌÂ·;
-// µİ¹é+¶ÌÂ·
+package com.interview.å‰‘æŒ‡offer.å››ä¸ƒ_æ±‚1åˆ°nçš„å’Œ_é€’å½’åŠ çŸ­è·¯;
+// é€’å½’+çŸ­è·¯
 public class Solution {
     public int Sum_Solution(int n) {
         int sum = n;
-        // Ê¹ÓÃ¶ÌÂ·ÖÕÖ¹µİ¹é
+        // ä½¿ç”¨çŸ­è·¯ç»ˆæ­¢é€’å½’
         boolean flag = ((n>0) && (sum+=Sum_Solution(n-1))>0);
         return sum;
     }

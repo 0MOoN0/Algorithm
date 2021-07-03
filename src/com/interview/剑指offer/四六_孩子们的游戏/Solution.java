@@ -1,7 +1,7 @@
-package com.interview.½£Ö¸offer.ËÄÁù_º¢×ÓÃÇµÄÓÎÏ·;
-// Ê¹ÓÃÊı×éÄ£Äâ»·
-// 1. ÖÕÖ¹Ìõ¼ş£ºÖ»Ê£ÏÂÒ»¸öĞ¡ÅóÓÑ
-// 2. »·ÖĞÄÚÈİ²»ÎªÁãÊ±²ÅËãÓĞĞ§µÄÒ»²½
+package com.interview.å‰‘æŒ‡offer.å››å…­_å­©å­ä»¬çš„æ¸¸æˆ;
+// ä½¿ç”¨æ•°ç»„æ¨¡æ‹Ÿç¯
+// 1. ç»ˆæ­¢æ¡ä»¶ï¼šåªå‰©ä¸‹ä¸€ä¸ªå°æœ‹å‹
+// 2. ç¯ä¸­å†…å®¹ä¸ä¸ºé›¶æ—¶æ‰ç®—æœ‰æ•ˆçš„ä¸€æ­¥
 public class Solution {
     public int LastRemaining_Solution(int n, int m) {
         int count = n;
@@ -12,18 +12,18 @@ public class Solution {
             if(index>=n){
                 index = index%n;
             }
-            // ÅĞ¶Ïµ±Ç°Ö¸ÕëÊÇ·ñÓĞĞ§
-            // ÓĞĞ§Ôòindex+1, ²½Êı+1
+            // åˆ¤æ–­å½“å‰æŒ‡é’ˆæ˜¯å¦æœ‰æ•ˆ
+            // æœ‰æ•ˆåˆ™index+1, æ­¥æ•°+1
             if(cycle[index] != -1){
                 step+=1;
                 if(step == m){
                     cycle[index] = -1;
                     count--;
-                    // ÖØÖÃstep£¬´ÓÁã¿ªÊ¼¼ÆËã
+                    // é‡ç½®stepï¼Œä»é›¶å¼€å§‹è®¡ç®—
                     step = 0;
                 }
             }
-            // ÎŞĞ§Ôòindex+1,ÔÙ½øĞĞÑ­»·
+            // æ— æ•ˆåˆ™index+1,å†è¿›è¡Œå¾ªç¯
             index+=1;
         }
         return index-1;

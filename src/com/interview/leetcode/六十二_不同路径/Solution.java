@@ -1,14 +1,14 @@
-package com.interview.leetcode.ÁùÊ®¶ş_²»Í¬Â·¾¶;
+package com.interview.leetcode.å…­åäºŒ_ä¸åŒè·¯å¾„;
 /**
- * Ê¹ÓÃ¶¯Ì¬¹æ»®Ëã·¨
+ * ä½¿ç”¨åŠ¨æ€è§„åˆ’ç®—æ³•
  * @author Peter
  *
  */
 class Solution {
     public int uniquePaths(int m, int n) {
-    	// mÁĞ nĞĞ
+    	// måˆ— nè¡Œ
     	int [][]dp = new int[n][m];
-    	//³õÊ¼»¯±ß¿ò
+    	//åˆå§‹åŒ–è¾¹æ¡†
     	for(int i=0; i<dp.length; i++) dp[i][0] = 1;
     	for(int i=0; i<dp[0].length; i++) dp[0][i] = 1;    	
     	for(int i=1; i<dp.length; i++) {

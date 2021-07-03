@@ -1,24 +1,24 @@
-package com.interview.Ëã·¨.Èı.Q4_DogCatQueue;
+package com.interview.ç®—æ³•.ä¸‰.Q4_DogCatQueue;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
 import javax.management.RuntimeErrorException;
 
-import com.interview.Ëã·¨.Èı.Q4_DogCatQueue.DogCatQueue.PetEnterQueue;
+import com.interview.ç®—æ³•.ä¸‰.Q4_DogCatQueue.DogCatQueue.PetEnterQueue;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
- * Ã¨¹·¶ÓÁĞ
- * ÒªÇóÈçÏÂ£º ÓÃ»§¿ÉÒÔµ÷ÓÃadd·½·¨½«catÀà»òdogÀàµÄÊµÀı·ÅÈë¶ÓÁĞÖĞ£» 
- * ÓÃ»§¿ÉÒÔµ÷ÓÃpollAll·½·¨£¬½«¶ÓÁĞÖĞËùÓĞµÄÊµÀı°´ÕÕ½ø¶ÓÁĞµÄÏÈºóË³ĞòÒÀ´Îµ¯³ö£» 
- * ÓÃ»§¿ÉÒÔµ÷ÓÃpollDog·½·¨£¬½«¶ÓÁĞÖĞdogÀàµÄÊµÀı°´ÕÕ½ø¶ÓÁĞµÄÏÈºóË³ĞòÒÀ´Îµ¯³ö£» 
- * ÓÃ»§¿ÉÒÔµ÷ÓÃpollCat·½·¨£¬½«¶ÓÁĞÖĞcatÀàµÄÊµÀı°´ÕÕ½ø¶ÓÁĞµÄÏÈºóË³ĞòÒÀ´Îµ¯³ö£» 
- * ÓÃ»§¿ÉÒÔµ÷ÓÃisEmpty·½·¨£¬¼ì²é¶ÓÁĞÖĞÊÇ·ñ»¹ÓĞdog»òcatµÄÊµÀı£» 
- * ÓÃ»§¿ÉÒÔµ÷ÓÃisDogEmpty·½·¨£¬¼ì²é¶ÓÁĞÖĞÊÇ·ñÓĞdogÀàµÄÊµÀı£» 
- * ÓÃ»§¿ÉÒÔµ÷ÓÃisCatEmpty·½·¨£¬¼ì²é¶ÓÁĞÖĞÊÇ·ñÓĞcatÀàµÄÊµÀı¡£
+ * çŒ«ç‹—é˜Ÿåˆ—
+ * è¦æ±‚å¦‚ä¸‹ï¼š ç”¨æˆ·å¯ä»¥è°ƒç”¨addæ–¹æ³•å°†catç±»æˆ–dogç±»çš„å®ä¾‹æ”¾å…¥é˜Ÿåˆ—ä¸­ï¼› 
+ * ç”¨æˆ·å¯ä»¥è°ƒç”¨pollAllæ–¹æ³•ï¼Œå°†é˜Ÿåˆ—ä¸­æ‰€æœ‰çš„å®ä¾‹æŒ‰ç…§è¿›é˜Ÿåˆ—çš„å…ˆåé¡ºåºä¾æ¬¡å¼¹å‡ºï¼› 
+ * ç”¨æˆ·å¯ä»¥è°ƒç”¨pollDogæ–¹æ³•ï¼Œå°†é˜Ÿåˆ—ä¸­dogç±»çš„å®ä¾‹æŒ‰ç…§è¿›é˜Ÿåˆ—çš„å…ˆåé¡ºåºä¾æ¬¡å¼¹å‡ºï¼› 
+ * ç”¨æˆ·å¯ä»¥è°ƒç”¨pollCatæ–¹æ³•ï¼Œå°†é˜Ÿåˆ—ä¸­catç±»çš„å®ä¾‹æŒ‰ç…§è¿›é˜Ÿåˆ—çš„å…ˆåé¡ºåºä¾æ¬¡å¼¹å‡ºï¼› 
+ * ç”¨æˆ·å¯ä»¥è°ƒç”¨isEmptyæ–¹æ³•ï¼Œæ£€æŸ¥é˜Ÿåˆ—ä¸­æ˜¯å¦è¿˜æœ‰dogæˆ–catçš„å®ä¾‹ï¼› 
+ * ç”¨æˆ·å¯ä»¥è°ƒç”¨isDogEmptyæ–¹æ³•ï¼Œæ£€æŸ¥é˜Ÿåˆ—ä¸­æ˜¯å¦æœ‰dogç±»çš„å®ä¾‹ï¼› 
+ * ç”¨æˆ·å¯ä»¥è°ƒç”¨isCatEmptyæ–¹æ³•ï¼Œæ£€æŸ¥é˜Ÿåˆ—ä¸­æ˜¯å¦æœ‰catç±»çš„å®ä¾‹ã€‚
  * @author Peter
  *
  */
@@ -47,7 +47,7 @@ public class DogCatQueue {
 		}
 	}
 	
-	// Êµ¼ÊµÄÈë¶ÓÀàĞÍ
+	// å®é™…çš„å…¥é˜Ÿç±»å‹
 	@Data
 	@AllArgsConstructor
 	public static class PetEnterQueue{
@@ -76,7 +76,7 @@ public class DogCatQueue {
 			}
 		}
 		
-		// °´ÕÕÈë¶ÓË³Ğò³ö¶ÓÔªËØ
+		// æŒ‰ç…§å…¥é˜Ÿé¡ºåºå‡ºé˜Ÿå…ƒç´ 
 		public Pet pollAll() {
 			if(!DQ.isEmpty() && !CQ.isEmpty()) {
 				return DQ.peek().getCount() < CQ.peek().getCount() ? DQ.poll().getPet() : CQ.poll().getPet();

@@ -1,4 +1,4 @@
-package com.interview.�㷨.common;
+package com.interview.算法.common;
 
 public class Node {
 	public int value;

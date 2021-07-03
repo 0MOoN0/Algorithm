@@ -1,10 +1,10 @@
-package com.interview.Ëã·¨.Èı.Q2_MinStack;
+package com.interview.ç®—æ³•.ä¸‰.Q2_MinStack;
 
-import com.interview.Ëã·¨.Èı.Q2_stack_queue.Array_To_Stack;
+import com.interview.ç®—æ³•.ä¸‰.Q2_stack_queue.Array_To_Stack;
 
 /**
- * ÊµÏÖÒ»¸öÌØÊâµÄÕ»£¬ÔÚÊµÏÖÕ»µÄ»ù±¾¹¦ÄÜµÄ»ù´¡ÉÏ£¬ÔÙÊµÏÖ·µ »ØÕ»ÖĞ×îĞ¡ÔªËØµÄ²Ù×÷¡£
- * ÒªÇó£ºpop¡¢push¡¢getMin²Ù×÷µÄÊ±¼ä¸´ÔÓ¶È¶¼ÊÇO(1)¡£
+ * å®ç°ä¸€ä¸ªç‰¹æ®Šçš„æ ˆï¼Œåœ¨å®ç°æ ˆçš„åŸºæœ¬åŠŸèƒ½çš„åŸºç¡€ä¸Šï¼Œå†å®ç°è¿” å›æ ˆä¸­æœ€å°å…ƒç´ çš„æ“ä½œã€‚
+ * è¦æ±‚ï¼špopã€pushã€getMinæ“ä½œçš„æ—¶é—´å¤æ‚åº¦éƒ½æ˜¯O(1)ã€‚
  * @author Peter
  *
  */

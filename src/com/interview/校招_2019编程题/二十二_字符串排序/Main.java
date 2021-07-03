@@ -1,4 +1,4 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.¶şÊ®¶ş_×Ö·û´®ÅÅĞò;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.äºŒåäºŒ_å­—ç¬¦ä¸²æ’åº;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -8,7 +8,7 @@ import java.util.Collections;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		// ÊäÈë
+		// è¾“å…¥
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		int size = Integer.parseInt(reader.readLine());
 		ArrayList<Integer> list = new ArrayList<Integer>();

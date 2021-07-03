@@ -1,7 +1,7 @@
-package com.interview.Ëã·¨.Èı.Q8_ZigZagPrintMatrix;
+package com.interview.ç®—æ³•.ä¸‰.Q8_ZigZagPrintMatrix;
 
 /**
- * Ö®×Ö´òÓ¡¾ØÕó
+ * ä¹‹å­—æ‰“å°çŸ©é˜µ
  * input: int[][] matrix = { 
 				  { 1, 2, 3, 4 }, 
 				  { 5, 6, 7, 8 }, 
@@ -15,19 +15,19 @@ package com.interview.Ëã·¨.Èı.Q8_ZigZagPrintMatrix;
 public class ZigZagPrintMatrix {
 	
 	public static void zigZangPrint(int[][] matrix) {
-		// ÓÒÏÂ½Ç
+		// å³ä¸‹è§’
 		int RR = matrix.length-1; // row
 		int RC = matrix[0].length-1; //column
-		// ´Ó×óÉÏ½Ç¿ªÊ¼ÒÆ¶¯µÄÖ¸Õë
-		int LTC = 0;	//×óÉÏ½Ç¿ªÊ¼£¬°´ĞĞÒÆ¶¯£¬Èç¹ûLT = RC ,Ôò¿ªÊ¼ÍùÏÂÒÆ¶¯
-		int LTR = 0;	// ĞĞ
-		int LDC = 0;	//×óÉÏ½Ç¿ªÊ¼£¬°´ÁĞÒÆ¶¯£¬Èç¹ûLD = RR ,Ôò¿ªÊ¼ÍùÓÒÒÆ¶¯
-		int LDR = 0;	// ĞĞ
+		// ä»å·¦ä¸Šè§’å¼€å§‹ç§»åŠ¨çš„æŒ‡é’ˆ
+		int LTC = 0;	//å·¦ä¸Šè§’å¼€å§‹ï¼ŒæŒ‰è¡Œç§»åŠ¨ï¼Œå¦‚æœLT = RC ,åˆ™å¼€å§‹å¾€ä¸‹ç§»åŠ¨
+		int LTR = 0;	// è¡Œ
+		int LDC = 0;	//å·¦ä¸Šè§’å¼€å§‹ï¼ŒæŒ‰åˆ—ç§»åŠ¨ï¼Œå¦‚æœLD = RR ,åˆ™å¼€å§‹å¾€å³ç§»åŠ¨
+		int LDR = 0;	// è¡Œ
 		boolean flag = false;
 		while(LTR <= RR) {
 			printMatrix(LTC, LTR, LDC, LDR, matrix, flag);
 			flag = !flag;
-			// ÒÆ¶¯×óÉÏ½ÇµÄÁ½¸öÖ¸Õë£¬×¢ÒâÅĞ¶ÏµÄË³Ğò£¬×óÉÏ½ÇµÄµãÏÈÅĞ¶ÏÁĞÊÇ·ñĞèÒªÒÆ¶¯£¬ÔÙÅĞ¶ÏĞĞÊÇ·ñĞèÒªÒÆ¶¯£¬×óÏÂ½ÇÔòÏà·´£¬ÏÈÅĞ¶ÏĞĞÔÙÅĞ¶ÏÁĞ
+			// ç§»åŠ¨å·¦ä¸Šè§’çš„ä¸¤ä¸ªæŒ‡é’ˆï¼Œæ³¨æ„åˆ¤æ–­çš„é¡ºåºï¼Œå·¦ä¸Šè§’çš„ç‚¹å…ˆåˆ¤æ–­åˆ—æ˜¯å¦éœ€è¦ç§»åŠ¨ï¼Œå†åˆ¤æ–­è¡Œæ˜¯å¦éœ€è¦ç§»åŠ¨ï¼Œå·¦ä¸‹è§’åˆ™ç›¸åï¼Œå…ˆåˆ¤æ–­è¡Œå†åˆ¤æ–­åˆ—
 			LTR = LTC == RC ? LTR+1 : LTR;
 			LTC = LTC == RC ? LTC : LTC+1;
 			LDC = LDR == RR ? LDC+1 : LDC;
@@ -36,13 +36,13 @@ public class ZigZagPrintMatrix {
 	}
 	
 	public static void printMatrix(int LTC, int LTR, int LDC, int LDR, int[][]matrix, boolean flag) {
-		if(flag) {	// ´Ó×óÍùÓÒ
+		if(flag) {	// ä»å·¦å¾€å³
 			int curC = LDC;
 			int curR = LDR;
 			while(curC <= LTC && curR >= LTR) {
 				System.out.print(matrix[curC++][curR--] + " ");
 			}
-		}else {		// ´ÓÓÒÍù×ó
+		}else {		// ä»å³å¾€å·¦
 			int curC = LTC;
 			int curR = LTR;
 			while(curC >= LDC && curR <= LDR) {

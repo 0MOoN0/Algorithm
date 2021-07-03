@@ -1,4 +1,4 @@
-package com.interview.leetcode.three_ÎŞÖØ¸´×Ö·ûµÄ×î³¤×Ó´®;
+package com.interview.leetcode.three_æ— é‡å¤å­—ç¬¦çš„æœ€é•¿å­ä¸²;
 class Solution {
     public int lengthOfLongestSubstring(String s) {
     	char[] arr = s.toCharArray();
@@ -11,7 +11,7 @@ class Solution {
         int begin = 0, end = 1, maxLength = 0, j = 0;
         for(; end<s.length(); end++) {
         	for(j = begin; j<end; j++) {
-//        		 ³öÏÖÏàµÈ×Ö·û£¬¼ÆËã³¤¶È£¬end+1£¬ÖØĞÂ¶¨Î»begin
+//        		 å‡ºç°ç›¸ç­‰å­—ç¬¦ï¼Œè®¡ç®—é•¿åº¦ï¼Œend+1ï¼Œé‡æ–°å®šä½begin
         		if(arr[end]==arr[j]) {
         			maxLength = maxLength>(end-begin) ? maxLength : end-begin;
         			begin = j+1;
@@ -24,16 +24,16 @@ class Solution {
         return maxLength;
         
 /*        do {
-        	// ÅĞ¶Ïµ±Ç°×Ö·ûÊÇ·ñÔÚ×Ö´®ÄÚ³öÏÖ¹ı
+        	// åˆ¤æ–­å½“å‰å­—ç¬¦æ˜¯å¦åœ¨å­—ä¸²å†…å‡ºç°è¿‡
         	int repeatIndex = childString.indexOf(s.charAt(end)+"");
         	if(repeatIndex != -1) {
-        		// ³öÏÖ¹ı£¬ÖØĞÂÉú³É×Ö´®
+        		// å‡ºç°è¿‡ï¼Œé‡æ–°ç”Ÿæˆå­—ä¸²
         		begin = repeatIndex+1;
 //        		end = ++begin;
         		childString.delete(0, repeatIndex+1);
         		continue;
         	}
-        	// Ã»ÓĞ³öÏÖ¹ı£¬¼ÓÈë×Ö´®
+        	// æ²¡æœ‰å‡ºç°è¿‡ï¼ŒåŠ å…¥å­—ä¸²
         	childString.append(s.charAt(end));
         	if(childString.length()>maxLength) {
         		maxLength ++;

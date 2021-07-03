@@ -1,11 +1,11 @@
-package com.interview.leetcode.���Ķ�_��Ч����ĸ��λ��;
+package com.interview.leetcode.二四二_有效的字母异位词;
 
 import java.util.ArrayList;
 
 /**
- * �ٷ���⣬ʹ�ù�ϣ��
- * ʹ��һ�������¼ÿ���ַ����ֹ��Ĵ�����һ����һ��һ����һ��������Ľ������Ԫ��
-��Ϊ�㣬��˵�������ַ������ַ����ִ�����ƥ��
+ * 官方题解，使用哈希表
+ * 使用一个数组记录每个字符出现过的次数，一个加一，一个减一，如果最后的结果数组元素
+不为零，则说明两个字符串的字符出现次数不匹配
  * @author Peter
  *
  */

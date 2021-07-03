@@ -1,4 +1,4 @@
-package com.interview.字节跳动.two_用户喜好;
+package com.interview.瀛楄妭璺冲姩.two_鐢ㄦ埛鍠滃ソ;
 
 import java.util.Scanner;
 

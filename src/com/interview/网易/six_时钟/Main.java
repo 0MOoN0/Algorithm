@@ -1,4 +1,4 @@
-package com.interview.ÍøÒ×.six_Ê±ÖÓ;
+package com.interview.ç½‘æ˜“.six_æ—¶é’Ÿ;
 
 import java.util.Scanner;
 
@@ -16,20 +16,20 @@ public class Main {
 			hour = Integer.parseInt(split[0]);
 			min = Integer.parseInt(split[1]);
 			sec = Integer.parseInt(split[2]);
-			// Ê±
+			// æ—¶
 			if(hour>23) {
-				// ÅÐ¶ÏÊ®Î»Êý
+				// åˆ¤æ–­åä½æ•°
 //				if(hour/10 > 2) {
 					hour = hour%10;
 					split[0] = "0"+hour;
 //				}
 			}
-			// ·Ö
+			// åˆ†
 			if(min > 59) {
 				min = min%10;
 				split[1] = "0"+min;
 			}
-			// Ãë
+			// ç§’
 			if(sec > 59) {
 				sec = sec%10;
 				split[2] = "0"+ sec;

@@ -1,4 +1,4 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.Ê®ËÄ_Ëş;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.åå››_å¡”;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -13,27 +13,27 @@ public class Main {
 		int times = Integer.parseInt(line[1]);
 		int [][]tower = new int[Integer.parseInt(line[0])][2];
 		ArrayList<int[]> result = new ArrayList<int[]>();
-		// ¸³Öµ
+		// èµ‹å€¼
 		String[] towers = reader.readLine().split(" ");
 		for(int i=0; i<tower.length; i++) {
 			tower[i][0]=Integer.parseInt(towers[i]);
 			tower[i][1]=i;
 		}
 		for(int i=0; i<times; i++) {
-			// ÅÅĞò
+			// æ’åº
 			Arrays.sort(tower,(x, y)->x[0]-y[0]);
-			// ±È½Ï´óĞ¡
+			// æ¯”è¾ƒå¤§å°
 			if(tower[tower.length-1][0]-tower[0][0]<2) {
 				break;
 			}
-			// ´æÔÚ²îÖµ
+			// å­˜åœ¨å·®å€¼
 			tower[0][0]++;
 			tower[tower.length-1][0]--;
 			result.add(new int []{tower[tower.length-1][1],tower[0][1]});
 		}
-		// Êä³ö
+		// è¾“å‡º
 		System.out.println(tower[tower.length-1][0] - tower[0][0]  + " "+ result.size());
-		// ±éÀú½á¹û
+		// éå†ç»“æœ
 		for (int [] arr : result) {
 			System.out.println(arr[0]+1+" "+(arr[1]+1));
 		}

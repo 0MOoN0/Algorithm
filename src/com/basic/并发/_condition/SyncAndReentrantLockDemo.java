@@ -1,13 +1,13 @@
-package com.basic.²¢·¢._condition;
+package com.basic.å¹¶å‘._condition;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * ReentrantLock¾ÙÀı
- * Ê¹ÓÃÈıÌõÏß³Ì£¬Ã¿ÌõÏß³ÌÒÀ´Î´òÓ¡5´Î¡¢10´Î¡¢15´Î
- * ÖØ¸´Ê®±é
+ * ReentrantLockä¸¾ä¾‹
+ * ä½¿ç”¨ä¸‰æ¡çº¿ç¨‹ï¼Œæ¯æ¡çº¿ç¨‹ä¾æ¬¡æ‰“å°5æ¬¡ã€10æ¬¡ã€15æ¬¡
+ * é‡å¤åé
  * @author Peter
  *
  */

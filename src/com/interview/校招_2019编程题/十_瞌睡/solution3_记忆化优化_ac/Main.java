@@ -1,4 +1,4 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.Ê®_î§Ë¯.solution3_¼ÇÒä»¯ÓÅ»¯_ac;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.å_çŒç¡.solution3_è®°å¿†åŒ–ä¼˜åŒ–_ac;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -20,13 +20,13 @@ public class Main {
 		line = reader.readLine().split(" ");
 		for(int i=0; i<classSize; i++) {
 			split[i][1] = Integer.parseInt(line[i]);
-			// ¼ÆËãË¯ÃßÊ±µÄ·ÖÊı
+			// è®¡ç®—ç¡çœ æ—¶çš„åˆ†æ•°
 			if(split[i][1]==0) {
 				sleep += split[i][0];
 			}
 			sleepPoint[i] += sleep;
 		}
-		// ÔÙ´Î±éÀúÊı×é
+		// å†æ¬¡éå†æ•°ç»„
 		int wakePoint = 0;
 		long max = 0;
 		for(int i=0; i<classSize; i++) {

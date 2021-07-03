@@ -1,8 +1,8 @@
-package com.interview.Ëã·¨.¹é²¢ÅÅĞò;
+package com.interview.ç®—æ³•.å½’å¹¶æ’åº;
 
 import java.util.Arrays;
 
-import com.interview.Ëã·¨.utils.Utils;
+import com.interview.ç®—æ³•.utils.Utils;
 
 public class SolutionChecker {
 	

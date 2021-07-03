@@ -1,10 +1,10 @@
-package com.interview.½£Ö¸offer.ËÄ¶ş_ºÍÎªSµÄÁ½¸öÊı×Ö;
+package com.interview.å‰‘æŒ‡offer.å››äºŒ_å’Œä¸ºSçš„ä¸¤ä¸ªæ•°å­—;
 
 import java.util.*;
 
-//1. Êı×éÎªµİÔöÊıÁĞ£¬Òò´ËÃ»ÓĞÏàÍ¬µÄÔªËØ
-//2. Èç¹û½á¹û´æÔÚ£¬ÔòÒ»¶¨ÊÇÔÚÊı×éÖĞ£¬Òò´Ë£¬´ÓÇ°Ãæ¿ªÊ¼ÕÒºóÃæµÄÔªËØºÍ´ÓºóÃæÕÒÇ°ÃæµÄÔªËØÊÇÒ»ÑùµÄ
-//3. Èç¹ûÊÇ´ÓºóÃæÕÒÔªËØ£¬¶øÇÒÓĞ¶ÔÓ¦Æ¥ÅäµÄÊı×Ö¶Ô£¬ÔòÊı×Ö¶ÔÂú×ã£ºKey-array[i]Ò»¶¨Ğ¡ÓÚarray[i]
+//1. æ•°ç»„ä¸ºé€’å¢æ•°åˆ—ï¼Œå› æ­¤æ²¡æœ‰ç›¸åŒçš„å…ƒç´ 
+//2. å¦‚æœç»“æœå­˜åœ¨ï¼Œåˆ™ä¸€å®šæ˜¯åœ¨æ•°ç»„ä¸­ï¼Œå› æ­¤ï¼Œä»å‰é¢å¼€å§‹æ‰¾åé¢çš„å…ƒç´ å’Œä»åé¢æ‰¾å‰é¢çš„å…ƒç´ æ˜¯ä¸€æ ·çš„
+//3. å¦‚æœæ˜¯ä»åé¢æ‰¾å…ƒç´ ï¼Œè€Œä¸”æœ‰å¯¹åº”åŒ¹é…çš„æ•°å­—å¯¹ï¼Œåˆ™æ•°å­—å¯¹æ»¡è¶³ï¼šKey-array[i]ä¸€å®šå°äºarray[i]
 public class Solution {
 	public ArrayList<Integer> FindNumbersWithSum(int[] array, int sum) {
 		int cj = Integer.MAX_VALUE;
@@ -16,7 +16,7 @@ public class Solution {
 			if (map.containsKey(num)) {
 				if ((num * array[i]) < cj) {
 					cj = num * array[i];
-					// ½«½á¹û·ÅÈëList
+					// å°†ç»“æœæ”¾å…¥List
 					result.clear();
 					result.add(num);
 					result.add(array[i]);

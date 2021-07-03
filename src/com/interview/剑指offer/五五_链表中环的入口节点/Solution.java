@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.ÎåÎå_Á´±íÖĞ»·µÄÈë¿Ú½Úµã;
+package com.interview.å‰‘æŒ‡offer.äº”äº”_é“¾è¡¨ä¸­ç¯çš„å…¥å£èŠ‚ç‚¹;
 /*
  public class ListNode {
     int val;
@@ -16,7 +16,7 @@ public class Solution {
     {
         ListNode slow = pHead;
         ListNode fast = pHead;
-        while(fast!=null && fast.next!=null){    // ÒòÎª¿ìÖ¸ÕëÔÚÂıÖ¸ÕëÇ°Ãæ£¬ ËùÒÔÖ»ĞèÒª¶Ô¿ìÖ¸Õë×öÊı¾İĞ£Ñé
+        while(fast!=null && fast.next!=null){    // å› ä¸ºå¿«æŒ‡é’ˆåœ¨æ…¢æŒ‡é’ˆå‰é¢ï¼Œ æ‰€ä»¥åªéœ€è¦å¯¹å¿«æŒ‡é’ˆåšæ•°æ®æ ¡éªŒ
             slow = slow.next;
             fast = fast.next.next;
             if(slow == fast){

@@ -1,4 +1,4 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.one;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.one;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -24,7 +24,7 @@ public class Main {
 				}else if(o1.level>o2.level) {
 					return 1;
 				}else {
-					// ±È½ÏĞ½³ê
+					// æ¯”è¾ƒè–ªé…¬
 					if(o1.reward>o2.reward) {
 						return -1;
 					}else if(o1.reward<o2.reward) {

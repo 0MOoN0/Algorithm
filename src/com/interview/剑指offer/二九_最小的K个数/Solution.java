@@ -1,5 +1,5 @@
-package com.interview.剑指offer.二九_最小的K个数;
-// 1. 排序后找出最小的k个数
+package com.interview.鍓戞寚offer.浜屼節_鏈�灏忕殑K涓暟;
+// 1. 鎺掑簭鍚庢壘鍑烘渶灏忕殑k涓暟
 import java.util.*;
 public class Solution {
     public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {

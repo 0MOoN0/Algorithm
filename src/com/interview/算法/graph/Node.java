@@ -1,11 +1,11 @@
-package com.interview.Ëã·¨.graph;
+package com.interview.ç®—æ³•.graph;
 
 import java.util.ArrayList;
 
 public class Node {
-	public int value;	// Öµ
-	public int in;		// Èë¶È
-	public int out;		// ³ö¶È
+	public int value;	// å€¼
+	public int in;		// å…¥åº¦
+	public int out;		// å‡ºåº¦
 	public ArrayList<Node> nexts;	
 	public ArrayList<Edge> edges;
 

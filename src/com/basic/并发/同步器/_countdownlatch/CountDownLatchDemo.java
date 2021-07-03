@@ -1,9 +1,9 @@
-package com.basic.²¢·¢.Í¬²½Æ÷._countdownlatch;
+package com.basic.å¹¶å‘.åŒæ­¥å™¨._countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 
 /**
- * CountDownLatch°¸Àı
+ * CountDownLatchæ¡ˆä¾‹
  * @author Peter
  *
  */
@@ -14,12 +14,12 @@ public class CountDownLatchDemo {
 		CountDownLatch latch = new CountDownLatch(6);
 		for (int i = 0; i <= 6; i++) {
 			new Thread(()->{
-				System.out.println(Thread.currentThread().getName()+"\t Ïß³ÌÖ´ĞĞÍê±Ï");
+				System.out.println(Thread.currentThread().getName()+"\t çº¿ç¨‹æ‰§è¡Œå®Œæ¯•");
 				latch.countDown();
 			},String.valueOf(i)).start();
 		}
 		latch.await();
-		System.out.println("ÆäËûÏß³ÌÖ´ĞĞÍê±Ï£¬Ö÷Ïß³Ì·½·¨Ö´ĞĞÍê±Ï");
+		System.out.println("å…¶ä»–çº¿ç¨‹æ‰§è¡Œå®Œæ¯•ï¼Œä¸»çº¿ç¨‹æ–¹æ³•æ‰§è¡Œå®Œæ¯•");
 	}
 
 }

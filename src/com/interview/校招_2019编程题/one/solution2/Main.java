@@ -1,4 +1,4 @@
-package com.interview.Ð£ÕÐ_2019±à³ÌÌâ.one.solution2;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.one.solution2;
 import java.util.*;
 public class Main {
     public static void main(String[] args) {

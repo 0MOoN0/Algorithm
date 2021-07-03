@@ -1,8 +1,8 @@
-package com.interview.Ëã·¨;
+package com.interview.ç®—æ³•;
 
 import java.util.Arrays;
 
-public class ¿ìËÙÅÅĞò·¨ {
+public class å¿«é€Ÿæ’åºæ³• {
 
 	static int [] arr = {3,7,2,9,1,4,6,8,10,5};
 	public static void main(String[] args) {
@@ -11,33 +11,33 @@ public class ¿ìËÙÅÅĞò·¨ {
 		
 	}
 	private static int partition(int []arr, int left, int right) {
-		// Ñ¡ÔñÒ»¸ö»ù×¼Êı£¬´Ó×ó±ß¿ªÊ¼
+		// é€‰æ‹©ä¸€ä¸ªåŸºå‡†æ•°ï¼Œä»å·¦è¾¹å¼€å§‹
 		int temp = arr[left];
-		// µ±×óÓÒÓÎ±ê²»ÏàµÈÊ±£¬½øĞĞÑ­»·
+		// å½“å·¦å³æ¸¸æ ‡ä¸ç›¸ç­‰æ—¶ï¼Œè¿›è¡Œå¾ªç¯
 		while(left<right) {
-			// ×ó±ß»ù×¼ÊıÑ¡ÔñÍêºó£¬¿ªÊ¼ÓëÓÒ±ß½øĞĞ±È½Ï£¬Ö±µ½ÓÒ±ßµÄÊı±È»ù×¼ÊıĞ¡
+			// å·¦è¾¹åŸºå‡†æ•°é€‰æ‹©å®Œåï¼Œå¼€å§‹ä¸å³è¾¹è¿›è¡Œæ¯”è¾ƒï¼Œç›´åˆ°å³è¾¹çš„æ•°æ¯”åŸºå‡†æ•°å°
 			while(left<right && temp<=arr[right]) {
 				right--;
 			}
-			// ÕÒµ½±È»ù×¼ÊıĞ¡µÄÓÒ±ß£¬ÍÚ¿Ó¡¢Ìî¿Ó
+			// æ‰¾åˆ°æ¯”åŸºå‡†æ•°å°çš„å³è¾¹ï¼ŒæŒ–å‘ã€å¡«å‘
 			if(left<right) {
 				arr[left] = arr[right];
 				left++;
 			}
-			// ÓÒ±ßÑ°ÕÒÍê±Ï£¬´Ó×ó±ß¿ªÊ¼Ñ°ÕÒ
+			// å³è¾¹å¯»æ‰¾å®Œæ¯•ï¼Œä»å·¦è¾¹å¼€å§‹å¯»æ‰¾
 			while(left<right && temp>=arr[left]) {
 				left++;
 			}
-			// Èç¹û×ó±ßµÄÊı´óÓÚ»ù×¼Êı
+			// å¦‚æœå·¦è¾¹çš„æ•°å¤§äºåŸºå‡†æ•°
 			if(left<right) {
-				// Ìî¿Ó
+				// å¡«å‘
 				arr[right] = arr[left];
 				right--;
 			}
 		}
-		// Ìî×îºóÒ»¸ö¿Ó
+		// å¡«æœ€åä¸€ä¸ªå‘
 		arr[left]=temp;
-		// ×óÓÒÓÎ±êÏàµÈÊ±·µ»Ø
+		// å·¦å³æ¸¸æ ‡ç›¸ç­‰æ—¶è¿”å›
 		return left;
 	}
 	

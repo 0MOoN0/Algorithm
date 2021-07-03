@@ -1,25 +1,25 @@
-package com.interview.leetcode.Ò»Îå_threeSum;
+package com.interview.leetcode.ä¸€äº”_threeSum;
 import java.util.*;
 
 /**
- * Ë«Ö¸Õë-³¬Ê±
+ * åŒæŒ‡é’ˆ-è¶…æ—¶
  *
  */
 class Solution3 {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         List<Integer> innerList = null;
-        // ¶ÔÊı×é½øĞĞÅÅĞò
+        // å¯¹æ•°ç»„è¿›è¡Œæ’åº
         Arrays.sort(nums);
         boolean flag = true;
-        // ±éÀúÒ»´Î
+        // éå†ä¸€æ¬¡
         for(int i=0; i<nums.length-2; i++){
-            // ×óÓÒÖ¸Õë
+            // å·¦å³æŒ‡é’ˆ
             int j = i+1;
             int k = nums.length-1;
             while(j<k){
                 if(nums[i]+nums[j]+nums[k]==0){
-                    // ÅĞÖØ
+                    // åˆ¤é‡
                     innerList = Arrays.asList(nums[i], nums[j], nums[k]);
                     Collections.sort(innerList);
                     if (result.size() > 0){

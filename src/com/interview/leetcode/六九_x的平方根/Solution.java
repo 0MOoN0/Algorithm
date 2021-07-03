@@ -1,14 +1,14 @@
-package com.interview.leetcode.Áù¾Å_xµÄÆ½·½¸ù;
+package com.interview.leetcode.å…­ä¹_xçš„å¹³æ–¹æ ¹;
 
-// ¶ş·Ö·¨£¬ÒòÎªÖ»ÇóÕûÊı£¬ËùÒÔ¾«È·µ½¶şÎ»Ğ¡Êı¼´¿É
+// äºŒåˆ†æ³•ï¼Œå› ä¸ºåªæ±‚æ•´æ•°ï¼Œæ‰€ä»¥ç²¾ç¡®åˆ°äºŒä½å°æ•°å³å¯
 //WA
 class Solution {
     public int mySqrt(int x) {
-        // ÅĞ¶ÏĞ¡ÊıÎ»ÊÇ·ñ´óÓÚÁã
-        // ¶ş·Ö£¬È¡³öÖĞµã
-        // ±È½ÏÖĞµãÆ½·½´óĞ¡
-        // ´óÓÚ£¬Ñ¡È¡×óµ½ÖĞµãµÄ¾àÀëÔÙ¶ş·Ö
-        // Ğ¡ÓÚ£¬Ñ¡È¡ÖĞ¼äÓëÓÒ±ßµÄ¾àÀëÔÙ¶ş·Ö
+        // åˆ¤æ–­å°æ•°ä½æ˜¯å¦å¤§äºé›¶
+        // äºŒåˆ†ï¼Œå–å‡ºä¸­ç‚¹
+        // æ¯”è¾ƒä¸­ç‚¹å¹³æ–¹å¤§å°
+        // å¤§äºï¼Œé€‰å–å·¦åˆ°ä¸­ç‚¹çš„è·ç¦»å†äºŒåˆ†
+        // å°äºï¼Œé€‰å–ä¸­é—´ä¸å³è¾¹çš„è·ç¦»å†äºŒåˆ†
         return divide(0, new Double(x), x, (double)x/2 );   
         
     }
@@ -16,10 +16,10 @@ class Solution {
     public int divide(double begin, double end, int target, Double middle){
         String[] middleStr = (middle+"").split("\\.");
         if(Math.pow(middle,2)==target || middleStr.length>=2 && middleStr[1].length()>=2){
-            // È¡ÕûÊı£¬·µ»Ø
+            // å–æ•´æ•°ï¼Œè¿”å›
             return middle.intValue();
         }
-        // ¶ş·Ö£¬È¡ÖĞµã
+        // äºŒåˆ†ï¼Œå–ä¸­ç‚¹
         middle = (begin+end) / 2;
         if(Math.pow(middle,2) > target){
             return divide(begin, middle, target, middle);

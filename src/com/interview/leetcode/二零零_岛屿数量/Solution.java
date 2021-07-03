@@ -1,9 +1,9 @@
-package com.interview.leetcode.¶şÁãÁã_µºÓìÊıÁ¿;
+package com.interview.leetcode.äºŒé›¶é›¶_å²›å±¿æ•°é‡;
 
 /**
- * # DFS-È¾É«-AC-3ms 
- * 1. ÉÏÏÂ×óÓÒÏàÁÚ²ÅÎªÒ»¸öĞ¡µº£¬³ı´ËÖ®ÍâÎªÁíÒ»¸öµºÓì 
- * 2. Ã¿µ½Ò»¸öĞÂµÄĞ¡µº£¬ÏÈ¼ÇÂ¼Ğ¡µº¸öÊı£¬ÔÙ½«ÓëĞ¡µºÏàÁÚµÄËùÓĞ'1'ÌîÆ½(½«Ğ¡µºÒÆÆ½)
+ * # DFS-æŸ“è‰²-AC-3ms 
+ * 1. ä¸Šä¸‹å·¦å³ç›¸é‚»æ‰ä¸ºä¸€ä¸ªå°å²›ï¼Œé™¤æ­¤ä¹‹å¤–ä¸ºå¦ä¸€ä¸ªå²›å±¿ 
+ * 2. æ¯åˆ°ä¸€ä¸ªæ–°çš„å°å²›ï¼Œå…ˆè®°å½•å°å²›ä¸ªæ•°ï¼Œå†å°†ä¸å°å²›ç›¸é‚»çš„æ‰€æœ‰'1'å¡«å¹³(å°†å°å²›ç§»å¹³)
  * 
  * @author Peter
  *
@@ -15,8 +15,8 @@ class Solution {
 	int[] vy = { 0, 0, -1, 1 };
 
 	public int numIslands(char[][] grid) {
-		for (int i = 0; i < grid.length; i++) { // ĞĞÊı
-			for (int j = 0; j < grid[i].length; j++) { // ÁĞÊı
+		for (int i = 0; i < grid.length; i++) { // è¡Œæ•°
+			for (int j = 0; j < grid[i].length; j++) { // åˆ—æ•°
 				if (grid[i][j] == '1') {
 					result += 1;
 					DFS(grid, j, i);
@@ -28,7 +28,7 @@ class Solution {
 
 	public void DFS(char[][] grid, int x, int y) {
 
-		// È¾É«
+		// æŸ“è‰²
 		grid[y][x] = '0';
 		for (int i = 0; i < 4; i++) {
 			if (valid(grid, x + vx[i], y + vy[i])) {
@@ -37,7 +37,7 @@ class Solution {
 		}
 	}
 
-	// ÑéÖ¤ÊÇ·ñºÏ·¨
+	// éªŒè¯æ˜¯å¦åˆæ³•
 	public boolean valid(char[][] grid, int x, int y) {
 		if (x < 0 || y < 0 || x >= grid[0].length || y >= grid.length || grid[y][x] == '0') {
 			return false;

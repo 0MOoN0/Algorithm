@@ -1,6 +1,6 @@
-package com.interview.Ëã·¨;
+package com.interview.ç®—æ³•;
 
-public class È«ÅÅÁĞ {
+public class å…¨æ’åˆ— {
 
 	public static void arrage(int[] list, int start, int length) {
 		int i;
@@ -12,7 +12,7 @@ public class È«ÅÅÁĞ {
 			for (i = start; i < length; i++) {
 				swap(list, start, i);
 				arrage(list, start + 1, length);
-				swap(list, start, i);// ÕâÀïÊÇÒòÎªÎÒÃÇÃ¿Ò»´ÎÈç¹ûÎÒÃÇÒª¼Ù¶¨µÚÒ»Î»µÄËùÓĞ¿ÉÄÜĞÔµÄ»°£¬ÄÇÃ´¾Í±ØĞëÊÇÔÚ½¨Á¢ÔÚÕâĞ©ĞòÁĞµÄ³õÊ¼×´Ì¬Ò»ÖÂµÄÇé¿öÏÂ£¬ËùÒÔÒª»Ø¹é×´Ì¬
+				swap(list, start, i);// è¿™é‡Œæ˜¯å› ä¸ºæˆ‘ä»¬æ¯ä¸€æ¬¡å¦‚æœæˆ‘ä»¬è¦å‡å®šç¬¬ä¸€ä½çš„æ‰€æœ‰å¯èƒ½æ€§çš„è¯ï¼Œé‚£ä¹ˆå°±å¿…é¡»æ˜¯åœ¨å»ºç«‹åœ¨è¿™äº›åºåˆ—çš„åˆå§‹çŠ¶æ€ä¸€è‡´çš„æƒ…å†µä¸‹ï¼Œæ‰€ä»¥è¦å›å½’çŠ¶æ€
 			}
 		}
 	}

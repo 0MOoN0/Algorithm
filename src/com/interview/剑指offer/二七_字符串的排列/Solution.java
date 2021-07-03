@@ -1,17 +1,17 @@
-package com.interview.½£Ö¸offer.¶şÆß_×Ö·û´®µÄÅÅÁĞ;
+package com.interview.å‰‘æŒ‡offer.äºŒä¸ƒ_å­—ç¬¦ä¸²çš„æ’åˆ—;
 
 import java.util.ArrayList;
 import java.util.TreeSet;
-// ×ÖÄ¸°üÀ¨´óĞ¡Ğ´
-// ×Ö·û¿ÉÄÜÓĞÖØ¸´
+// å­—æ¯åŒ…æ‹¬å¤§å°å†™
+// å­—ç¬¦å¯èƒ½æœ‰é‡å¤
 public class Solution {
     
     public ArrayList<String> Permutation(String str) {
-    	// TreeSet¿ÉÒÔ¸ù¾İ×ÔÈ»Ë³ĞòÅÅĞò
+    	// TreeSetå¯ä»¥æ ¹æ®è‡ªç„¶é¡ºåºæ’åº
         TreeSet<String> temp = new TreeSet<String>();
         ArrayList<String> result = new ArrayList<String>();
         if(str==null || str.equals("")) return result;
-       // ×ª³É×Ö½ÚÊı×é
+       // è½¬æˆå­—èŠ‚æ•°ç»„
         char [] cs = str.toCharArray();
         perm(cs, 0, cs.length, temp);
         result.addAll(temp);
@@ -22,14 +22,14 @@ public class Solution {
         if(start==end){
             result.add(new String(cs));
         }else{
-            // ½«µÚÒ»Î»ÓëÆäËûÎ»½»»»£¬Ê£ÏÂµÄ×öÈ«ÅÅÁĞ
+            // å°†ç¬¬ä¸€ä½ä¸å…¶ä»–ä½äº¤æ¢ï¼Œå‰©ä¸‹çš„åšå…¨æ’åˆ—
             for(int i=start; i<end; i++){
                 //if(cs[start]==cs[i] && start!=i) continue;
-                // ½»»»
+                // äº¤æ¢
                 swap(cs, i, start);
-                // ¶ÔÊ£ÏÂµÄÊı×ÖÄÚÈİ½øĞĞÈ«ÅÅÁĞ
+                // å¯¹å‰©ä¸‹çš„æ•°å­—å†…å®¹è¿›è¡Œå…¨æ’åˆ—
                 perm(cs, start+1, end, result);
-                // »Ø¹é×´Ì¬£¬½øĞĞ»ØËİ
+                // å›å½’çŠ¶æ€ï¼Œè¿›è¡Œå›æº¯
                 swap(cs, i, start);
             }
         }

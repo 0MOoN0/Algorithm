@@ -1,4 +1,4 @@
-package com.interview.½£Ö¸offer.¶şÎå_¸´ÔÓÁ´±íµÄ¸´ÖÆ;
+package com.interview.å‰‘æŒ‡offer.äºŒäº”_å¤æ‚é“¾è¡¨çš„å¤åˆ¶;
 /*
 public class RandomListNode {
     int label;
@@ -10,14 +10,14 @@ public class RandomListNode {
     }
 }
 */
-// 1.µ¥Á´±í¸´ÖÆ£¬¸´ÖÆµ±Ç°½Úµã£¬²¢²åÈëµ½µ±Ç°½ÚµãµÄºóÃæ
-// 2.Ëæ»úÖ¸Õë¸´ÖÆ£¬¸´ÖÆµ¥Á´±íµÄËæ»úÖ¸Õë
-// 3.·ÖÀëÁ´±í
+// 1.å•é“¾è¡¨å¤åˆ¶ï¼Œå¤åˆ¶å½“å‰èŠ‚ç‚¹ï¼Œå¹¶æ’å…¥åˆ°å½“å‰èŠ‚ç‚¹çš„åé¢
+// 2.éšæœºæŒ‡é’ˆå¤åˆ¶ï¼Œå¤åˆ¶å•é“¾è¡¨çš„éšæœºæŒ‡é’ˆ
+// 3.åˆ†ç¦»é“¾è¡¨
 public class Solution2 {
     public RandomListNode Clone(RandomListNode pHead)
     {
         if(pHead==null) return null;
-        // 1. µ¥Á´±í¸´ÖÆ
+        // 1. å•é“¾è¡¨å¤åˆ¶
         RandomListNode pHead_ = pHead;
         while(pHead != null){
             RandomListNode newNode = new RandomListNode(pHead.label);
@@ -25,7 +25,7 @@ public class Solution2 {
             pHead.next = newNode;
             pHead = pHead.next.next;
         }
-        // Ëæ»úÖ¸Õë¸´ÖÆ
+        // éšæœºæŒ‡é’ˆå¤åˆ¶
         pHead = pHead_;
         while(pHead!=null){
             RandomListNode pRandom = pHead.random;
@@ -35,7 +35,7 @@ public class Solution2 {
             }
             pHead = pHead.next.next;
         }
-        // ·ÖÀëÁ´±í
+        // åˆ†ç¦»é“¾è¡¨
         RandomListNode qHead = pHead_.next, qHead_=qHead;
         pHead = pHead_;
         while(pHead.next!=null && qHead_.next!=null){

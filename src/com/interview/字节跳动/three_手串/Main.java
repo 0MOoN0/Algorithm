@@ -1,4 +1,4 @@
-package com.interview.×Ö½ÚÌø¶¯.three_ÊÖ´®;
+package com.interview.å­—èŠ‚è·³åŠ¨.three_æ‰‹ä¸²;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,12 +34,12 @@ public class Main {
 			Collections.sort(arrayList);
 			for(int i=2; i<arrayList.size(); i++) {
 				if(i==arrayList.size()-1) {
-					// ÍùÇ°±È½Ï
+					// å¾€å‰æ¯”è¾ƒ
 					if(arrayList.get(i)-arrayList.get(i-1) < space) {
 						result++;
 						break;
 					}
-					// Íùºó±È½Ï
+					// å¾€åæ¯”è¾ƒ
 					int index = (arrayList.get(i)+space)%size;
 					for(int j=1; j<arrayList.size()-1;j++) {
 						if(arrayList.get(j)<index) {

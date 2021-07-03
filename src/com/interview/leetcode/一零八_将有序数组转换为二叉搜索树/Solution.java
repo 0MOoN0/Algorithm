@@ -1,7 +1,7 @@
-package com.interview.leetcode.Ò»Áã°Ë_½«ÓĞĞòÊı×é×ª»»Îª¶ş²æËÑË÷Ê÷;
+package com.interview.leetcode.ä¸€é›¶å…«_å°†æœ‰åºæ•°ç»„è½¬æ¢ä¸ºäºŒå‰æœç´¢æ ‘;
 /**
- * ¶ş²æËÑË÷Ê÷µÄÖĞĞò±éÀúÊÇÓĞĞòµÄ£¬Òò´ËÓÃµİÔöÊı×é¹¹½¨µÄ¶ş²æÊ÷µÄ¸ù½Úµã¾ÍÊÇÎ»ÖÃÔÚÊı×éÖĞ¼äµÄÖµ
- * ×ó×ÓÊ÷¾ÍÊÇ×ó±ß²¿·ÖµÄÖĞ¼äÖµ£¬ÓÒ×ÓÊ÷¾ÍÊÇÓÒ±ß²¿·ÖµÄÖĞ¼äÖµ
+ * äºŒå‰æœç´¢æ ‘çš„ä¸­åºéå†æ˜¯æœ‰åºçš„ï¼Œå› æ­¤ç”¨é€’å¢æ•°ç»„æ„å»ºçš„äºŒå‰æ ‘çš„æ ¹èŠ‚ç‚¹å°±æ˜¯ä½ç½®åœ¨æ•°ç»„ä¸­é—´çš„å€¼
+ * å·¦å­æ ‘å°±æ˜¯å·¦è¾¹éƒ¨åˆ†çš„ä¸­é—´å€¼ï¼Œå³å­æ ‘å°±æ˜¯å³è¾¹éƒ¨åˆ†çš„ä¸­é—´å€¼
  * 
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -21,17 +21,17 @@ class Solution {
     }
     
     public TreeNode sortArrayToBSTCore(int []nums, int start, int end){
-        // ÅĞ¶Ï±ß½ç
+        // åˆ¤æ–­è¾¹ç•Œ
         if(start>end){
             return null;
         }
-        // »ñÈ¡ÖĞ¼äÖµ
+        // è·å–ä¸­é—´å€¼
         int index = start + (end-start)/2;
-        // ´´½¨¸ù½Úµã
+        // åˆ›å»ºæ ¹èŠ‚ç‚¹
         TreeNode root = new TreeNode(nums[index]);
-        // ÓÒ×ÓÊ÷
+        // å³å­æ ‘
         root.right = sortArrayToBSTCore(nums, index+1, end);
-        // ×ó×ÓÊ÷
+        // å·¦å­æ ‘
         root.left = sortArrayToBSTCore(nums, start, index-1);
         return root;
     }

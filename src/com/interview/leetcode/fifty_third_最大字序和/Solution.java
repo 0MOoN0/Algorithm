@@ -1,4 +1,4 @@
-package com.interview.leetcode.fifty_third_×î´ó×ÖĞòºÍ;
+package com.interview.leetcode.fifty_third_æœ€å¤§å­—åºå’Œ;
 /**
  * 
  * @author Peter
@@ -9,8 +9,8 @@ class Solution {
         int ans = nums[0];
         int max = 0;
         for(int i=0; i<nums.length; i++) {
-        	// ¶ÔÓÚiÏî£¬±íÊ¾¼ÓÈë»òÕß²»¼ÓÈë£¬Èç¹û²»¼ÓÈë£¬ÔòÖ±½ÓÊ¹ÓÃiÏîÄÚÈİ£¬Èç¹û¼ÓÈë£¬Ôò½«max¼ÓÈë£¬ÔÚÑ¡Á½ÕßµÄ×î´óÖµ
-        	// ĞÂ¸³ÖµµÄmax±íÊ¾°üº¬iÏîÔÚÄÚµÄ×Ö´®
+        	// å¯¹äºié¡¹ï¼Œè¡¨ç¤ºåŠ å…¥æˆ–è€…ä¸åŠ å…¥ï¼Œå¦‚æœä¸åŠ å…¥ï¼Œåˆ™ç›´æ¥ä½¿ç”¨ié¡¹å†…å®¹ï¼Œå¦‚æœåŠ å…¥ï¼Œåˆ™å°†maxåŠ å…¥ï¼Œåœ¨é€‰ä¸¤è€…çš„æœ€å¤§å€¼
+        	// æ–°èµ‹å€¼çš„maxè¡¨ç¤ºåŒ…å«ié¡¹åœ¨å†…çš„å­—ä¸²
         	if(nums[i]+max > nums[i]) {
         		max+=nums[i];
         	}else {

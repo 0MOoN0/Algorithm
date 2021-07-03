@@ -1,4 +1,4 @@
-package com.interview.Ğ£ÕĞ_2019±à³ÌÌâ.Ê®_î§Ë¯.solution2_ÊäÈëÓÅ»¯;
+package com.interview.æ ¡æ‹›_2019ç¼–ç¨‹é¢˜.å_çŒç¡.solution2_è¾“å…¥ä¼˜åŒ–;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,24 +21,24 @@ public class Main {
 		line = reader.readLine().split(" ");
 		for(int i=0; i<classSize; i++) {
 			split[i][1] = Integer.parseInt(line[i]);
-			// Èç¹ûµ±Ç°·ÖÖÓÎªÇåĞÑ£¬Ôò¼ÓÈëqxPoint×ÜºÍ
+			// å¦‚æœå½“å‰åˆ†é’Ÿä¸ºæ¸…é†’ï¼Œåˆ™åŠ å…¥qxPointæ€»å’Œ
 			if(split[i][1]==1) {
 				qxPointBase += split[i][0];
 			}
 		}
-		// ÔÙ´Î±éÀúÊı×é
+		// å†æ¬¡éå†æ•°ç»„
 		for(int i=0; i<classSize; i++) {
-			// ÅĞ¶Ïµ±Ç°·ÖÖÓÊÇ·ñÇåĞÑ
+			// åˆ¤æ–­å½“å‰åˆ†é’Ÿæ˜¯å¦æ¸…é†’
 			if(split[i][1]!=1) {
-				// Èç¹û²»ÇåĞÑ£¬ÔòÅĞ¶Ï½ĞĞÑÒ»´Î¿ÉÒÔÔö¼Ó¶àÉÙqxPoint
+				// å¦‚æœä¸æ¸…é†’ï¼Œåˆ™åˆ¤æ–­å«é†’ä¸€æ¬¡å¯ä»¥å¢åŠ å¤šå°‘qxPoint
 				int qxMax = qxPointBase;
 				int step = 0;
 				for(int j=i; j<classSize && step<qx; j++,step++) {
-					// ÅĞ¶Ï½ĞĞÑÒÔºóµÄµ±Ç°µãÊÇ·ñÎªqxPoint;
+					// åˆ¤æ–­å«é†’ä»¥åçš„å½“å‰ç‚¹æ˜¯å¦ä¸ºqxPoint;
 					if(split[j][1]==1) {
 						continue;
 					}
-					// Èç¹û²»ÎªqxPoint£¬Ôò¼ÓÈëqxPoint
+					// å¦‚æœä¸ä¸ºqxPointï¼Œåˆ™åŠ å…¥qxPoint
 					qxMax += split[j][0];
 				}
 				result = Math.max(qxMax, result);

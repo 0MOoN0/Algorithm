@@ -1,10 +1,10 @@
-package com.interview.leetcode.ÈıÁù_ÓĞĞ§µÄÊı¶À;
+package com.interview.leetcode.ä¸‰å…­_æœ‰æ•ˆçš„æ•°ç‹¬;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
- * WA - Ö»Í¨¹ı²¿·Ö²âÊÔÓÃÀı-466/504
+ * WA - åªé€šè¿‡éƒ¨åˆ†æµ‹è¯•ç”¨ä¾‹-466/504
  * @author Peter
  *
  */
@@ -15,7 +15,7 @@ class Solution {
         Set<Character> hSet = new LinkedHashSet<Character>();
         Set<Character> zSet = new LinkedHashSet<Character>();
         Set<Character> jSet = new LinkedHashSet<Character>();
-        // ºáÏòÉ¨Ãè  ×İÏòÉ¨Ãè
+        // æ¨ªå‘æ‰«æ  çºµå‘æ‰«æ
         for(int i=0; i<N; i++){
             for(int j=0;j<N;j++){
                 if(board[i][j]!='.' && hSet.contains(board[i][j])){

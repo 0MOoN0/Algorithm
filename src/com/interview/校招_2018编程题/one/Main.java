@@ -1,4 +1,4 @@
-package com.interview.Ð£ÕÐ_2018±à³ÌÌâ.one;
+package com.interview.æ ¡æ‹›_2018ç¼–ç¨‹é¢˜.one;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,11 +24,11 @@ public class Main {
 				fs.add(temp);
 			}
 		}
-		// ¶ÔÊý×éÅÅÐò
+		// å¯¹æ•°ç»„æŽ’åº
 		Collections.sort(zs);
 		Collections.sort(fs);
 		
-		// ÈýÕý or Á½¸ºÒ»Õý
+		// ä¸‰æ­£ or ä¸¤è´Ÿä¸€æ­£
 		if(zs.size()>=3) {
 			if(fs.size() >= 2){
 				System.out.println(
@@ -36,7 +36,7 @@ public class Main {
 				);
 			}
 			System.out.println(zs.get(zs.size()-1) * zs.get(zs.size()-2) * zs.get(zs.size()-3));
-		// Á½ÕýÒ»¸º or Á½¸ºÒ»Õý
+		// ä¸¤æ­£ä¸€è´Ÿ or ä¸¤è´Ÿä¸€æ­£
 		}else if(zs.size() >= 2) {
 			if(fs.size() >= 2) {
 				System.out.println(
@@ -44,10 +44,10 @@ public class Main {
 						);
 			}
 			System.out.println(zs.get(0)*zs.get(1)*fs.get(fs.size()-1));
-		// Á½¸ºÒ»Õý
+		// ä¸¤è´Ÿä¸€æ­£
 		}else if(zs.size()==1) {
 			System.out.println(zs.get(0)*fs.get(0)*fs.get(1));
-		// Èý¸º
+		// ä¸‰è´Ÿ
 		}else {
 			System.out.println(fs.get(0)*fs.get(1)*fs.get(2));
 		}

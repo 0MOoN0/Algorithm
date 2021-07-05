@@ -1,35 +1,11 @@
 package com.test;
 
 class Test {
-    public static void main(String[] args) {
-        System.out.println(new B().getValue());
+    public static void main(String[] args) throws Exception {
+        String str1 = new String("a");
+        String str2 = new String("a");
+        System.out.println(str1.equals(str2));
+        System.out.println(str1==str2);
+        System.out.println(str1.hashCode() == str2.hashCode());
     }
-    static class A {
-        protected int value;
-        public A (int v) {
-            setValue(v);
-        }
-        public void setValue(int value) {
-            this.value= value;
-        }
-        public int getValue() {
-            try {
-                value ++;
-                return value;
-            } finally {
-                this.setValue(value);
-                System.out.println(value);
-            }
-        }
-    }
-    static class B extends A {
-        public B () {
-            super(5);
-            setValue(getValue()- 3);
-        }
-        public void setValue(int value) {
-            super.setValue(2 * value);
-        }
-    }
-    
 }

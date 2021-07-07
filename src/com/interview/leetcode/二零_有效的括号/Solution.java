@@ -1,6 +1,5 @@
 package com.interview.leetcode.二零_有效的括号;
 
-import java.util.LinkedList;
 import java.util.Stack;
 
 /**

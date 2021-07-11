@@ -1,15 +1,12 @@
 package com.test;
 
-class Test {
-    public static void main(String[] args) throws Exception {
-        Integer a = new Integer(2);
-        Integer b = new Integer(3);
-        System.out.println(a);
-        Swap(a,b);
-        System.out.println(a);
-    }
+import com.interview.leetcode.五八_最后一个单词的长度.Solution2;
 
-    public static void Swap(Integer a, Integer b){
-        System.out.println();
+import java.util.Arrays;
+
+class Test {
+    public static void main(String[] args){
+        Solution2 s = new Solution2();
+        s.lengthOfLastWord("b   a    ");
     }
 }

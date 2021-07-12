@@ -6,7 +6,8 @@ import java.util.Arrays;
 
 class Test {
     public static void main(String[] args){
-        Solution2 s = new Solution2();
-        s.lengthOfLastWord("b   a    ");
+        int[] a = new int[]{1,2,3};
+        a = new int[a.length+1];
+        Arrays.stream(a).forEach(System.out::println);
     }
 }

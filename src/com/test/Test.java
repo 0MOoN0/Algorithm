@@ -10,33 +10,11 @@ import java.util.stream.Stream;
 
 class Test {
     public static void main(String[] args) throws Exception {
-        Class<Singleton> clazz = Singleton.class;
-        Constructor<?>[] declaredConstructors = clazz.getDeclaredConstructors();
-        for(Constructor constructor : declaredConstructors){
-            constructor.setAccessible(true);
-            Object o1 = constructor.newInstance();
-            Object o2 = constructor.newInstance();
-            System.out.println(o1==o2);
-            System.out.println(o1);
-            System.out.println(o2);
-        }
+        Set<Integer> set = new HashSet<Integer>();
+        set.add(1);
+        set.add(256);
+        System.out.println(set.contains(1));
+        System.out.println(set.contains(256));
     }
 }
 
-class Singleton {
-    private volatile static Singleton uniqueSingleton;
-
-    private Singleton() {
-    }
-
-    public static Singleton getInstance() {
-        if (null == uniqueSingleton) {
-            synchronized (Singleton.class) {
-                if (null == uniqueSingleton) {
-                    uniqueSingleton = new Singleton();
-                }
-            }
-        }
-        return uniqueSingleton;
-    }
-}

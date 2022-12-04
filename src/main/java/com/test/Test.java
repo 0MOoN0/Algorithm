@@ -1,8 +1,8 @@
 package com.test;
 
-import com.interview.leetcode.一零零_相同的树.TreeNode;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 class Test {
     public static void main(String[] args) throws Exception {

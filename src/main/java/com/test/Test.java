@@ -1,16 +1,21 @@
 package com.test;
 
 
-import java.util.HashSet;
-import java.util.Set;
-
 class Test {
     public static void main(String[] args) throws Exception {
-        Set<Integer> set = new HashSet<Integer>();
-        set.add(1);
-        set.add(256);
-        System.out.println(set.contains(1));
-        System.out.println(set.contains(256));
+//        Long.valueOf("100.00"); // NumberFormatException
+        System.out.println(test());
+        Test.class.getDeclaredConstructor().newInstance();
+    }
+
+    public static int test(){
+        try {
+            throw new RuntimeException("e1");
+        }catch (Exception e){
+            throw new RuntimeException("e2");
+        }finally {
+            return 100;
+        }
     }
 }
 

@@ -25,8 +25,8 @@ public class QuickSort {
 			swap(arr, L + (int)(Math.random()*(R-L+1)), R);
 			// 选择最左边的数为基准，进行排序
 			int[] partition = partition(arr, L, R, arr[R]);
-			quickSort(arr, L, partition[0]-1);
-			quickSort(arr, partition[1]+1, R);
+			quickSort(arr, L, partition[0]);
+			quickSort(arr, partition[1], R);
 		}
 	}
 	
@@ -55,7 +55,7 @@ public class QuickSort {
 			}
 		}
 		// 返回相等区间
-		return new int[]{less+1, more-1};
+		return new int[]{less, more};
 	}
 	
 	public static void swap(int[] arr, int a, int b) {

@@ -10,6 +10,7 @@ import com.程序员面试金典_第六版.ListNode;
  *     ListNode next;
  *     ListNode(int x) { val = x; }
  * }
+ * 解题思路：将链表分成小于x和大于等于x的两部分链表，然后拼接两个链表。这种思路也可以用于链表将元素分成小于x、等于x、大于x三部分
  */
 class Solution {
     public ListNode partition(ListNode head, int x) {

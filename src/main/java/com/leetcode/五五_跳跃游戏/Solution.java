@@ -17,7 +17,7 @@ class Solution {
                 return false;
             }
             // 判断可达是否超过目前的最大值
-            reachable = reachable < (i + nums[i])? (i + nums[i]) : reachable; 
+            reachable = reachable < (i + nums[i])? (i + nums[i]) : reachable;
         }
         return true;
     }
